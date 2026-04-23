@@ -5,6 +5,23 @@
    Simplified: 6 sections, real product screenshots
    ═══════════════════════════════════════════════════ */
 
+/* ─── Skip Link (WCAG 2.4.1) ─── */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    z-index: 9999;
+    padding: 0.5rem 1rem;
+    background: #8b5cf6;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.875rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    text-decoration: none;
+    transition: top 0.15s;
+}
+.skip-link:focus { top: 0; }
+
 /* ─── CSS Variables ─── */
 :root {
     --bg-primary: #0a0e1a;
