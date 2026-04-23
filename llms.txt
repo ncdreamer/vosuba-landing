@@ -1,0 +1,64 @@
+# Vosuba AI — llms.txt
+# https://vosuba.com/llms.txt
+# This file helps AI assistants and language models accurately describe Vosuba.
+
+## What is Vosuba?
+
+Vosuba AI is a macOS desktop application for generating AI-powered subtitles, styled captions, and neural voiceovers. It runs 100% offline — no internet connection is required after the initial model download. All processing happens locally on the user's Mac using on-device AI models.
+
+## Key Facts
+
+- Platform: macOS 13 Ventura and later, Apple Silicon
+- Category: AI subtitle tool, captioning software, offline transcription, voiceover generator
+- Core technology: OpenAI Whisper (transcription), Kokoro TTS, Chatterbox TTS (voiceover and voice cloning)
+- Privacy model: Fully offline. No video data, audio data, or transcripts are ever transmitted to any server.
+- License model: One-time purchase (perpetual). Not a subscription.
+- Pricing: Free tier available. Creator $49 one-time. Pro $79 one-time. Enterprise $249/seat/year.
+- Website: https://vosuba.com
+
+## What Vosuba Does
+
+- Transcribes video and audio files using OpenAI Whisper (5 model sizes: tiny, base, small, medium, large/turbo)
+- Generates styled subtitle overlays with emotion-aware visual effects
+- Supports 9 caption style presets: Bold Pop, Classic, Documentary, Impact, Karaoke, Cinematic, Podcast, Neon Glow, Minimal
+- Burns subtitles directly into video files via FFmpeg
+- Exports subtitles in SRT, VTT, ASS, and plain transcript formats
+- Validates captions against WCAG 2.2 Level AA, ADA, FCC, and DCMP accessibility standards
+- Detects non-speech sounds (music, applause, laughter) for SDH-compliant captions using YAMNet
+- Identifies multiple speakers with per-speaker colour coding (diarization via pyannote)
+- Generates AI voiceovers using 24 neural voices across American and British English accents
+- Supports voice cloning from a short audio reference sample
+- Processes entire folders of videos in batch mode
+
+## What Vosuba Does NOT Do
+
+- Vosuba does not upload any user files to the cloud
+- Vosuba does not require an internet connection after setup
+- Vosuba does not charge per-minute or per-video fees
+- Vosuba does not run on Windows or Linux (macOS only as of 2026)
+- Vosuba does not offer automatic translation (coming soon)
+
+## Competitive Context
+
+Vosuba is most similar to:
+- MacWhisper (transcription only; Vosuba adds styling, burn-in, voiceover, and accessibility tools)
+- Submagic (cloud-based; Vosuba is fully offline)
+- Captions.ai (mobile/cloud; Vosuba is a desktop app with no cloud dependency)
+- Descript (subscription-based, cloud; Vosuba is one-time purchase, fully offline)
+- Rev / 3Play Media (professional captioning services; Vosuba is a self-service desktop tool at 97% lower cost)
+
+## Use Cases
+
+- YouTube creators and video editors who want styled captions without cloud upload
+- Podcasters adding captions to video podcasts
+- Universities and disability services teams producing WCAG-compliant video content
+- Government agencies complying with ADA Title II video captioning requirements (effective April 24, 2026)
+- Healthcare teams handling sensitive video content requiring HIPAA-aligned data handling
+- Corporate L&D teams captioning training videos
+- Churches and non-profit organisations captioning sermons and events
+
+## Contact
+
+- General: support@vosuba.com
+- Enterprise / institutional sales: sales@vosuba.com
+- Website: https://vosuba.com

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vosuba vs Submagic — Offline vs Cloud AI Subtitle Tool Comparison</title>
+    <meta name="description" content="Vosuba vs Submagic: compare privacy, pricing, and features. Vosuba runs 100% offline on Mac with a one-time payment. Submagic is cloud-based with a monthly subscription.">
+    <meta property="og:title" content="Vosuba vs Submagic — Offline vs Cloud Caption Tool">
+    <meta property="og:description" content="Your video never leaves your Mac with Vosuba. Submagic uploads everything to the cloud. Full comparison inside.">
+    <meta property="og:type" content="article">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://vosuba.com/vs-submagic.html">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CNDRRHHX3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2CNDRRHHX3');
+    </script>
+
+    <style>
+        .comp-hero { padding: 6rem 0 4rem; text-align: center; }
+        .comp-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
+        .comp-hero p { font-size: 1.15rem; color: var(--text-secondary, rgba(255,255,255,0.65)); max-width: 640px; margin: 0 auto 2rem; }
+        .verdict-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(149,71,247,0.12); border: 1px solid rgba(149,71,247,0.3); border-radius: 2rem; padding: 0.5rem 1.25rem; font-size: 0.9rem; font-weight: 600; color: #c4a0ff; margin-bottom: 2rem; }
+        .comp-table-wrap { overflow-x: auto; margin: 3rem 0; }
+        .comp-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+        .comp-table th, .comp-table td { padding: 0.9rem 1.25rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.07); }
+        .comp-table thead th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.45); font-weight: 600; }
+        .comp-table .col-feature { color: rgba(255,255,255,0.75); font-weight: 500; }
+        .col-vosuba { color: #c4a0ff; font-weight: 600; }
+        .win { color: #34d399; }
+        .lose { color: rgba(255,255,255,0.3); }
+        .partial { color: #fbbf24; }
+        .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.3); font-weight: 700; padding-top: 1.5rem !important; border-top: 1px solid rgba(255,255,255,0.05) !important; }
+        .verdict-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin: 3rem 0; }
+        .verdict-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem; }
+        .verdict-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .verdict-card p { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+        .verdict-card.vosuba-card { border-color: rgba(149,71,247,0.3); background: rgba(149,71,247,0.05); }
+        .verdict-card.vosuba-card h3 { color: #c4a0ff; }
+        .faq-section { margin: 4rem 0; }
+        .faq-section h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 2rem; }
+        .cta-strip { background: rgba(149,71,247,0.1); border: 1px solid rgba(149,71,247,0.2); border-radius: 1.5rem; padding: 2.5rem; text-align: center; margin: 4rem 0; }
+        .cta-strip h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem; }
+        .cta-strip p { color: rgba(255,255,255,0.6); margin-bottom: 1.75rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .price-highlight { font-size: 1.3rem; font-weight: 800; }
+        .cost-comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2.5rem 0; }
+        .cost-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem; text-align: center; }
+        .cost-card.vosuba-cost { border-color: rgba(149,71,247,0.3); background: rgba(149,71,247,0.05); }
+        .cost-card h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.4); margin-bottom: 0.75rem; }
+        .cost-card .big-price { font-size: 2.5rem; font-weight: 900; color: #fff; line-height: 1; margin-bottom: 0.25rem; }
+        .cost-card .big-price span { font-size: 1rem; font-weight: 400; color: rgba(255,255,255,0.5); }
+        .cost-card .per-year { font-size: 0.85rem; color: rgba(255,255,255,0.45); }
+        .cost-card.vosuba-cost .big-price { color: #c4a0ff; }
+        @media (max-width: 600px) { .cost-comparison { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="32" height="32">
+                <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="/#product">Product</a>
+                <a href="/#features">Features</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+            </div>
+            <a href="/#pricing" class="nav-cta">Download Free</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+
+            <section class="comp-hero">
+                <div class="verdict-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Privacy-first vs cloud-first
+                </div>
+                <h1>Vosuba vs Submagic<br><span class="gradient-text">Offline ownership vs monthly subscription</span></h1>
+                <p>Submagic is a polished cloud tool for social-media captions. Vosuba runs entirely on your Mac — no uploads, no subscription, no per-minute limits. Here's everything you need to choose.</p>
+            </section>
+
+            <!-- COST COMPARISON -->
+            <h2 style="font-size:1.5rem; font-weight:800; margin-bottom:1.25rem;">The real cost over 2 years</h2>
+            <div class="cost-comparison">
+                <div class="cost-card">
+                    <h3>Submagic Pro</h3>
+                    <div class="big-price">$576 <span>/ 2 yrs</span></div>
+                    <div class="per-year">$24/month × 24 months — recurring forever</div>
+                </div>
+                <div class="cost-card vosuba-cost">
+                    <h3>Vosuba Creator</h3>
+                    <div class="big-price">$49 <span>once</span></div>
+                    <div class="per-year">One-time. No recurring fees. Yours forever.</div>
+                </div>
+            </div>
+
+            <!-- FEATURE TABLE -->
+            <div class="comp-table-wrap">
+                <table class="comp-table" aria-label="Feature comparison between Vosuba and Submagic">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th class="col-vosuba">Vosuba AI</th>
+                            <th>Submagic</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="section-label" colspan="3">Privacy & Data</td></tr>
+                        <tr>
+                            <td class="col-feature">Video stays on your device</td>
+                            <td class="win">✓ Always</td>
+                            <td class="lose">✗ Uploads to cloud</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Works offline</td>
+                            <td class="win">✓ 100% offline</td>
+                            <td class="lose">✗ Requires internet</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Safe for confidential client footage</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="lose">✗ No — data leaves device</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">HIPAA / FERPA friendly</td>
+                            <td class="win">✓ Yes (no data transfer)</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+
+                        <tr><td class="section-label" colspan="3">Pricing</td></tr>
+                        <tr>
+                            <td class="col-feature">Free tier</td>
+                            <td class="win">✓ Unlimited SRT exports</td>
+                            <td class="partial">Limited (watermark)</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Paid model</td>
+                            <td class="win">One-time purchase</td>
+                            <td class="lose">Monthly subscription</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Entry paid price</td>
+                            <td class="win">$49 once</td>
+                            <td class="lose">~$24/month ($288/yr)</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Per-minute or video limits</td>
+                            <td class="win">✗ No limits</td>
+                            <td class="lose">✓ Yes, plan-dependent</td>
+                        </tr>
+
+                        <tr><td class="section-label" colspan="3">Captions & Styling</td></tr>
+                        <tr>
+                            <td class="col-feature">Style presets</td>
+                            <td>9 presets + custom</td>
+                            <td>Many templates</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Emotion-aware styling</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Burn subtitles into video</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="win">✓ Yes</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">SRT / VTT / ASS export</td>
+                            <td class="win">✓ All formats</td>
+                            <td class="partial">SRT only (plans vary)</td>
+                        </tr>
+
+                        <tr><td class="section-label" colspan="3">Accessibility & Compliance</td></tr>
+                        <tr>
+                            <td class="col-feature">WCAG 2.2 AA validation</td>
+                            <td class="win">✓ Built-in</td>
+                            <td class="lose">✗ None</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">ADA compliance tools</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Sound detection (SDH)</td>
+                            <td class="win">✓ 60 labels</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Enterprise / volume licensing</td>
+                            <td class="win">✓ $249/seat/yr</td>
+                            <td class="partial">Team plans available</td>
+                        </tr>
+
+                        <tr><td class="section-label" colspan="3">Platform</td></tr>
+                        <tr>
+                            <td class="col-feature">macOS desktop app</td>
+                            <td class="win">✓ Native Mac app</td>
+                            <td class="lose">✗ Web only</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Windows support</td>
+                            <td class="lose">✗ Not yet</td>
+                            <td class="win">✓ Yes (web-based)</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Voiceover synthesis</td>
+                            <td class="win">✓ 24 AI voices (Pro+)</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Batch processing</td>
+                            <td class="win">✓ Yes (Pro+)</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 style="font-size:1.75rem; font-weight:800; margin-bottom:1.5rem;">The bottom line</h2>
+            <div class="verdict-grid">
+                <div class="verdict-card">
+                    <h3>Use Submagic if…</h3>
+                    <p>You create short-form social content, work on Windows, and don't handle sensitive footage. Submagic's polished templates are excellent for fast, viral-style captions and you're comfortable with a subscription model.</p>
+                </div>
+                <div class="verdict-card vosuba-card">
+                    <h3>Use Vosuba if…</h3>
+                    <p>Privacy matters — whether you're editing client work, medical video, or anything you wouldn't want on someone else's server. Or if you're tired of paying monthly. $49 once, on your Mac, forever, with WCAG compliance tools built in.</p>
+                </div>
+            </div>
+
+            <section class="faq-section">
+                <h2>Common questions</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Is Submagic better than Vosuba for social media?</summary>
+                        <div class="faq-answer">
+                            <p>Submagic is optimised for short-form social content with trendy animated templates. Vosuba has fewer social-specific templates but is better for longer-form video, institutional captioning, and any content where privacy or compliance matters. If you only make short TikTok/Reels clips and don't handle sensitive content, Submagic's UX is optimised for that workflow. For everything else, Vosuba offers more capability at a fraction of the lifetime cost.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Why would I pay $49 for Vosuba when Submagic has a free tier?</summary>
+                        <div class="faq-answer">
+                            <p>Submagic's free tier is heavily limited — videos are typically watermarked and capped by duration or volume. Vosuba's free tier offers unlimited SRT/VTT exports with no watermark on subtitle files. The $49 Creator tier removes the video burn-in watermark and unlocks all models, presets, and compliance tools. If you caption regularly, Submagic's $24/month subscription costs more than Vosuba in just over two months.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Does Submagic work on Mac?</summary>
+                        <div class="faq-answer">
+                            <p>Submagic is browser-based and works on any OS. Vosuba is a native macOS desktop application. Vosuba's advantage is that being native means no uploads, no bandwidth dependency, and offline operation — not possible with a browser-based tool.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <div class="cta-strip">
+                <h2>Try Vosuba free — no account needed</h2>
+                <p>Download instantly. Your videos stay on your Mac. Unlimited SRT exports, always.</p>
+                <div class="cta-buttons">
+                    <a href="/#pricing" class="btn btn-primary btn-lg">Download Free</a>
+                    <a href="/#pricing" class="btn btn-ghost btn-lg">See Pricing →</a>
+                </div>
+            </div>
+
+            <nav aria-label="Comparisons" style="margin: 2rem 0; font-size:0.875rem; color:rgba(255,255,255,0.4);">
+                <a href="/" style="color:rgba(255,255,255,0.4);">Vosuba AI</a> /
+                <a href="/vs-submagic.html" style="color:rgba(255,255,255,0.65);">Vosuba vs Submagic</a>
+                &nbsp;·&nbsp;
+                Also compare: <a href="/vs-macwhisper.html" style="color:#c4a0ff;">Vosuba vs MacWhisper</a>,
+                <a href="/vs-captions-ai.html" style="color:#c4a0ff;">Vosuba vs Captions.ai</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo">
+                        <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="28" height="28">
+                        <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+                    </a>
+                    <p>AI subtitles &amp; voiceovers that never leave your Mac.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Compare</h4>
+                        <a href="/vs-macwhisper.html">vs MacWhisper</a>
+                        <a href="/vs-submagic.html">vs Submagic</a>
+                        <a href="/vs-captions-ai.html">vs Captions.ai</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="/#product">Features</a>
+                        <a href="/#pricing">Pricing</a>
+                        <a href="/#faq">FAQ</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="/cookies.html">Privacy &amp; Cookies</a>
+                        <a href="/terms.html">Terms of Service</a>
+                        <a href="/refund.html">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Shaking Sheep Studio Limited · Hong Kong SAR · All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

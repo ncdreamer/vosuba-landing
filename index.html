@@ -24,6 +24,150 @@
 
     gtag('config', 'G-2CNDRRHHX3');
     </script>
+
+    <!-- ═══ Structured Data: SoftwareApplication ═══ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Vosuba AI",
+      "url": "https://vosuba.com",
+      "description": "AI subtitles and voiceovers that run 100% offline on your Mac. Whisper-powered transcription, emotion-aware caption styling, neural voiceover synthesis, and WCAG 2.2 AA accessibility validation. No cloud. No subscription. Pay once, own forever.",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "macOS 13+",
+      "processorRequirements": "Apple Silicon",
+      "softwareVersion": "1.0",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Unlimited SRT/VTT exports, Whisper tiny/base models, 3 style presets, watermarked burn-in."
+        },
+        {
+          "@type": "Offer",
+          "name": "Creator",
+          "price": "49",
+          "priceCurrency": "USD",
+          "description": "All Whisper models, no watermark, all 9 style presets, speaker diarization, sound detection, WCAG accessibility dashboard."
+        },
+        {
+          "@type": "Offer",
+          "name": "Pro",
+          "price": "79",
+          "priceCurrency": "USD",
+          "description": "Everything in Creator plus Voiceover Studio with 24 AI voices, voice cloning, and batch processing."
+        },
+        {
+          "@type": "Offer",
+          "name": "Enterprise",
+          "price": "249",
+          "priceCurrency": "USD",
+          "description": "Volume licensing for universities, government agencies, and media teams. Per seat, billed annually."
+        }
+      ],
+      "featureList": [
+        "100% offline AI transcription using OpenAI Whisper",
+        "Emotion-aware subtitle styling",
+        "WCAG 2.2 AA caption compliance validation",
+        "Speaker diarization with per-speaker colour coding",
+        "Non-speech sound detection for SDH captions (YAMNet)",
+        "24 neural AI voices for voiceover synthesis",
+        "Voice cloning from audio reference",
+        "Batch processing of entire video folders",
+        "SRT, VTT, ASS, and transcript export",
+        "Burn subtitles into video via FFmpeg",
+        "No cloud upload — all processing on-device"
+      ],
+      "screenshot": "https://vosuba.com/images/screenshot-editor.png",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "ratingCount": "1"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shaking Sheep Studio Limited",
+        "url": "https://vosuba.com"
+      }
+    }
+    </script>
+
+    <!-- ═══ Structured Data: FAQPage ═══ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Vosuba really 100% offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Vosuba runs entirely on your Mac using local AI models — Whisper for transcription and Kokoro or Chatterbox for voiceover synthesis. Your video, audio, and transcript data never leaves your machine. The only network request is a one-time license activation; after that, the app works completely offline with no internet connection required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Vosuba and MacWhisper?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MacWhisper is a transcription-only tool that produces SRT or text from audio. Vosuba includes everything MacWhisper does plus: emotion-aware styled caption overlays with 9 visual presets, subtitle burn-in to video via FFmpeg, WCAG 2.2 AA accessibility validation, speaker diarization, non-speech sound detection for SDH captions, neural voiceover synthesis with 24 AI voices, voice cloning, and batch processing for entire folders. MacWhisper is best for quick raw transcription. Vosuba is best for creators and institutions that need a complete subtitle and voiceover workflow."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Vosuba help create ADA and WCAG compliant captions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Vosuba includes a built-in accessibility dashboard that validates caption reading speed (characters per second), line length, sound annotations, and speaker identification against WCAG 2.2 Level AA, ADA, FCC, and DCMP captioning standards. It flags non-compliant captions and provides a one-click auto-fix. It exports an Accessibility Package containing SRT, VTT, transcript, and a JSON compliance report. This feature requires Creator tier or above."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can universities and government teams use Vosuba to comply with ADA Title II?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Vosuba is designed for institutional compliance use cases. The ADA Title II rule (effective April 24, 2026) requires state and local government agencies with 50,000+ residents to make video content WCAG 2.1 AA compliant. Vosuba generates validated, compliant captions offline — no video data leaves your network. At $999 per year for 10 machines (Enterprise tier), it replaces per-minute captioning services that typically cost $15,000–$90,000 per year. Because it is priced under $1,000, it generally falls below the procurement threshold for purchase orders."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate is Vosuba's AI transcription?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vosuba uses OpenAI Whisper, which achieves 95%+ word accuracy for clear English audio with the large or turbo model. The free tier includes Whisper tiny and base (faster, slightly less accurate). Creator, Pro, and Enterprise tiers unlock all five model sizes including large and turbo. You can review and edit every word in the built-in subtitle editor before exporting or burning to video."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Vosuba a subscription?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Vosuba uses a one-time purchase model. Creator is $49, Pro is $79, and Enterprise is $249 per seat per year. There are no monthly fees, no per-minute charges, and no recurring billing for the Creator and Pro tiers. All minor version updates (1.x) are included free of charge."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What Mac hardware does Vosuba require?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vosuba requires macOS 13 Ventura or later running on Apple Silicon (M1, M2, M3, or M4 chip). It is not compatible with Intel Macs or Windows. Apple Silicon allows Vosuba to run Whisper and TTS models locally at practical speeds without a dedicated GPU."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Vosuba work with HIPAA or FERPA data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because Vosuba never transmits any data — no video, no audio, no transcripts — to any server, it can be used in environments where data privacy is critical. Healthcare teams captioning patient-related video and universities handling student content under FERPA can use Vosuba without creating a Business Associate Agreement or FERPA data sharing concern, because Vosuba never accesses or stores any of your data. Always consult your compliance team for your specific situation."
+          }
+        }
+      ]
+    }
+    </script>
+
 </head>
 <body>
 
@@ -382,6 +526,12 @@
                         <a href="#product">Features</a>
                         <a href="#pricing">Pricing</a>
                         <a href="#faq">FAQ</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Compare</h4>
+                        <a href="vs-macwhisper.html">vs MacWhisper</a>
+                        <a href="vs-submagic.html">vs Submagic</a>
+                        <a href="vs-captions-ai.html">vs Captions.ai</a>
                     </div>
                     <div class="footer-col">
                         <h4>Support</h4>

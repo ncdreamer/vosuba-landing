@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vosuba vs MacWhisper — Which Offline Mac Subtitle Tool Is Right for You?</title>
+    <meta name="description" content="Vosuba vs MacWhisper: a detailed, honest comparison of two offline Mac subtitle tools. See feature differences, pricing, and which one fits your workflow.">
+    <meta property="og:title" content="Vosuba vs MacWhisper — Offline Subtitle Tool Comparison">
+    <meta property="og:description" content="Both run 100% offline on Mac. But they're built for very different jobs. Here's the full comparison.">
+    <meta property="og:type" content="article">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://vosuba.com/vs-macwhisper.html">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CNDRRHHX3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2CNDRRHHX3');
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Vosuba vs MacWhisper: Offline Mac Subtitle Tool Comparison",
+      "description": "A detailed feature-by-feature comparison of Vosuba and MacWhisper — two 100% offline subtitle tools for macOS.",
+      "url": "https://vosuba.com/vs-macwhisper.html",
+      "publisher": { "@type": "Organization", "name": "Vosuba AI", "url": "https://vosuba.com" },
+      "datePublished": "2026-04-24"
+    }
+    </script>
+
+    <style>
+        /* ── Comparison page styles ── */
+        .comp-hero { padding: 6rem 0 4rem; text-align: center; }
+        .comp-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
+        .comp-hero p { font-size: 1.15rem; color: var(--text-secondary, rgba(255,255,255,0.65)); max-width: 640px; margin: 0 auto 2rem; }
+        .verdict-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(149,71,247,0.12); border: 1px solid rgba(149,71,247,0.3); border-radius: 2rem; padding: 0.5rem 1.25rem; font-size: 0.9rem; font-weight: 600; color: #c4a0ff; margin-bottom: 2rem; }
+
+        .comp-table-wrap { overflow-x: auto; margin: 3rem 0; }
+        .comp-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+        .comp-table th, .comp-table td { padding: 0.9rem 1.25rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.07); }
+        .comp-table thead th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.45); font-weight: 600; }
+        .comp-table .col-feature { color: rgba(255,255,255,0.75); font-weight: 500; }
+        .col-vosuba { color: #c4a0ff; font-weight: 600; }
+        .col-mw { color: rgba(255,255,255,0.5); }
+        .win { color: #34d399; }
+        .lose { color: rgba(255,255,255,0.3); }
+        .partial { color: #fbbf24; }
+        .comp-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+        .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.3); font-weight: 700; padding-top: 1.5rem !important; border-top: 1px solid rgba(255,255,255,0.05) !important; }
+
+        .verdict-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin: 3rem 0; }
+        .verdict-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem; }
+        .verdict-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .verdict-card p { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+        .verdict-card.vosuba-card { border-color: rgba(149,71,247,0.3); background: rgba(149,71,247,0.05); }
+        .verdict-card.vosuba-card h3 { color: #c4a0ff; }
+        .verdict-card.mw-card h3 { color: rgba(255,255,255,0.7); }
+
+        .faq-section { margin: 4rem 0; }
+        .faq-section h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 2rem; }
+
+        .cta-strip { background: rgba(149,71,247,0.1); border: 1px solid rgba(149,71,247,0.2); border-radius: 1.5rem; padding: 2.5rem; text-align: center; margin: 4rem 0; }
+        .cta-strip h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem; }
+        .cta-strip p { color: rgba(255,255,255,0.6); margin-bottom: 1.75rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+        @media (max-width: 600px) {
+            .comp-table th:nth-child(3), .comp-table td:nth-child(3) { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="32" height="32">
+                <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="/#product">Product</a>
+                <a href="/#features">Features</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+            </div>
+            <a href="/#pricing" class="nav-cta">Download Free</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+
+            <!-- HERO -->
+            <section class="comp-hero">
+                <div class="verdict-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    Both tools run 100% offline on Mac
+                </div>
+                <h1>Vosuba vs MacWhisper<br><span class="gradient-text">Which offline Mac subtitle tool wins?</span></h1>
+                <p>MacWhisper transcribes audio to text. Vosuba takes it the rest of the way — styled captions, burn-in, voiceover, and WCAG compliance. Here's the honest breakdown.</p>
+            </section>
+
+            <!-- FEATURE TABLE -->
+            <div class="comp-table-wrap">
+                <table class="comp-table" aria-label="Feature comparison between Vosuba and MacWhisper">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th class="col-vosuba">Vosuba AI</th>
+                            <th class="col-mw">MacWhisper</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="section-label" colspan="3">Transcription</td></tr>
+                        <tr>
+                            <td class="col-feature">Whisper model sizes</td>
+                            <td class="win">All 5 (tiny → turbo)</td>
+                            <td class="win">All 5 (tiny → large)</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Runs 100% offline</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="win">✓ Yes</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Speaker diarization</td>
+                            <td class="win">✓ Yes (Creator+)</td>
+                            <td class="partial">✓ Yes (paid)</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Word-level timestamps</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="win">✓ Yes</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Multi-language support</td>
+                            <td class="win">✓ 99 languages</td>
+                            <td class="win">✓ 99 languages</td>
+                        </tr>
+
+                        <tr><td class="section-label" colspan="3">Caption Styling & Output</td></tr>
+                        <tr>
+                            <td class="col-feature">Styled visual overlays</td>
+                            <td class="win">✓ 9 presets + custom</td>
+                            <td class="lose">✗ None</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Emotion-aware styling</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Animation presets</td>
+                            <td class="win">✓ 4 animations</td>
+                            <td class="lose">✗ None</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Burn subtitles into video</td>
+                            <td class="win">✓ Yes (via FFmpeg)</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">SRT export</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="win">✓ Yes</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">VTT export</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="win">✓ Yes</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">ASS export</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Real-time preview on video</td>
+                            <td class="win">✓ Yes (WYSIWYG)</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+
+                        <tr><td class="section-label" colspan="3">Accessibility & Compliance</td></tr>
+                        <tr>
+                            <td class="col-feature">WCAG 2.2 AA validation</td>
+                            <td class="win">✓ Built-in dashboard</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">CPS auto-fix</td>
+                            <td class="win">✓ One-click</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Sound detection (SDH)</td>
+                            <td class="win">✓ 60 labels, DCMP</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Accessibility package export</td>
+                            <td class="win">✓ SRT + VTT + report</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">ADA Title II compliance tools</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+
+                        <tr><td class="section-label" colspan="3">Voiceover & Audio</td></tr>
+                        <tr>
+                            <td class="col-feature">AI voiceover synthesis</td>
+                            <td class="win">✓ 24 voices (Pro+)</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Voice cloning</td>
+                            <td class="win">✓ Yes (Pro+)</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+
+                        <tr><td class="section-label" colspan="3">Workflow</td></tr>
+                        <tr>
+                            <td class="col-feature">Batch processing</td>
+                            <td class="win">✓ Yes (Pro+)</td>
+                            <td class="partial">✓ Limited</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Find &amp; replace (with regex)</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="partial">Basic</td>
+                        </tr>
+
+                        <tr><td class="section-label" colspan="3">Pricing</td></tr>
+                        <tr>
+                            <td class="col-feature">Free tier</td>
+                            <td class="win">✓ Unlimited SRT</td>
+                            <td class="partial">Limited trial</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Paid price</td>
+                            <td>$49 one-time (Creator)</td>
+                            <td>~$20 one-time</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Subscription required</td>
+                            <td class="win">✗ Never</td>
+                            <td class="win">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td class="col-feature">Enterprise / volume licensing</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- VERDICT CARDS -->
+            <h2 style="font-size:1.75rem; font-weight:800; margin-bottom:1.5rem;">The bottom line</h2>
+            <div class="verdict-grid">
+                <div class="verdict-card mw-card">
+                    <h3>Use MacWhisper if…</h3>
+                    <p>You need the fastest path from audio or video to a raw SRT or text file. It's a focused, lightweight tool that does transcription very well. Great for journalists, researchers, or developers extracting text from media.</p>
+                </div>
+                <div class="verdict-card vosuba-card">
+                    <h3>Use Vosuba if…</h3>
+                    <p>You need the full subtitle workflow: styled captions, burned-in video, WCAG compliance, sound detection, voiceover, or batch processing. Vosuba is a complete offline creative studio — not just a transcription utility.</p>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <section class="faq-section">
+                <h2>Common questions</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Can I use both Vosuba and MacWhisper?</summary>
+                        <div class="faq-answer">
+                            <p>Yes. Some users use MacWhisper for quick transcript extraction and Vosuba when they need styled captions for a final video. However, Vosuba's free tier already covers unlimited SRT exports — so for most subtitle workflows, Vosuba alone is sufficient.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Is Vosuba more expensive than MacWhisper?</summary>
+                        <div class="faq-answer">
+                            <p>MacWhisper's one-time price is around $20. Vosuba Creator is $49 one-time. The difference reflects a much broader feature set: styled overlays, burn-in, WCAG compliance tools, sound detection, voiceover studio, and batch processing. If you only need raw transcription, MacWhisper is the cheaper option. If you need complete caption production, Vosuba replaces multiple tools.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Which tool is better for university or government captioning compliance?</summary>
+                        <div class="faq-answer">
+                            <p>Vosuba is purpose-built for institutional compliance use cases. It validates captions against WCAG 2.2 Level AA, ADA, FCC, and DCMP standards, exports accessibility packages, and supports enterprise volume licensing. MacWhisper does not include any compliance tooling. For organisations needing to meet ADA Title II requirements, Vosuba is the clear choice.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Does Vosuba use the same Whisper models as MacWhisper?</summary>
+                        <div class="faq-answer">
+                            <p>Yes. Both tools use OpenAI's open-source Whisper models and run them locally on Apple Silicon. Transcription accuracy is equivalent between the two apps when using the same model size. The difference is everything built on top of the transcript.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <div class="cta-strip">
+                <h2>Try Vosuba free — no signup required</h2>
+                <p>Download the free version. Unlimited SRT exports, no watermark on text files, no cloud upload.</p>
+                <div class="cta-buttons">
+                    <a href="/#pricing" class="btn btn-primary btn-lg">Download Free</a>
+                    <a href="/#pricing" class="btn btn-ghost btn-lg">See Pricing →</a>
+                </div>
+            </div>
+
+            <!-- SEO BREADCRUMBS / LINKS -->
+            <nav aria-label="Comparisons" style="margin: 2rem 0; font-size:0.875rem; color:rgba(255,255,255,0.4);">
+                <a href="/" style="color:rgba(255,255,255,0.4);">Vosuba AI</a> /
+                <a href="/vs-macwhisper.html" style="color:rgba(255,255,255,0.65);">Vosuba vs MacWhisper</a>
+                &nbsp;·&nbsp;
+                Also compare: <a href="/vs-submagic.html" style="color:#c4a0ff;">Vosuba vs Submagic</a>,
+                <a href="/vs-captions-ai.html" style="color:#c4a0ff;">Vosuba vs Captions.ai</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo">
+                        <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="28" height="28">
+                        <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+                    </a>
+                    <p>AI subtitles &amp; voiceovers that never leave your Mac.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Compare</h4>
+                        <a href="/vs-macwhisper.html">vs MacWhisper</a>
+                        <a href="/vs-submagic.html">vs Submagic</a>
+                        <a href="/vs-captions-ai.html">vs Captions.ai</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="/#product">Features</a>
+                        <a href="/#pricing">Pricing</a>
+                        <a href="/#faq">FAQ</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="/cookies.html">Privacy &amp; Cookies</a>
+                        <a href="/terms.html">Terms of Service</a>
+                        <a href="/refund.html">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Shaking Sheep Studio Limited · Hong Kong SAR · All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
