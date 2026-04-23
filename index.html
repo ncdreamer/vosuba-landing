@@ -174,8 +174,11 @@
 </head>
 <body>
 
+    <!-- Skip to main content (WCAG 2.4.1) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- ═══════════════ NAVIGATION ═══════════════ -->
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Main navigation">
         <div class="nav-container">
             <a href="#" class="nav-logo">
                 <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="32" height="32">
@@ -185,11 +188,12 @@
                 <a href="#product">Product</a>
                 <a href="#features">Features</a>
                 <a href="#pricing">Pricing</a>
+                <a href="for-universities.html">For Teams</a>
                 <a href="#faq">FAQ</a>
             </div>
             <a href="#pricing" class="nav-cta">Download Free</a>
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
-                <span></span><span></span><span></span>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
             </button>
         </div>
     </nav>
@@ -202,6 +206,9 @@
         <a href="#faq">FAQ</a>
         <a href="#pricing" class="nav-cta">Download Free</a>
     </div>
+
+    <!-- ═══════════════ MAIN CONTENT ═══════════════ -->
+    <main id="main-content">
 
     <!-- ═══════════════ HERO ═══════════════ -->
     <section id="hero">
@@ -537,6 +544,12 @@
                         <a href="vs-captions-ai.html">vs Captions.ai</a>
                     </div>
                     <div class="footer-col">
+                        <h4>Use Cases</h4>
+                        <a href="for-universities.html">Universities</a>
+                        <a href="for-regulated-industries.html">Aviation &amp; Rail</a>
+                        <a href="for-creators.html">Content Creators</a>
+                    </div>
+                    <div class="footer-col">
                         <h4>Support</h4>
                         <a href="mailto:support@vosuba.com">Contact</a>
                         <a href="mailto:sales@vosuba.com">Enterprise Sales</a>
@@ -619,5 +632,7 @@
             document.body.appendChild(overlay);
         }
     </script>
+
+    </main><!-- end #main-content -->
 </body>
 </html>
