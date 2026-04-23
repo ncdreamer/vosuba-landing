@@ -521,3 +521,19 @@ section { padding: var(--section-padding) 0; position: relative; }
     .showcase-tab { justify-content: center; }
     .footer-links { flex-direction: column; gap: 24px; }
 }
+
+/* ─── WCAG 2.4.7: Focus Indicators (Sprint 2) ─── */
+:focus-visible {
+    outline: 2px solid var(--accent-purple, #8b5cf6);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+/* ─── WCAG 2.3.3: Reduced Motion (Sprint 2) ─── */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
