@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline WCAG-Compliant Captioning for Universities & Regulated Industries — Vosuba AI</title>
+    <meta name="description" content="Universities, transit agencies, and aviation teams use Vosuba to produce WCAG 2.1 AA-compliant captions without uploading sensitive video to the cloud. ADA Title II, Section 504, Section 508, and FERPA-friendly.">
+    <meta property="og:title" content="ADA-Compliant Video Captioning That Never Leaves Your Network">
+    <meta property="og:description" content="Meet ADA Title II, Section 504, Section 508, and FERPA obligations. Vosuba runs 100% on Mac — no cloud uploads, no vendor data agreements needed.">
+    <meta property="og:type" content="article">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="canonical" href="https://vosuba.com/for-universities.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CNDRRHHX3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2CNDRRHHX3');
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does ADA Title II require universities to caption their videos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The DOJ's 2024 final rule under ADA Title II requires state and local government entities — including public universities — to bring their web content and video into conformance with WCAG 2.1 Level AA. The compliance deadline for entities serving populations of 50,000 or more is April 26, 2027."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we upload student lecture recordings to a cloud captioning service?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not without a formal Data Processing Agreement. Under FERPA, video recordings that directly relate to identifiable students are education records. Uploading them to a third-party cloud service without a compliant written agreement may violate FERPA. Vosuba processes video entirely on your local Mac — nothing is uploaded."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What captioning standard does Section 508 require?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Section 508 of the Rehabilitation Act requires all federal agencies to caption pre-recorded and live video content. The technical standard is WCAG 2.0 Level AA. Automatically generated captions from platforms like YouTube typically do not meet the accuracy threshold required."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        .hero-inst { padding: 6rem 0 4rem; text-align: center; }
+        .hero-inst h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
+        .hero-inst p { font-size: 1.15rem; color: rgba(255,255,255,0.65); max-width: 660px; margin: 0 auto 2.5rem; }
+        .law-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.25); border-radius: 2rem; padding: 0.45rem 1.1rem; font-size: 0.85rem; font-weight: 600; color: #fca5a5; margin-bottom: 1.5rem; }
+        .deadline-banner { background: rgba(239,68,68,0.07); border: 1px solid rgba(239,68,68,0.2); border-radius: 1rem; padding: 1.25rem 1.75rem; margin: 2rem 0 3rem; display: flex; align-items: flex-start; gap: 1rem; }
+        .deadline-banner .icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+        .deadline-banner p { margin: 0; font-size: 0.95rem; color: rgba(255,255,255,0.75); line-height: 1.6; }
+        .deadline-banner strong { color: #fca5a5; }
+        .sector-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2.5rem 0; }
+        .sector-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem; }
+        .sector-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem; }
+        .sector-card .law-refs { font-size: 0.78rem; color: rgba(255,255,255,0.35); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+        .sector-card p { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+        .problem-section { margin: 4rem 0; }
+        .problem-section h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .problem-section .sub { color: rgba(255,255,255,0.5); margin-bottom: 2.5rem; font-size: 0.95rem; }
+        .cost-reality { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 2rem; margin: 2rem 0; }
+        .cost-reality h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 1rem; }
+        .cost-row { display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; }
+        .cost-row:last-child { border-bottom: none; }
+        .cost-row .label { color: rgba(255,255,255,0.6); }
+        .cost-row .value { font-weight: 600; }
+        .cost-row .value.bad { color: #fca5a5; }
+        .cost-row .value.good { color: #34d399; }
+        .solution-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin: 2.5rem 0; }
+        .solution-item { display: flex; gap: 0.85rem; align-items: flex-start; }
+        .solution-item .check { color: #34d399; font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+        .solution-item .text h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.2rem; }
+        .solution-item .text p { font-size: 0.875rem; color: rgba(255,255,255,0.55); line-height: 1.5; }
+        .citation { font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 0.25rem; }
+        .faq-section { margin: 4rem 0; }
+        .faq-section h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 2rem; }
+        .cta-strip { background: rgba(149,71,247,0.1); border: 1px solid rgba(149,71,247,0.2); border-radius: 1.5rem; padding: 2.5rem; text-align: center; margin: 4rem 0; }
+        .cta-strip h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem; }
+        .cta-strip p { color: rgba(255,255,255,0.6); margin-bottom: 1.75rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .disclaimer { font-size: 0.78rem; color: rgba(255,255,255,0.25); margin-top: 3rem; line-height: 1.6; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.5rem; }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="32" height="32">
+                <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="/#product">Product</a>
+                <a href="/#features">Features</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+            </div>
+            <a href="mailto:sales@vosuba.com" class="nav-cta">Talk to Sales</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+
+            <section class="hero-inst">
+                <div class="law-badge">
+                    ⚖️ ADA Title II · Section 504 · Section 508 · FERPA
+                </div>
+                <h1>WCAG-Compliant Captioning<br><span class="gradient-text">That Never Leaves Your Network</span></h1>
+                <p>Universities, transit agencies, airlines, and federal teams use Vosuba to produce ADA-compliant captions on Mac — without uploading sensitive footage to a third-party cloud.</p>
+                <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                    <a href="mailto:sales@vosuba.com" class="btn btn-primary btn-lg">Request Enterprise Quote</a>
+                    <a href="/#pricing" class="btn btn-ghost btn-lg">Download Free Trial</a>
+                </div>
+            </section>
+
+            <div class="deadline-banner">
+                <div class="icon">📅</div>
+                <p>
+                    <strong>ADA Title II compliance deadline: April 26, 2027</strong> for public entities serving populations of 50,000 or more. The DOJ published a final rule in 2024 requiring state and local governments — including public universities — to bring web content and video into conformance with <strong>WCAG 2.1 Level AA</strong>. An interim final rule on April 20, 2026 extended the original deadline by one year. The one-year window is now.
+                    <span class="citation">Source: U.S. Department of Justice, ada.gov</span>
+                </p>
+            </div>
+
+            <!-- WHO IS THIS FOR -->
+            <h2 style="font-size:1.75rem;font-weight:800;margin-bottom:0.5rem;">Who has a video captioning obligation?</h2>
+            <p style="color:rgba(255,255,255,0.5);margin-bottom:2rem;font-size:0.95rem;">Any organisation that produces video and is covered by one or more of these laws:</p>
+
+            <div class="sector-grid">
+                <div class="sector-card">
+                    <h3>🎓 Higher Education</h3>
+                    <div class="law-refs">ADA Title II · Section 504 · FERPA</div>
+                    <p>Public universities are state entities covered by ADA Title II. All web-published and LMS-hosted video — lectures, training, departmental content — must meet WCAG 2.1 AA by April 26, 2027. Lecture recordings containing identifiable students are FERPA-protected education records and cannot be uploaded to cloud services without a compliant Data Processing Agreement.</p>
+                </div>
+                <div class="sector-card">
+                    <h3>🚆 Public Transit & Rail</h3>
+                    <div class="law-refs">ADA Title II · Section 504 · FTA / FRA</div>
+                    <p>Transit authorities and rail operators are public entities subject to ADA Title II and Section 504 of the Rehabilitation Act. The Federal Transit Administration (FTA) and Federal Railroad Administration (FRA) require that communications — including training and safety videos — are accessible to employees and riders with disabilities.</p>
+                </div>
+                <div class="sector-card">
+                    <h3>✈️ Aviation & Airlines</h3>
+                    <div class="law-refs">ACAA 14 CFR Part 382 · ADA · Section 504</div>
+                    <p>Under the Air Carrier Access Act (14 CFR Part 382), airlines must ensure training materials are accessible to employees with disabilities. Safety and procedural training videos — which often contain sensitive operational footage — must be captioned as a reasonable accommodation, and may not be appropriately uploaded to consumer cloud tools.</p>
+                </div>
+                <div class="sector-card">
+                    <h3>🏛️ Federal Agencies</h3>
+                    <div class="law-refs">Section 508 · Rehabilitation Act</div>
+                    <p>Section 508 of the Rehabilitation Act requires all federal agencies to caption every pre-recorded and live video — internal training, onboarding, and employee communications included. The technical standard is WCAG 2.0 Level AA. Auto-generated captions from YouTube or Teams typically do not meet the required accuracy threshold (source: Section508.gov).</p>
+                </div>
+                <div class="sector-card">
+                    <h3>🏥 Healthcare & Research</h3>
+                    <div class="law-refs">Section 504 · HIPAA · ADA Title III</div>
+                    <p>Healthcare organisations receiving federal funding (Medicare/Medicaid) must comply with Section 504. Patient education video, staff training footage, and any recording containing identifiable patient information falls under HIPAA. Uploading HIPAA-protected video to a cloud captioning service without a Business Associate Agreement creates direct regulatory exposure.</p>
+                </div>
+                <div class="sector-card">
+                    <h3>🏙️ State & Local Government</h3>
+                    <div class="law-refs">ADA Title II · Section 504</div>
+                    <p>Every state and local government entity — city councils, county departments, public schools, emergency services — is covered by ADA Title II. Council meeting recordings, emergency briefings, and public information videos posted online must be WCAG 2.1 AA compliant by April 2027.</p>
+                </div>
+            </div>
+
+            <!-- THE COST PROBLEM -->
+            <section class="problem-section">
+                <h2>The cost of outsourced captioning adds up fast</h2>
+                <p class="sub">Based on published rates from professional captioning services (Rev.com, riverside.com, 2024)</p>
+
+                <div class="cost-reality">
+                    <h3>Scenario: a university department captioning 10 hours of lecture video per week</h3>
+                    <div class="cost-row">
+                        <span class="label">Human-verified captions (market rate: ~$1.50–$2.00/min)</span>
+                        <span class="value bad">~$900–$1,200 / week</span>
+                    </div>
+                    <div class="cost-row">
+                        <span class="label">Annual cost at that volume</span>
+                        <span class="value bad">~$46,800–$62,400 / year</span>
+                    </div>
+                    <div class="cost-row">
+                        <span class="label">Vosuba Enterprise (per Mac workstation)</span>
+                        <span class="value good">$249 / year</span>
+                    </div>
+                    <div class="cost-row">
+                        <span class="label">Processing speed (Apple Silicon)</span>
+                        <span class="value good">Faster than real-time · no turnaround wait</span>
+                    </div>
+                    <div class="cost-row">
+                        <span class="label">Video uploaded to third-party servers</span>
+                        <span class="value good">Never</span>
+                    </div>
+                </div>
+                <p style="font-size:0.8rem;color:rgba(255,255,255,0.3);">Captioning service rates sourced from public pricing pages. Vosuba is not a replacement for human review of legal or medical transcripts. Accuracy varies by audio quality and accent.</p>
+            </section>
+
+            <!-- HOW VOSUBA HELPS -->
+            <h2 style="font-size:1.75rem;font-weight:800;margin-bottom:2rem;">How Vosuba addresses institutional requirements</h2>
+            <div class="solution-grid">
+                <div class="solution-item">
+                    <span class="check">✓</span>
+                    <div class="text">
+                        <h4>100% offline processing</h4>
+                        <p>Video is processed entirely on your Mac using locally-installed AI models. No data is transmitted. No vendor DPA or BAA required.</p>
+                    </div>
+                </div>
+                <div class="solution-item">
+                    <span class="check">✓</span>
+                    <div class="text">
+                        <h4>WCAG 2.2 AA validation dashboard</h4>
+                        <p>Built-in compliance checker validates CPS (characters per second), line length, synchronisation, and contrast against WCAG 2.2 Level AA criteria.</p>
+                    </div>
+                </div>
+                <div class="solution-item">
+                    <span class="check">✓</span>
+                    <div class="text">
+                        <h4>SDH sound descriptions</h4>
+                        <p>60 standardised sound labels (e.g. [APPLAUSE], [ALARM]) for Subtitles for the Deaf and Hard of Hearing — required for full WCAG compliance.</p>
+                    </div>
+                </div>
+                <div class="solution-item">
+                    <span class="check">✓</span>
+                    <div class="text">
+                        <h4>SRT / VTT / ASS export</h4>
+                        <p>Export to all major formats compatible with LMS platforms (Canvas, Blackboard, Moodle), video players, and broadcast systems.</p>
+                    </div>
+                </div>
+                <div class="solution-item">
+                    <span class="check">✓</span>
+                    <div class="text">
+                        <h4>Batch processing for large libraries</h4>
+                        <p>Caption entire folders of recordings overnight on a single Mac workstation. No per-minute charges, no queue, no waiting.</p>
+                    </div>
+                </div>
+                <div class="solution-item">
+                    <span class="check">✓</span>
+                    <div class="text">
+                        <h4>Accessibility compliance export</h4>
+                        <p>Generate a compliance summary report — useful for accessibility audits, legal documentation, and department record-keeping.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <section class="faq-section">
+                <h2>Frequently asked questions</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Does ADA Title II require universities to caption their videos?</summary>
+                        <div class="faq-answer">
+                            <p>Yes. The DOJ's 2024 final rule under ADA Title II requires public universities (as state entities) to bring their web content and video into conformance with WCAG 2.1 Level AA. The compliance deadline for entities serving populations of 50,000 or more is <strong>April 26, 2027</strong> — extended from the original date by an interim final rule published April 20, 2026. The underlying obligation to provide effective communication to people with disabilities has existed since the ADA was enacted in 1990.</p>
+                            <p style="margin-top:0.5rem;font-size:0.8rem;color:rgba(255,255,255,0.35);">Source: U.S. Department of Justice, ada.gov</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can we upload student lecture recordings to a cloud captioning service?</summary>
+                        <div class="faq-answer">
+                            <p>Not without a formal, compliant Data Processing Agreement. Under FERPA, video recordings that directly relate to an identifiable student — such as a student's individual presentation, or a seminar recording where students participate — are education records. Institutions remain legally responsible for the data even when it is processed by a third-party vendor. Uploading such recordings to a consumer cloud service without a written agreement designating the vendor as a "school official" may constitute a FERPA violation.</p>
+                            <p>Vosuba processes all video locally on your Mac. Nothing is uploaded. No agreement is required.</p>
+                            <p style="margin-top:0.5rem;font-size:0.8rem;color:rgba(255,255,255,0.35);">Source: U.S. Department of Education, ed.gov; Family Educational Rights and Privacy Act (FERPA), 20 U.S.C. § 1232g</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Does Section 508 require federal agencies to caption internal training videos?</summary>
+                        <div class="faq-answer">
+                            <p>Yes. Section 508 of the Rehabilitation Act applies to <em>all</em> electronic and information technology developed, procured, maintained, or used by federal agencies — including internal training materials, onboarding videos, and employee communications. The standard is WCAG 2.0 Level AA. Auto-generated captions from platforms like YouTube or Microsoft Teams typically do not meet the required accuracy threshold and must be manually reviewed.</p>
+                            <p style="margin-top:0.5rem;font-size:0.8rem;color:rgba(255,255,255,0.35);">Source: Section508.gov; 29 U.S.C. § 794d</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>We use Windows across our organisation. Does Vosuba work for us?</summary>
+                        <div class="faq-answer">
+                            <p>Vosuba is currently a macOS-only application. It is best suited for teams that already use Mac workstations — common in media, design, and accessibility departments. If your accessibility team operates on Mac but the rest of your organisation uses Windows, Vosuba can still serve as your compliance captioning workstation. We are evaluating Windows support; <a href="mailto:sales@vosuba.com" style="color:#c4a0ff;">contact us</a> if this is a requirement.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Does Vosuba replace professional captioning vendors entirely?</summary>
+                        <div class="faq-answer">
+                            <p>For most standard video content — lectures, training, departmental communications — Vosuba's accuracy on clear audio is suitable for WCAG compliance. For content with significant legal, medical, or evidentiary weight, we recommend human review of AI-generated captions, as with any AI transcription tool. Vosuba dramatically reduces the cost of that review by giving you a high-quality first draft to correct, rather than a blank transcript.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <div class="cta-strip">
+                <h2>Interested in enterprise licensing?</h2>
+                <p>$249 per Mac workstation per year. Volume pricing available for teams of 5 or more. We'll respond within one business day.</p>
+                <div class="cta-buttons">
+                    <a href="mailto:sales@vosuba.com" class="btn btn-primary btn-lg">Email sales@vosuba.com</a>
+                    <a href="/#pricing" class="btn btn-ghost btn-lg">See all pricing</a>
+                </div>
+            </div>
+
+            <nav aria-label="Related pages" style="margin:2rem 0;font-size:0.875rem;color:rgba(255,255,255,0.4);">
+                <a href="/" style="color:rgba(255,255,255,0.4);">Vosuba AI</a> /
+                <a href="/for-universities.html" style="color:rgba(255,255,255,0.65);">Institutional Captioning</a>
+                &nbsp;·&nbsp;
+                Also see: <a href="/vs-macwhisper.html" style="color:#c4a0ff;">Vosuba vs MacWhisper</a>,
+                <a href="/for-creators.html" style="color:#c4a0ff;">For Creators</a>
+            </nav>
+
+            <p class="disclaimer">This page is provided for informational purposes and does not constitute legal advice. Compliance obligations vary by entity type, jurisdiction, and specific circumstances. Consult your organisation's legal counsel or accessibility coordinator to determine your specific obligations. ADA Title II deadline information sourced from the U.S. Department of Justice (ada.gov). FERPA information sourced from the U.S. Department of Education (ed.gov). Section 508 information sourced from Section508.gov. Captioning cost estimates sourced from published pricing by Rev.com and riverside.com (2024).</p>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo">
+                        <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="28" height="28">
+                        <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+                    </a>
+                    <p>AI subtitles &amp; voiceovers that never leave your Mac.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Compare</h4>
+                        <a href="/vs-macwhisper.html">vs MacWhisper</a>
+                        <a href="/vs-submagic.html">vs Submagic</a>
+                        <a href="/vs-captions-ai.html">vs Captions.ai</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Use Cases</h4>
+                        <a href="/for-universities.html">Universities &amp; Institutions</a>
+                        <a href="/for-creators.html">Content Creators</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="/cookies.html">Privacy &amp; Cookies</a>
+                        <a href="/terms.html">Terms of Service</a>
+                        <a href="/refund.html">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Shaking Sheep Studio Limited · Hong Kong SAR · All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

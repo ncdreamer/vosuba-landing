@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline AI Subtitle Tool for Mac Content Creators — Vosuba AI</title>
+    <meta name="description" content="Vosuba adds WCAG-compliant captions, styled subtitles, and AI voiceovers to your videos — entirely on your Mac. No subscription per-minute fees. No cloud uploads. Perfect for YouTubers, podcasters, and video editors.">
+    <meta property="og:title" content="Subtitles & Voiceovers for Mac Content Creators — Vosuba AI">
+    <meta property="og:description" content="One-time purchase. Burn subtitles, export SRT/VTT, generate AI voiceovers — all offline on Apple Silicon.">
+    <meta property="og:type" content="article">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="canonical" href="https://vosuba.com/for-creators.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CNDRRHHX3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2CNDRRHHX3');
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does Vosuba work without an internet connection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Vosuba runs 100% on your Mac using locally installed AI models. No internet connection is required after the initial download. Your footage never leaves your machine."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What video formats does Vosuba support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vosuba supports all major video formats including MP4, MOV, MKV, and AVI via FFmpeg. It exports subtitles as SRT, VTT, and ASS files, and can burn subtitles directly into video output."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Vosuba compare to cloud subtitle tools like Submagic or Captions.ai?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Unlike cloud tools that charge per minute or per video, Vosuba is a one-time purchase with no ongoing fees. It runs offline on Mac with Apple Silicon acceleration, supports WCAG-compliant caption formatting, and includes AI voiceover generation — all locally."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        .hero-creator { padding: 6rem 0 4rem; text-align: center; }
+        .hero-creator h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
+        .hero-creator p { font-size: 1.15rem; color: rgba(255,255,255,0.65); max-width: 640px; margin: 0 auto 2.5rem; }
+        .creator-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(149,71,247,0.15); border: 1px solid rgba(149,71,247,0.3); border-radius: 2rem; padding: 0.45rem 1.1rem; font-size: 0.85rem; font-weight: 600; color: #c4a0ff; margin-bottom: 1.5rem; }
+        .workflow-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.25rem; margin: 2.5rem 0; }
+        .workflow-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem; }
+        .workflow-card .emoji { font-size: 1.5rem; margin-bottom: 0.75rem; }
+        .workflow-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.35rem; }
+        .workflow-card p { font-size: 0.875rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+        .cost-compare { margin: 3rem 0; }
+        .cost-compare h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .cost-compare .sub { color: rgba(255,255,255,0.5); margin-bottom: 2rem; font-size: 0.95rem; }
+        .compare-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+        .compare-table th { text-align: left; padding: 0.75rem 1rem; background: rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.5); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .compare-table td { padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: rgba(255,255,255,0.7); }
+        .compare-table tr.highlight td { background: rgba(149,71,247,0.05); }
+        .compare-table .tick { color: #34d399; font-weight: 700; }
+        .compare-table .cross { color: #f87171; }
+        .compare-table .vosuba-col { color: #c4a0ff; font-weight: 600; }
+        .audience-section { margin: 3rem 0; }
+        .audience-section h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 2rem; }
+        .audience-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem; }
+        .audience-icon { font-size: 1.4rem; flex-shrink: 0; width: 2.5rem; text-align: center; }
+        .audience-text h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem; }
+        .audience-text p { font-size: 0.875rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+        .cta-strip { background: rgba(149,71,247,0.1); border: 1px solid rgba(149,71,247,0.2); border-radius: 1.5rem; padding: 2.5rem; text-align: center; margin: 4rem 0; }
+        .cta-strip h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem; }
+        .cta-strip p { color: rgba(255,255,255,0.6); margin-bottom: 1.75rem; }
+        .pill-row { display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2rem; }
+        .pill { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 2rem; padding: 0.35rem 0.9rem; font-size: 0.8rem; color: rgba(255,255,255,0.55); }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="32" height="32">
+                <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="/#product">Product</a>
+                <a href="/#features">Features</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+            </div>
+            <a href="/#pricing" class="nav-cta">Download Free</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+
+            <section class="hero-creator">
+                <div class="creator-badge">🎬 Built for Mac content creators</div>
+                <h1>Subtitles. Voiceovers. Compliance.<br><span class="gradient-text">All on Your Mac — Offline.</span></h1>
+                <p>Add styled captions, export SRT/VTT for YouTube, and generate AI voiceovers without uploading your footage to a subscription cloud service.</p>
+                <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                    <a href="/#pricing" class="btn btn-primary btn-lg">Download Free Trial</a>
+                    <a href="/vs-submagic.html" class="btn btn-ghost btn-lg">Compare vs Submagic →</a>
+                </div>
+            </section>
+
+            <div class="pill-row">
+                <span class="pill">✓ No per-minute fees</span>
+                <span class="pill">✓ Runs 100% offline</span>
+                <span class="pill">✓ Apple Silicon optimised</span>
+                <span class="pill">✓ SRT · VTT · ASS export</span>
+                <span class="pill">✓ Burned-in subtitles</span>
+                <span class="pill">✓ AI voiceover in 50+ voices</span>
+            </div>
+
+            <!-- WORKFLOW -->
+            <h2 style="font-size:1.75rem;font-weight:800;margin:3rem 0 0.5rem;">One tool for the full subtitle workflow</h2>
+            <p style="color:rgba(255,255,255,0.5);margin-bottom:2rem;font-size:0.95rem;">From raw recording to upload-ready file in minutes</p>
+
+            <div class="workflow-grid">
+                <div class="workflow-card">
+                    <div class="emoji">🎙️</div>
+                    <h3>Auto-transcription</h3>
+                    <p>Drop any video or audio file. Whisper-powered transcription runs locally — no cloud account, no wait, no privacy risk. Works on MP4, MOV, MKV, and more.</p>
+                </div>
+                <div class="workflow-card">
+                    <div class="emoji">✂️</div>
+                    <h3>Edit & time-sync</h3>
+                    <p>Edit captions inline in the built-in timeline editor. Adjust start/end times, fix word breaks, and split or merge segments before export.</p>
+                </div>
+                <div class="workflow-card">
+                    <div class="emoji">🎨</div>
+                    <h3>Style your subtitles</h3>
+                    <p>Choose font, size, colour, outline, position, and background. Create the bold one-word-at-a-time style popular on short-form video — or clean broadcast-style captions.</p>
+                </div>
+                <div class="workflow-card">
+                    <div class="emoji">📤</div>
+                    <h3>Export for any platform</h3>
+                    <p>Export SRT for YouTube, VTT for web players, ASS for DaVinci Resolve / Final Cut Pro, or burn subtitles permanently into an MP4 — all from one app.</p>
+                </div>
+                <div class="workflow-card">
+                    <div class="emoji">🗣️</div>
+                    <h3>AI voiceover studio</h3>
+                    <p>Generate natural-sounding voiceovers in 50+ voices and 30+ languages. Useful for B-roll narration, translated versions, or text-to-speech demos.</p>
+                </div>
+                <div class="workflow-card">
+                    <div class="emoji">♿</div>
+                    <h3>WCAG compliance check</h3>
+                    <p>Built-in validator checks reading speed (CPS), line length, and synchronisation against WCAG 2.2 AA criteria — useful if you publish to institutional or government channels.</p>
+                </div>
+            </div>
+
+            <!-- COST COMPARISON -->
+            <section class="cost-compare">
+                <h2>Stop paying per-minute forever</h2>
+                <p class="sub">How Vosuba compares to common cloud-based alternatives for independent creators</p>
+                <div style="overflow-x:auto;">
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th class="vosuba-col">Vosuba</th>
+                                <th>Submagic</th>
+                                <th>Captions.ai</th>
+                                <th>Rev (AI)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="highlight">
+                                <td>Business model</td>
+                                <td class="vosuba-col tick">One-time purchase</td>
+                                <td class="cross">Monthly subscription</td>
+                                <td class="cross">Monthly subscription</td>
+                                <td class="cross">Per-minute billing</td>
+                            </tr>
+                            <tr>
+                                <td>Starting price</td>
+                                <td class="vosuba-col tick">$49 one-time</td>
+                                <td class="cross">~$20/month</td>
+                                <td class="cross">~$17/month</td>
+                                <td class="cross">$0.25/min AI · $1.99/min human</td>
+                            </tr>
+                            <tr>
+                                <td>Footage uploaded to cloud</td>
+                                <td class="vosuba-col tick">Never</td>
+                                <td class="cross">Always</td>
+                                <td class="cross">Always</td>
+                                <td class="cross">Always</td>
+                            </tr>
+                            <tr>
+                                <td>Works offline</td>
+                                <td class="vosuba-col tick">✓</td>
+                                <td class="cross">✗</td>
+                                <td class="cross">✗</td>
+                                <td class="cross">✗</td>
+                            </tr>
+                            <tr>
+                                <td>AI voiceover included</td>
+                                <td class="vosuba-col tick">✓</td>
+                                <td class="cross">✗</td>
+                                <td class="cross">✗</td>
+                                <td class="cross">✗</td>
+                            </tr>
+                            <tr>
+                                <td>WCAG compliance check</td>
+                                <td class="vosuba-col tick">✓</td>
+                                <td class="cross">✗</td>
+                                <td class="cross">✗</td>
+                                <td class="cross">✗</td>
+                            </tr>
+                            <tr>
+                                <td>SRT / VTT / ASS export</td>
+                                <td class="vosuba-col tick">✓ All three</td>
+                                <td>SRT only</td>
+                                <td>SRT / VTT</td>
+                                <td>SRT / VTT</td>
+                            </tr>
+                            <tr>
+                                <td>Platform</td>
+                                <td class="vosuba-col">macOS only</td>
+                                <td>Web / Mobile</td>
+                                <td>Web / Mobile</td>
+                                <td>Web</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size:0.78rem;color:rgba(255,255,255,0.25);margin-top:0.75rem;">Competitor pricing sourced from public pricing pages as of April 2026. Subject to change. See <a href="/vs-submagic.html" style="color:#c4a0ff;">full Submagic comparison</a> and <a href="/vs-captions-ai.html" style="color:#c4a0ff;">Captions.ai comparison</a>.</p>
+            </section>
+
+            <!-- WHO IS IT FOR -->
+            <section class="audience-section">
+                <h2>Who uses Vosuba</h2>
+                <div class="audience-row">
+                    <div class="audience-icon">▶️</div>
+                    <div class="audience-text">
+                        <h3>YouTubers and video essayists</h3>
+                        <p>Burn styled captions into your export for maximum accessibility and watch-time. Export SRT for YouTube's built-in caption system. No upload limits, no per-video fees — caption entire back-catalogues overnight.</p>
+                    </div>
+                </div>
+                <div class="audience-row">
+                    <div class="audience-icon">🎙️</div>
+                    <div class="audience-text">
+                        <h3>Podcasters adding video</h3>
+                        <p>Convert recordings to video with captions already burned in. Generate an AI-voiced version of your script for multilingual clips or short-form cuts — all without leaving your Mac.</p>
+                    </div>
+                </div>
+                <div class="audience-row">
+                    <div class="audience-icon">🎞️</div>
+                    <div class="audience-text">
+                        <h3>Freelance video editors</h3>
+                        <p>Deliver captioned exports to clients fast. Export ASS files that import directly into DaVinci Resolve and Final Cut Pro. Run multiple jobs in batch without a cloud queue.</p>
+                    </div>
+                </div>
+                <div class="audience-row">
+                    <div class="audience-icon">📱</div>
+                    <div class="audience-text">
+                        <h3>Short-form creators (TikTok / Reels / Shorts)</h3>
+                        <p>Style captions for the vertical video format — large text, high contrast, word-by-word highlight. Keep your raw footage local and private; don't hand your unreleased clips to a cloud service.</p>
+                    </div>
+                </div>
+                <div class="audience-row">
+                    <div class="audience-icon">🌐</div>
+                    <div class="audience-text">
+                        <h3>Multilingual content creators</h3>
+                        <p>Generate translated subtitle files or AI-voiced narration in 30+ languages. Localise once and export separate SRT files per language for the same source video.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <h2 style="font-size:1.75rem;font-weight:800;margin-bottom:2rem;">Common questions</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Does Vosuba work without an internet connection?</summary>
+                    <div class="faq-answer">
+                        <p>Yes. Once installed, Vosuba runs entirely on your Mac. The AI transcription model (Whisper) and TTS models run locally using Apple Silicon acceleration. No internet is required for transcription, subtitle editing, or voiceover generation. An internet connection is only needed for the initial download and licence activation.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>What's the difference between the tiers?</summary>
+                    <div class="faq-answer">
+                        <p><strong>Free</strong> — unlimited transcription, basic subtitle export, WCAG validator. <strong>Pro ($49 one-time)</strong> — styled subtitles, burned-in export, batch processing, ASS export. <strong>Studio ($99 one-time)</strong> — everything in Pro plus AI voiceover studio, SDH sound labels, compliance export. See the full breakdown on the <a href="/#pricing" style="color:#c4a0ff;">pricing page</a>.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>How accurate is the transcription?</summary>
+                    <div class="faq-answer">
+                        <p>Vosuba uses OpenAI's Whisper model. On clear audio with a native speaker, word-error rates are typically low (under 5% for English). Accuracy drops with strong accents, overlapping speakers, or noisy environments. You can edit every caption segment in the built-in editor before export.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I burn subtitles into a video for social media?</summary>
+                    <div class="faq-answer">
+                        <p>Yes. Vosuba uses FFmpeg to render styled subtitles directly into your video output file. The result is a single MP4 with captions permanently embedded — ready to upload to any platform without relying on that platform's caption system.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="cta-strip">
+                <h2>Download free and start today</h2>
+                <p>No account needed. No credit card. Runs on any Mac with Apple Silicon (M1 or later).</p>
+                <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                    <a href="/#pricing" class="btn btn-primary btn-lg">Get Vosuba Free</a>
+                    <a href="/vs-macwhisper.html" class="btn btn-ghost btn-lg">How we compare →</a>
+                </div>
+            </div>
+
+            <nav aria-label="Related pages" style="margin:2rem 0;font-size:0.875rem;color:rgba(255,255,255,0.4);">
+                <a href="/" style="color:rgba(255,255,255,0.4);">Vosuba AI</a> /
+                <a href="/for-creators.html" style="color:rgba(255,255,255,0.65);">For Creators</a>
+                &nbsp;·&nbsp;
+                Also see: <a href="/vs-submagic.html" style="color:#c4a0ff;">vs Submagic</a>,
+                <a href="/vs-captions-ai.html" style="color:#c4a0ff;">vs Captions.ai</a>,
+                <a href="/for-universities.html" style="color:#c4a0ff;">Institutional Captioning</a>
+            </nav>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo">
+                        <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="28" height="28">
+                        <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+                    </a>
+                    <p>AI subtitles &amp; voiceovers that never leave your Mac.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Compare</h4>
+                        <a href="/vs-macwhisper.html">vs MacWhisper</a>
+                        <a href="/vs-submagic.html">vs Submagic</a>
+                        <a href="/vs-captions-ai.html">vs Captions.ai</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Use Cases</h4>
+                        <a href="/for-universities.html">Universities &amp; Institutions</a>
+                        <a href="/for-creators.html">Content Creators</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="/cookies.html">Privacy &amp; Cookies</a>
+                        <a href="/terms.html">Terms of Service</a>
+                        <a href="/refund.html">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Shaking Sheep Studio Limited · Hong Kong SAR · All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
