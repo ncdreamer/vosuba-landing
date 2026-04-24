@@ -48,6 +48,19 @@
     </script>
 
     <style>
+        /* Use-case grid */
+        .usecase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin: 2rem 0 3rem; }
+        .usecase-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.25rem 1.5rem; }
+        .usecase-card .uc-icon { font-size: 1.5rem; margin-bottom: 0.5rem; display: block; }
+        .usecase-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.35rem; }
+        .usecase-card p { font-size: 0.85rem; color: rgba(255,255,255,0.52); line-height: 1.55; margin: 0; }
+        .usecase-card .uc-volume { display: inline-block; margin-top: 0.6rem; font-size: 0.72rem; color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.05); border-radius: 0.3rem; padding: 0.1rem 0.5rem; }
+        /* Stats bar */
+        .stats-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1.25rem; margin: 2rem 0 3rem; }
+        .stat-card { background: rgba(149,71,247,0.07); border: 1px solid rgba(149,71,247,0.18); border-radius: 1rem; padding: 1.25rem 1.5rem; text-align: center; }
+        .stat-card .stat-num { font-size: 2rem; font-weight: 900; color: #c4a0ff; display: block; line-height: 1.1; margin-bottom: 0.35rem; }
+        .stat-card p { font-size: 0.82rem; color: rgba(255,255,255,0.52); line-height: 1.45; margin: 0; }
+        .stat-card .stat-src { font-size: 0.7rem; color: rgba(255,255,255,0.22); margin-top: 0.4rem; display: block; }
         .hero-uni { padding: 6rem 0 4rem; text-align: center; }
         .hero-uni h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
         .hero-uni p { font-size: 1.15rem; color: rgba(255,255,255,0.65); max-width: 660px; margin: 0 auto 2.5rem; }
@@ -111,17 +124,85 @@
                     <span class="jur-badge eu">🇪🇺 EU</span>
                     <span class="jur-badge us">🇺🇸 US</span>
                 </div>
-                <h1>Video Captioning Compliance<br><span class="gradient-text">for Higher Education</span></h1>
-                <p>UK, EU, and US universities all face enforceable video accessibility obligations. Vosuba produces WCAG-compliant captions on-device — no cloud upload, no GDPR exposure, no Data Processing Agreement needed.</p>
+                <h1>Caption Every Lecture.<br><span class="gradient-text">Without the Cloud Bill.</span></h1>
+                <p>Universities produce hundreds of hours of video every semester — lectures, training, research, communications. Vosuba captions it all on your Mac, overnight, with no per-minute fees and no GDPR risk from cloud uploads.</p>
                 <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
                     <a href="mailto:sales@vosuba.com" class="btn btn-primary btn-lg">Request a Quote</a>
                     <a href="/#pricing" class="btn btn-ghost btn-lg">Try Free</a>
                 </div>
             </section>
 
+            <!-- USE CASES -->
+            <h2 style="font-size:1.6rem;font-weight:800;margin-bottom:0.35rem;">Where universities need captions</h2>
+            <p style="color:rgba(255,255,255,0.5);font-size:0.92rem;margin-bottom:1.75rem;">Every department produces video. Most of it is uncaptioned.</p>
+            <div class="usecase-grid">
+                <div class="usecase-card">
+                    <span class="uc-icon">🎓</span>
+                    <h4>Lecture &amp; Seminar Recordings</h4>
+                    <p>Teams, Zoom, and Panopto recordings pile up daily. Accessibility teams can't manually caption every session. Vosuba batches an entire week overnight on one Mac.</p>
+                    <span class="uc-volume">Typical volume: 20–100+ hrs/semester per department</span>
+                </div>
+                <div class="usecase-card">
+                    <span class="uc-icon">🖥️</span>
+                    <h4>Online &amp; Hybrid Course Content</h4>
+                    <p>LMS platforms (Canvas, Moodle, Blackboard, Panopto, Kaltura) require SRT or VTT files alongside video. Vosuba exports both — ready to upload.</p>
+                    <span class="uc-volume">Required by: Canvas, Moodle, Blackboard, Kaltura</span>
+                </div>
+                <div class="usecase-card">
+                    <span class="uc-icon">📢</span>
+                    <h4>Staff Training &amp; HR</h4>
+                    <p>Mandatory onboarding, HR policy, and Continuing Professional Development video. The Equality Act requires these to be accessible to disabled staff — not just students.</p>
+                    <span class="uc-volume">Equality Act 2010 s.20 anticipatory duty</span>
+                </div>
+                <div class="usecase-card">
+                    <span class="uc-icon">🔬</span>
+                    <h4>Research &amp; Conference Talks</h4>
+                    <p>Recorded seminars, symposia, and open-access research presentations. Often posted publicly — making PSBAR / WAD captioning requirements directly applicable.</p>
+                    <span class="uc-volume">Open access = public-facing = PSBAR applies</span>
+                </div>
+                <div class="usecase-card">
+                    <span class="uc-icon">🎬</span>
+                    <h4>Student Media Projects</h4>
+                    <p>Film, journalism, and media departments produce student content that may be published externally. Departments can integrate Vosuba into the standard production workflow.</p>
+                    <span class="uc-volume">Media, Film, Journalism, Communication depts</span>
+                </div>
+                <div class="usecase-card">
+                    <span class="uc-icon">📣</span>
+                    <h4>Marketing &amp; Recruitment Video</h4>
+                    <p>Open day videos, prospectus content, alumni communications. Public-facing — must meet WCAG 2.2 AA under PSBAR. Captioning also improves watch-through rates.</p>
+                    <span class="uc-volume">Comms, Marketing, Student Recruitment teams</span>
+                </div>
+            </div>
+
+            <!-- STATS BAR -->
+            <h2 style="font-size:1.6rem;font-weight:800;margin-bottom:0.35rem;">Why it matters beyond the law</h2>
+            <p style="color:rgba(255,255,255,0.5);font-size:0.92rem;margin-bottom:1.75rem;">Captions improve outcomes for every viewer — not just those who need them.</p>
+            <div class="stats-bar">
+                <div class="stat-card">
+                    <span class="stat-num">70%</span>
+                    <p>of people now use subtitles even when they can hear perfectly well</p>
+                    <span class="stat-src">Source: sonix.ai viewer survey</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">+75%</span>
+                    <p>higher video completion rate when captions are available on training content</p>
+                    <span class="stat-src">Source: waywithwords.net; 3Play Media research</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">£0/min</span>
+                    <p>per-minute captioning cost with Vosuba vs. £1.20–£1.60/min from outsourced providers</p>
+                    <span class="stat-src">Source: Rev.com, riverside.com published rates (2024)</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">100%</span>
+                    <p>of video content is unsearchable by Google and your LMS — until you add a caption file</p>
+                    <span class="stat-src">Search engines index text, not audio</span>
+                </div>
+            </div>
+
             <!-- REGULATORY OVERVIEW -->
-            <h2 style="font-size:1.6rem;font-weight:800;margin-bottom:0.5rem;">The legal framework, by jurisdiction</h2>
-            <p style="color:rgba(255,255,255,0.5);font-size:0.92rem;margin-bottom:1.5rem;">Each jurisdiction has its own law. All require WCAG-aligned captions on video.</p>
+            <h2 style="font-size:1.6rem;font-weight:800;margin-bottom:0.5rem;">Your compliance obligations at a glance</h2>
+            <p style="color:rgba(255,255,255,0.5);font-size:0.92rem;margin-bottom:1.5rem;">Each jurisdiction has its own law. All require WCAG-aligned captions on pre-recorded video.</p>
 
             <div class="law-block">
                 <div class="law-block-header">
@@ -224,7 +305,7 @@
             <p style="font-size:0.78rem;color:rgba(255,255,255,0.25);">Cost estimates based on published pricing by Rev.com and riverside.com (2024). Actual costs vary by provider, volume, and turnaround tier. Vosuba accuracy varies by audio quality; human review recommended for formal records.</p>
 
             <!-- WHAT VOSUBA DOES -->
-            <h2 style="font-size:1.6rem;font-weight:800;margin:3rem 0 1.75rem;">How Vosuba supports compliance</h2>
+            <h2 style="font-size:1.6rem;font-weight:800;margin:3rem 0 1.75rem;">What you get with Vosuba</h2>
             <div class="solution-grid">
                 <div class="solution-item">
                     <span class="check">✓</span>

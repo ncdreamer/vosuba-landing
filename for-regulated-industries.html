@@ -48,6 +48,19 @@
     </script>
 
     <style>
+        /* Use-case grid */
+        .usecase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin: 2rem 0 3rem; }
+        .usecase-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.25rem 1.5rem; }
+        .usecase-card .uc-icon { font-size: 1.5rem; margin-bottom: 0.5rem; display: block; }
+        .usecase-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.35rem; }
+        .usecase-card p { font-size: 0.85rem; color: rgba(255,255,255,0.52); line-height: 1.55; margin: 0; }
+        .usecase-card .uc-tag { display: inline-block; margin-top: 0.6rem; font-size: 0.72rem; color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.05); border-radius: 0.3rem; padding: 0.1rem 0.5rem; }
+        /* Stats bar */
+        .stats-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1.25rem; margin: 2rem 0 3rem; }
+        .stat-card { background: rgba(149,71,247,0.07); border: 1px solid rgba(149,71,247,0.18); border-radius: 1rem; padding: 1.25rem 1.5rem; text-align: center; }
+        .stat-card .stat-num { font-size: 2rem; font-weight: 900; color: #c4a0ff; display: block; line-height: 1.1; margin-bottom: 0.35rem; }
+        .stat-card p { font-size: 0.82rem; color: rgba(255,255,255,0.52); line-height: 1.45; margin: 0; }
+        .stat-card .stat-src { font-size: 0.7rem; color: rgba(255,255,255,0.22); margin-top: 0.4rem; display: block; }
         .hero-reg { padding: 6rem 0 4rem; text-align: center; }
         .hero-reg h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
         .hero-reg p { font-size: 1.15rem; color: rgba(255,255,255,0.65); max-width: 660px; margin: 0 auto 2.5rem; }
@@ -108,15 +121,85 @@
                     <span class="jur-badge eu">🇪🇺 EU</span>
                     <span class="jur-badge us">🇺🇸 US</span>
                 </div>
-                <h1>Video Captioning for<br><span class="gradient-text">Regulated Industries</span></h1>
-                <p>Aviation, rail, transport, healthcare, and media organisations produce high volumes of training and compliance video — often containing sensitive footage that cannot be uploaded to a cloud service. Vosuba captions everything on-device.</p>
+                <h1>Caption Sensitive Training Video<br><span class="gradient-text">Without Sending It to the Cloud.</span></h1>
+                <p>Aviation, rail, healthcare, and media organisations produce high volumes of training and operational video — much of it too sensitive to upload externally. Vosuba captions it all on-device: faster, cheaper, and without touching your data.</p>
                 <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
                     <a href="mailto:sales@vosuba.com" class="btn btn-primary btn-lg">Request Enterprise Quote</a>
                     <a href="/#pricing" class="btn btn-ghost btn-lg">Try Free</a>
                 </div>
             </section>
 
+            <!-- USE CASES -->
+            <h2 style="font-size:1.6rem;font-weight:800;margin-bottom:0.35rem;">What your team actually uses captioning for</h2>
+            <p style="color:rgba(255,255,255,0.5);font-size:0.92rem;margin-bottom:1.75rem;">Every regulated organisation produces video. Most of it can’t go near a third-party cloud service.</p>
+            <div class="usecase-grid">
+                <div class="usecase-card">
+                    <span class="uc-icon">✈️</span>
+                    <h4>Aviation Safety &amp; Recurrency Training</h4>
+                    <p>Cabin crew refreshers, dispatch briefings, incident walkthroughs. Often filmed in secure facilities — cloud upload is a data and security risk. Vosuba captions everything on your own hardware.</p>
+                    <span class="uc-tag">ADA · ACAA · UK Equality Act</span>
+                </div>
+                <div class="usecase-card">
+                    <span class="uc-icon">🚆</span>
+                    <h4>Rail Rules of the Road &amp; Competency Training</h4>
+                    <p>Driver competency assessments, platform safety briefings, Rules of the Road updates. Regulatory training for rail staff must be documented and accessible.</p>
+                    <span class="uc-tag">EAA · UK Equality Act · ADA Title II</span>
+                </div>
+                <div class="usecase-card">
+                    <span class="uc-icon">🏥</span>
+                    <h4>Clinical &amp; Mandatory Healthcare Training</h4>
+                    <p>Safeguarding, infection control, mandatory annual training. Patient-identifiable footage is special category data under GDPR — cloud captioning creates a DPA/BAA liability.</p>
+                    <span class="uc-tag">UK GDPR · HIPAA · Section 504</span>
+                </div>
+                <div class="usecase-card">
+                    <span class="uc-icon">🎤</span>
+                    <h4>Executive Communications &amp; Town Halls</h4>
+                    <p>Leadership briefings, strategy videos, employee all-hands recordings. Captioning improves retention and reach across a global, multilingual workforce.</p>
+                    <span class="uc-tag">EAA · Equality Act · ADA Title III</span>
+                </div>
+                <div class="usecase-card">
+                    <span class="uc-icon">📺</span>
+                    <h4>Customer-Facing &amp; Broadcast Content</h4>
+                    <p>Passenger safety announcements, public information video, streaming platform content. The EAA now requires private sector audiovisual services to meet accessibility standards.</p>
+                    <span class="uc-tag">EAA 2019/882 · AVMS Directive · Ofcom</span>
+                </div>
+                <div class="usecase-card">
+                    <span class="uc-icon">🏦</span>
+                    <h4>Financial Services Compliance Training</h4>
+                    <p>AML/KYC refreshers, FCA regulatory updates, annual mandatory modules. Sensitive market data and employee footage shouldn’t leave your infrastructure.</p>
+                    <span class="uc-tag">EAA · UK Equality Act · FCA guidance</span>
+                </div>
+            </div>
+
+            <!-- STATS BAR -->
+            <h2 style="font-size:1.6rem;font-weight:800;margin-bottom:0.35rem;">Why captions work for your team, not just your lawyers</h2>
+            <p style="color:rgba(255,255,255,0.5);font-size:0.92rem;margin-bottom:1.75rem;">The business case is just as strong as the compliance case.</p>
+            <div class="stats-bar">
+                <div class="stat-card">
+                    <span class="stat-num">+75%</span>
+                    <p>higher training video completion rate when captions are available</p>
+                    <span class="stat-src">Source: waywithwords.net; 3Play Media</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">85%</span>
+                    <p>of workplace video is watched without sound in open-plan or public environments</p>
+                    <span class="stat-src">Source: 41nine.com viewer data</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">£0/min</span>
+                    <p>per-minute cost with Vosuba vs. £1.20–£1.60/min outsourced, for unlimited volume</p>
+                    <span class="stat-src">Source: Rev.com, riverside.com (2024)</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">0</span>
+                    <p>data transfers, cloud uploads, or third-party processors — eliminating GDPR Art. 28 risk</p>
+                    <span class="stat-src">Fully local processing on your Mac</span>
+                </div>
+            </div>
+
             <!-- EAA BANNER -->
+            <h2 style="font-size:1.6rem;font-weight:800;margin-bottom:0.5rem;">Your compliance obligations at a glance</h2>
+            <p style="color:rgba(255,255,255,0.5);font-size:0.92rem;margin-bottom:1.5rem;">The key laws, by sector and jurisdiction.</p>
             <div class="eaa-banner">
                 <div class="icon">📌</div>
                 <div>
@@ -127,8 +210,6 @@
                         <li><strong>New products/services:</strong> must comply now. <strong>Existing products/services</strong> (on market before June 2025): must comply by <strong>28 June 2030</strong>.</li>
                         <li>Micro-enterprises (&lt;10 employees, &lt;€2M turnover) may qualify for an exemption.</li>
                     </ul>
-                    <p><strong>European Accessibility Act (EAA)</strong> — enforceable as of 28 June 2025.</p>
-                    <p style="margin-top:0.4rem;font-size:0.88rem;color:rgba(255,255,255,0.6);">Covers private sector transport, banking, media, and e-commerce. Existing services have until 28 June 2030 to comply.</p>
                     <span class="source">Source: EU Directive 2019/882 (eur-lex.europa.eu)</span>
                 </div>
             </div>
