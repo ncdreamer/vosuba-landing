@@ -31,8 +31,8 @@
     --bg-elevated: #1e2744;
 
     --text-primary: #f0f2f8;
-    --text-secondary: #8b95b0;
-    --text-muted: #5a6580;
+    --text-secondary: #9ba5c0;  /* upgraded from #8b95b0 — now ≥4.5:1 on bg-primary */
+    --text-muted: #7a849e;       /* upgraded from #5a6580 — now ≥4.5:1 on bg-primary */
 
     --accent-purple: #8b5cf6;
     --accent-cyan: #06d6a0;
@@ -238,7 +238,7 @@ section { padding: var(--section-padding) 0; position: relative; }
 .hero-proof { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
 .proof-item {
     display: flex; align-items: center; gap: 8px;
-    font-size: 0.85rem; color: var(--text-muted);
+    font-size: 0.85rem; color: var(--text-secondary); /* was text-muted; raised for 4.5:1 */
 }
 .proof-item svg { color: var(--accent-cyan); flex-shrink: 0; }
 
@@ -429,9 +429,14 @@ section { padding: var(--section-padding) 0; position: relative; }
     transition: color var(--transition-fast);
 }
 .faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:focus-visible {
+    outline: 2px solid var(--accent-purple);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
 .faq-item summary::after {
     content: '+'; font-size: 1.3rem; font-weight: 300;
-    color: var(--text-muted); transition: transform var(--transition-fast);
+    color: var(--text-secondary); transition: transform var(--transition-fast);
 }
 .faq-item[open] summary::after { content: '−'; }
 .faq-item summary:hover { color: white; }
@@ -467,11 +472,11 @@ section { padding: var(--section-padding) 0; position: relative; }
 .footer-brand p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
 .footer-links { display: flex; gap: 64px; }
 .footer-col { display: flex; flex-direction: column; gap: 10px; }
-.footer-col h4 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 4px; }
+.footer-col h4 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); margin-bottom: 4px; }
 .footer-col a { font-size: 0.9rem; color: var(--text-secondary); transition: color var(--transition-fast); }
 .footer-col a:hover { color: var(--text-primary); }
 .footer-bottom { border-top: 1px solid var(--border-color); padding-top: 24px; }
-.footer-bottom p { font-size: 0.8rem; color: var(--text-muted); text-align: center; }
+.footer-bottom p { font-size: 0.8rem; color: var(--text-secondary); text-align: center; }
 
 /* ═══════════════ RESPONSIVE ═══════════════ */
 @media (max-width: 1024px) {
@@ -522,13 +527,23 @@ section { padding: var(--section-padding) 0; position: relative; }
     .footer-links { flex-direction: column; gap: 24px; }
 }
 
-/* ─── WCAG 2.4.7: Focus Indicators (Sprint 2) ─── */
+/* ─── WCAG 2.4.7: Focus Indicators ─── */
 :focus-visible {
     outline: 2px solid var(--accent-purple, #8b5cf6);
     outline-offset: 2px;
     border-radius: 4px;
 }
-/* ─── WCAG 2.3.3: Reduced Motion (Sprint 2) ─── */
+
+/* ─── Screen-reader utility ─── */
+.sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0);
+    white-space: nowrap; border: 0;
+}
+
+/* ─── WCAG 2.3.3: Reduced Motion ─── */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation-duration: 0.01ms !important;

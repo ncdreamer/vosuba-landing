@@ -59,19 +59,19 @@
     <style>
         .hero-creator { padding: 6rem 0 4rem; text-align: center; }
         .hero-creator h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
-        .hero-creator p { font-size: 1.15rem; color: rgba(255,255,255,0.65); max-width: 640px; margin: 0 auto 2.5rem; }
+        .hero-creator p { font-size: 1.15rem; color: rgba(255,255,255,0.82); max-width: 640px; margin: 0 auto 2.5rem; }
         .creator-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(149,71,247,0.15); border: 1px solid rgba(149,71,247,0.3); border-radius: 2rem; padding: 0.45rem 1.1rem; font-size: 0.85rem; font-weight: 600; color: #c4a0ff; margin-bottom: 1.5rem; }
         .workflow-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.25rem; margin: 2.5rem 0; }
         .workflow-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem; }
         .workflow-card .emoji { font-size: 1.5rem; margin-bottom: 0.75rem; }
         .workflow-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.35rem; }
-        .workflow-card p { font-size: 0.875rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+        .workflow-card p { font-size: 0.875rem; color: rgba(255,255,255,0.78); line-height: 1.6; }
         .cost-compare { margin: 3rem 0; }
         .cost-compare h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.5rem; }
-        .cost-compare .sub { color: rgba(255,255,255,0.5); margin-bottom: 2rem; font-size: 0.95rem; }
+        .cost-compare .sub { color: rgba(255,255,255,0.78); margin-bottom: 2rem; font-size: 0.95rem; }
         .compare-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-        .compare-table th { text-align: left; padding: 0.75rem 1rem; background: rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.5); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
-        .compare-table td { padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: rgba(255,255,255,0.7); }
+        .compare-table th { text-align: left; padding: 0.75rem 1rem; background: rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.78); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .compare-table td { padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: rgba(255,255,255,0.82); }
         .compare-table tr.highlight td { background: rgba(149,71,247,0.05); }
         .compare-table .tick { color: #34d399; font-weight: 700; }
         .compare-table .cross { color: #f87171; }
@@ -81,15 +81,17 @@
         .audience-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem; }
         .audience-icon { font-size: 1.4rem; flex-shrink: 0; width: 2.5rem; text-align: center; }
         .audience-text h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem; }
-        .audience-text p { font-size: 0.875rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+        .audience-text p { font-size: 0.875rem; color: rgba(255,255,255,0.78); line-height: 1.6; }
         .cta-strip { background: rgba(149,71,247,0.1); border: 1px solid rgba(149,71,247,0.2); border-radius: 1.5rem; padding: 2.5rem; text-align: center; margin: 4rem 0; }
         .cta-strip h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem; }
-        .cta-strip p { color: rgba(255,255,255,0.6); margin-bottom: 1.75rem; }
+        .cta-strip p { color: rgba(255,255,255,0.82); margin-bottom: 1.75rem; }
         .pill-row { display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2rem; }
-        .pill { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 2rem; padding: 0.35rem 0.9rem; font-size: 0.8rem; color: rgba(255,255,255,0.55); }
+        .pill { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 2rem; padding: 0.35rem 0.9rem; font-size: 0.8rem; color: rgba(255,255,255,0.78); }
     </style>
 </head>
 <body>
+    <!-- Skip to main content (WCAG 2.4.1) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <nav id="navbar">
         <div class="nav-container">
@@ -107,7 +109,7 @@
         </div>
     </nav>
 
-    <main>
+    <main id="main-content">
         <div class="container">
 
             <section class="hero-creator">
@@ -131,7 +133,7 @@
 
             <!-- WORKFLOW -->
             <h2 style="font-size:1.75rem;font-weight:800;margin:3rem 0 0.5rem;">One tool for the full subtitle workflow</h2>
-            <p style="color:rgba(255,255,255,0.5);margin-bottom:2rem;font-size:0.95rem;">From raw recording to upload-ready file in minutes</p>
+            <p style="color:rgba(255,255,255,0.78);margin-bottom:2rem;font-size:0.95rem;">From raw recording to upload-ready file in minutes</p>
 
             <div class="workflow-grid">
                 <div class="workflow-card">
@@ -174,12 +176,12 @@
                     <table class="compare-table">
                         <thead>
                             <tr>
-                                <th>Feature</th>
-                                <th class="vosuba-col">Vosuba</th>
-                                <th>Submagic</th>
-                                <th>Captions.ai</th>
-                                <th>Rev (AI)</th>
-                            </tr>
+                            <th scope="col">Feature</th>
+                            <th scope="col" class="vosuba-col">Vosuba</th>
+                            <th scope="col">Submagic</th>
+                            <th scope="col">Captions.ai</th>
+                            <th scope="col">Rev (AI)</th>
+                        </tr>
                         </thead>
                         <tbody>
                             <tr class="highlight">
@@ -241,7 +243,7 @@
                         </tbody>
                     </table>
                 </div>
-                <p style="font-size:0.78rem;color:rgba(255,255,255,0.25);margin-top:0.75rem;">Competitor pricing sourced from public pricing pages as of April 2026. Subject to change. See <a href="/vs-submagic.html" style="color:#c4a0ff;">full Submagic comparison</a> and <a href="/vs-captions-ai.html" style="color:#c4a0ff;">Captions.ai comparison</a>.</p>
+                <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);margin-top:0.75rem;">Competitor pricing sourced from public pricing pages as of April 2026. Subject to change. See <a href="/vs-submagic.html" style="color:#c4a0ff;">full Submagic comparison</a> and <a href="/vs-captions-ai.html" style="color:#c4a0ff;">Captions.ai comparison</a>.</p>
             </section>
 
             <!-- WHO IS IT FOR -->
@@ -322,9 +324,9 @@
                 </div>
             </div>
 
-            <nav aria-label="Related pages" style="margin:2rem 0;font-size:0.875rem;color:rgba(255,255,255,0.4);">
-                <a href="/" style="color:rgba(255,255,255,0.4);">Vosuba AI</a> /
-                <a href="/for-creators.html" style="color:rgba(255,255,255,0.65);">For Creators</a>
+            <nav aria-label="Breadcrumb and related pages" style="margin:2rem 0;font-size:0.875rem;">
+                <a href="/" style="color:rgba(255,255,255,0.78);">Vosuba AI</a> /
+                <a href="/for-creators.html" style="color:rgba(255,255,255,0.95);" aria-current="page">For Creators</a>
                 &nbsp;·&nbsp;
                 Also see: <a href="/vs-submagic.html" style="color:#c4a0ff;">vs Submagic</a>,
                 <a href="/vs-captions-ai.html" style="color:#c4a0ff;">vs Captions.ai</a>,

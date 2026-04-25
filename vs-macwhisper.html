@@ -46,31 +46,31 @@
         .comp-table-wrap { overflow-x: auto; margin: 3rem 0; }
         .comp-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
         .comp-table th, .comp-table td { padding: 0.9rem 1.25rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.07); }
-        .comp-table thead th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.45); font-weight: 600; }
-        .comp-table .col-feature { color: rgba(255,255,255,0.75); font-weight: 500; }
+        .comp-table thead th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.78); font-weight: 600; }
+        .comp-table .col-feature { color: rgba(255,255,255,0.9); font-weight: 500; }
         .col-vosuba { color: #c4a0ff; font-weight: 600; }
         .col-mw { color: rgba(255,255,255,0.5); }
         .win { color: #34d399; }
-        .lose { color: rgba(255,255,255,0.3); }
+        .lose { color: rgba(255,255,255,0.65); }
         .partial { color: #fbbf24; }
         .comp-table tr:hover td { background: rgba(255,255,255,0.02); }
 
-        .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.3); font-weight: 700; padding-top: 1.5rem !important; border-top: 1px solid rgba(255,255,255,0.05) !important; }
+        .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.65); font-weight: 700; padding-top: 1.5rem !important; border-top: 1px solid rgba(255,255,255,0.05) !important; }
 
         .verdict-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin: 3rem 0; }
         .verdict-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem; }
         .verdict-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
-        .verdict-card p { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+        .verdict-card p { font-size: 0.9rem; color: rgba(255,255,255,0.82); line-height: 1.6; }
         .verdict-card.vosuba-card { border-color: rgba(149,71,247,0.3); background: rgba(149,71,247,0.05); }
         .verdict-card.vosuba-card h3 { color: #c4a0ff; }
-        .verdict-card.mw-card h3 { color: rgba(255,255,255,0.7); }
+        .verdict-card.mw-card h3 { color: rgba(255,255,255,0.9); }
 
         .faq-section { margin: 4rem 0; }
         .faq-section h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 2rem; }
 
         .cta-strip { background: rgba(149,71,247,0.1); border: 1px solid rgba(149,71,247,0.2); border-radius: 1.5rem; padding: 2.5rem; text-align: center; margin: 4rem 0; }
         .cta-strip h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem; }
-        .cta-strip p { color: rgba(255,255,255,0.6); margin-bottom: 1.75rem; }
+        .cta-strip p { color: rgba(255,255,255,0.82); margin-bottom: 1.75rem; }
         .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
         @media (max-width: 600px) {
@@ -79,6 +79,8 @@
     </style>
 </head>
 <body>
+    <!-- Skip to main content (WCAG 2.4.1) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- NAV -->
     <nav id="navbar">
@@ -97,7 +99,7 @@
         </div>
     </nav>
 
-    <main>
+    <main id="main-content">
         <div class="container">
 
             <!-- HERO -->
@@ -115,9 +117,9 @@
                 <table class="comp-table" aria-label="Feature comparison between Vosuba and MacWhisper">
                     <thead>
                         <tr>
-                            <th>Feature</th>
-                            <th class="col-vosuba">Vosuba AI</th>
-                            <th class="col-mw">MacWhisper</th>
+                            <th scope="col">Feature</th>
+                            <th scope="col" class="col-vosuba">Vosuba AI</th>
+                            <th scope="col" class="col-mw">MacWhisper</th>
                         </tr>
                     </thead>
                     <tbody>
