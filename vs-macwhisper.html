@@ -83,7 +83,7 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- NAV -->
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Main navigation">
         <div class="nav-container">
             <a href="/" class="nav-logo">
                 <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="32" height="32">
@@ -96,8 +96,20 @@
                 <a href="/#faq">FAQ</a>
             </div>
             <a href="/#pricing" class="nav-cta">Download Free</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/#product">Product</a>
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/#pricing" class="nav-cta">Download Free</a>
+    </div>
 
     <main id="main-content">
         <div class="container">
@@ -314,7 +326,7 @@
 
             <!-- CTA -->
             <div class="cta-strip">
-                <h2>Try Vosuba free — no signup required</h2>
+                <h2>Try Vosuba free — no account needed</h2>
                 <p>Download the free version. Unlimited SRT exports, no watermark on text files, no cloud upload.</p>
                 <div class="cta-buttons">
                     <a href="/#pricing" class="btn btn-primary btn-lg">Download Free</a>
@@ -347,16 +359,27 @@
                 </div>
                 <div class="footer-links">
                     <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="/#product">Features</a>
+                        <a href="/#pricing">Pricing</a>
+                        <a href="/#faq">FAQ</a>
+                    </div>
+                    <div class="footer-col">
                         <h4>Compare</h4>
                         <a href="/vs-macwhisper.html">vs MacWhisper</a>
                         <a href="/vs-submagic.html">vs Submagic</a>
                         <a href="/vs-captions-ai.html">vs Captions.ai</a>
                     </div>
                     <div class="footer-col">
-                        <h4>Product</h4>
-                        <a href="/#product">Features</a>
-                        <a href="/#pricing">Pricing</a>
-                        <a href="/#faq">FAQ</a>
+                        <h4>Use Cases</h4>
+                        <a href="/for-universities.html">Universities</a>
+                        <a href="/for-regulated-industries.html">Regulated Industries</a>
+                        <a href="/for-creators.html">Content Creators</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Support</h4>
+                        <a href="mailto:support@vosuba.com">Contact</a>
+                        <a href="mailto:sales@vosuba.com">Enterprise Sales</a>
                     </div>
                     <div class="footer-col">
                         <h4>Legal</h4>

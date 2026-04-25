@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WCAG-Compliant Video Captioning for Universities — UK, EU & US Compliance — Vosuba AI</title>
     <meta name="description" content="UK universities must meet WCAG 2.2 AA under the Public Sector Bodies Accessibility Regulations 2018. EU institutions are bound by the Web Accessibility Directive. US public universities face ADA Title II deadlines. Vosuba captions video on-device — no cloud upload, no GDPR/FERPA risk.">
+    <meta property="og:title" content="WCAG-Compliant Video Captioning for Universities — Vosuba AI">
+    <meta property="og:description" content="UK, EU, and US universities face enforceable captioning obligations. Vosuba captions video on-device — no cloud upload, no GDPR/FERPA risk.">
+    <meta property="og:type" content="article">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="canonical" href="https://vosuba.com/for-universities.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -101,7 +104,7 @@
     <!-- Skip to main content (WCAG 2.4.1) -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Main navigation">
         <div class="nav-container">
             <a href="/" class="nav-logo">
                 <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="32" height="32">
@@ -114,8 +117,20 @@
                 <a href="/#faq">FAQ</a>
             </div>
             <a href="mailto:sales@vosuba.com" class="nav-cta">Talk to Sales</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/#product">Product</a>
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="mailto:sales@vosuba.com" class="nav-cta">Talk to Sales</a>
+    </div>
 
     <main id="main-content">
         <div class="container">
@@ -409,8 +424,8 @@
                 <h2>Interested in institutional licensing?</h2>
                 <p>£199 per Mac workstation per year. Volume pricing for teams of 5 or more. We respond within one business day.</p>
                 <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-                    <a href="mailto:sales@vosuba.com" class="btn btn-primary btn-lg">Email sales@vosuba.com</a>
-                    <a href="/for-regulated-industries.html" class="btn btn-ghost btn-lg">Aviation, Rail & Healthcare →</a>
+                    <a href="mailto:sales@vosuba.com" class="btn btn-primary btn-lg">Contact Enterprise Sales</a>
+                    <a href="/for-regulated-industries.html" class="btn btn-ghost btn-lg">Regulated Industries →</a>
                 </div>
             </div>
 
@@ -418,7 +433,7 @@
                 <a href="/" style="color:rgba(255,255,255,0.4);">Vosuba AI</a> /
                 <a href="/for-universities.html" style="color:rgba(255,255,255,0.65);">Universities</a>
                 &nbsp;·&nbsp;
-                See also: <a href="/for-regulated-industries.html" style="color:#c4a0ff;">Aviation, Rail &amp; Healthcare</a> ·
+                See also: <a href="/for-regulated-industries.html" style="color:#c4a0ff;">Regulated Industries</a> ·
                 <a href="/for-creators.html" style="color:#c4a0ff;">Content Creators</a> ·
                 <a href="/vs-macwhisper.html" style="color:#c4a0ff;">vs MacWhisper</a>
             </nav>
@@ -440,6 +455,12 @@
                 </div>
                 <div class="footer-links">
                     <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="/#product">Features</a>
+                        <a href="/#pricing">Pricing</a>
+                        <a href="/#faq">FAQ</a>
+                    </div>
+                    <div class="footer-col">
                         <h4>Compare</h4>
                         <a href="/vs-macwhisper.html">vs MacWhisper</a>
                         <a href="/vs-submagic.html">vs Submagic</a>
@@ -450,6 +471,11 @@
                         <a href="/for-universities.html">Universities</a>
                         <a href="/for-regulated-industries.html">Regulated Industries</a>
                         <a href="/for-creators.html">Content Creators</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Support</h4>
+                        <a href="mailto:support@vosuba.com">Contact</a>
+                        <a href="mailto:sales@vosuba.com">Enterprise Sales</a>
                     </div>
                     <div class="footer-col">
                         <h4>Legal</h4>

@@ -93,7 +93,7 @@
     <!-- Skip to main content (WCAG 2.4.1) -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Main navigation">
         <div class="nav-container">
             <a href="/" class="nav-logo">
                 <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="32" height="32">
@@ -106,8 +106,20 @@
                 <a href="/#faq">FAQ</a>
             </div>
             <a href="/#pricing" class="nav-cta">Download Free</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/#product">Product</a>
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/#pricing" class="nav-cta">Download Free</a>
+    </div>
 
     <main id="main-content">
         <div class="container">
@@ -117,7 +129,7 @@
                 <h1>Subtitles. Voiceovers. Compliance.<br><span class="gradient-text">All on Your Mac — Offline.</span></h1>
                 <p>Add styled captions, export SRT/VTT for YouTube, and generate AI voiceovers without uploading your footage to a subscription cloud service.</p>
                 <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-                    <a href="/#pricing" class="btn btn-primary btn-lg">Download Free Trial</a>
+                    <a href="/#pricing" class="btn btn-primary btn-lg">Download Free</a>
                     <a href="/vs-submagic.html" class="btn btn-ghost btn-lg">Compare vs Submagic →</a>
                 </div>
             </section>
@@ -319,7 +331,7 @@
                 <h2>Download free and start today</h2>
                 <p>No account needed. No credit card. Runs on any Mac with Apple Silicon (M1 or later).</p>
                 <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-                    <a href="/#pricing" class="btn btn-primary btn-lg">Get Vosuba Free</a>
+                    <a href="/#pricing" class="btn btn-primary btn-lg">Download Free</a>
                     <a href="/vs-macwhisper.html" class="btn btn-ghost btn-lg">How we compare →</a>
                 </div>
             </div>
@@ -347,6 +359,12 @@
                 </div>
                 <div class="footer-links">
                     <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="/#product">Features</a>
+                        <a href="/#pricing">Pricing</a>
+                        <a href="/#faq">FAQ</a>
+                    </div>
+                    <div class="footer-col">
                         <h4>Compare</h4>
                         <a href="/vs-macwhisper.html">vs MacWhisper</a>
                         <a href="/vs-submagic.html">vs Submagic</a>
@@ -354,8 +372,14 @@
                     </div>
                     <div class="footer-col">
                         <h4>Use Cases</h4>
-                        <a href="/for-universities.html">Universities &amp; Institutions</a>
+                        <a href="/for-universities.html">Universities</a>
+                        <a href="/for-regulated-industries.html">Regulated Industries</a>
                         <a href="/for-creators.html">Content Creators</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Support</h4>
+                        <a href="mailto:support@vosuba.com">Contact</a>
+                        <a href="mailto:sales@vosuba.com">Enterprise Sales</a>
                     </div>
                     <div class="footer-col">
                         <h4>Legal</h4>

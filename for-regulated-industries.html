@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WCAG Video Captioning for Aviation, Rail, Healthcare & Media — UK, EU & US — Vosuba AI</title>
     <meta name="description" content="Aviation, rail, healthcare, and media organisations face enforceable video accessibility obligations under the European Accessibility Act, UK Equality Act, and ADA. Vosuba captions training and compliance video on-device — no cloud upload, no GDPR Article 28 risk.">
+    <meta property="og:title" content="WCAG Video Captioning for Regulated Industries — Vosuba AI">
+    <meta property="og:description" content="Aviation, rail, healthcare, and media organisations face enforceable video accessibility obligations. Vosuba captions on-device — no cloud upload, no GDPR risk.">
+    <meta property="og:type" content="article">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="canonical" href="https://vosuba.com/for-regulated-industries.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -98,7 +101,7 @@
     <!-- Skip to main content (WCAG 2.4.1) -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Main navigation">
         <div class="nav-container">
             <a href="/" class="nav-logo">
                 <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="32" height="32">
@@ -111,8 +114,20 @@
                 <a href="/#faq">FAQ</a>
             </div>
             <a href="mailto:sales@vosuba.com" class="nav-cta">Talk to Sales</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/#product">Product</a>
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="mailto:sales@vosuba.com" class="nav-cta">Talk to Sales</a>
+    </div>
 
     <main id="main-content">
         <div class="container">
@@ -394,7 +409,7 @@
                 <h2>Talk to us about enterprise licensing</h2>
                 <p>£319 / $399 per seat per year. Volume pricing for teams of 5 or more.</p>
                 <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-                    <a href="mailto:sales@vosuba.com" class="btn btn-primary btn-lg">Email sales@vosuba.com</a>
+                    <a href="mailto:sales@vosuba.com" class="btn btn-primary btn-lg">Contact Enterprise Sales</a>
                     <a href="/for-universities.html" class="btn btn-ghost btn-lg">Higher Education →</a>
                 </div>
             </div>
@@ -425,6 +440,12 @@
                 </div>
                 <div class="footer-links">
                     <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="/#product">Features</a>
+                        <a href="/#pricing">Pricing</a>
+                        <a href="/#faq">FAQ</a>
+                    </div>
+                    <div class="footer-col">
                         <h4>Compare</h4>
                         <a href="/vs-macwhisper.html">vs MacWhisper</a>
                         <a href="/vs-submagic.html">vs Submagic</a>
@@ -435,6 +456,11 @@
                         <a href="/for-universities.html">Universities</a>
                         <a href="/for-regulated-industries.html">Regulated Industries</a>
                         <a href="/for-creators.html">Content Creators</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Support</h4>
+                        <a href="mailto:support@vosuba.com">Contact</a>
+                        <a href="mailto:sales@vosuba.com">Enterprise Sales</a>
                     </div>
                     <div class="footer-col">
                         <h4>Legal</h4>
