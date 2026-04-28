@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCAG Caption Checker — Validate Subtitle Accessibility Offline — Vosuba AI</title>
+    <meta name="description" content="Check your subtitles against WCAG 2.2 AA, ADA, and FCC accessibility standards — right inside Vosuba on your Mac. CPS validation, auto-fix, sound detection (SDH), and compliance dashboards. No cloud required.">
+    <meta property="og:title" content="WCAG Caption Checker — Validate Subtitle Accessibility — Vosuba AI">
+    <meta property="og:description" content="Built-in WCAG 2.2 AA compliance dashboard. CPS checking, auto-fix, and SDH sound labels — all offline on your Mac.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vosuba.com/wcag-caption-checker.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WCAG Caption Checker — Subtitle Accessibility — Vosuba AI">
+    <meta name="twitter:description" content="Validate and auto-fix caption accessibility. WCAG 2.2 AA, CPS checking, SDH labels.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="canonical" href="https://vosuba.com/wcag-caption-checker.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CNDRRHHX3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2CNDRRHHX3');
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is CPS in subtitles?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CPS stands for Characters Per Second — the speed at which a viewer must read a subtitle segment. WCAG 2.2 AA and broadcast standards recommend a maximum of 15–20 CPS to ensure readability. Subtitles exceeding this threshold are difficult for viewers with cognitive disabilities, reading difficulties, or non-native language skills. Vosuba flags segments that exceed your chosen CPS threshold and can auto-fix them by splitting or retiming."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What WCAG standard does Vosuba check against?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vosuba validates subtitles against WCAG 2.2 Level AA, which covers Success Criteria 1.2.2 (Captions for Prerecorded media) and 1.2.4 (Captions for Live media). It also aligns with FCC closed captioning quality standards and DCMP (Described and Captioned Media Program) guidelines for sound description labels."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is SDH in subtitles?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SDH stands for Subtitles for the Deaf and Hard of Hearing. SDH captions include not only dialogue but also descriptions of non-speech sounds — music, sound effects, environmental audio, and speaker identification. Vosuba's sound detection engine identifies 60+ sound labels (e.g., [DOOR SLAMS], [PHONE RINGING], [SOFT MUSIC]) and inserts them into your subtitle track following DCMP guidelines."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need WCAG-compliant captions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you publish video content for educational institutions (ADA Title II — effective June 2026), regulated industries, European markets (European Accessibility Act — effective June 2025), or government-funded organizations, WCAG 2.2 AA-compliant captions are increasingly a legal requirement. Even outside regulated environments, accessible captions improve SEO, audience reach, and engagement — 80% of captions users are not deaf or hard of hearing."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        .feature-hero { padding: 6rem 0 3rem; text-align: center; }
+        .feature-hero h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
+        .feature-hero p { font-size: 1.15rem; color: rgba(255,255,255,0.82); max-width: 640px; margin: 0 auto 2rem; }
+        .feature-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(52,211,153,0.12); border: 1px solid rgba(52,211,153,0.3); border-radius: 2rem; padding: 0.45rem 1.1rem; font-size: 0.85rem; font-weight: 600; color: #34d399; margin-bottom: 1.5rem; }
+        .checks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 3rem 0; }
+        .check-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem; }
+        .check-card .icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
+        .check-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; }
+        .check-card p { font-size: 0.88rem; color: rgba(255,255,255,0.78); line-height: 1.6; }
+        .standards-section { margin: 3rem 0; }
+        .standards-section h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 1.5rem; }
+        .standard-row { display: flex; gap: 1rem; margin-bottom: 1rem; align-items: flex-start; }
+        .standard-badge { flex-shrink: 0; padding: 0.25rem 0.6rem; border-radius: 0.4rem; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+        .badge-wcag { background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3); color: #60a5fa; }
+        .badge-ada { background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.3); color: #fbbf24; }
+        .badge-fcc { background: rgba(168,85,247,0.15); border: 1px solid rgba(168,85,247,0.3); color: #c084fc; }
+        .badge-eaa { background: rgba(52,211,153,0.15); border: 1px solid rgba(52,211,153,0.3); color: #34d399; }
+        .standard-text h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.15rem; }
+        .standard-text p { font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.5; }
+        .autofix-box { background: rgba(52,211,153,0.08); border: 1px solid rgba(52,211,153,0.2); border-radius: 1rem; padding: 1.5rem; margin: 2.5rem 0; }
+        .autofix-box h3 { color: #34d399; font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .autofix-box p { color: rgba(255,255,255,0.82); font-size: 0.9rem; line-height: 1.6; }
+        .who-section { margin: 3rem 0; }
+        .who-section h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 1rem; }
+        .who-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+        .who-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.25rem; }
+        .who-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.25rem; }
+        .who-card p { font-size: 0.83rem; color: rgba(255,255,255,0.7); line-height: 1.5; }
+        .cta-strip { background: rgba(149,71,247,0.1); border: 1px solid rgba(149,71,247,0.2); border-radius: 1.5rem; padding: 2.5rem; text-align: center; margin: 4rem 0; }
+        .cta-strip h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem; }
+        .cta-strip p { color: rgba(255,255,255,0.82); margin-bottom: 1.75rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .faq-section { margin: 4rem 0; }
+        .faq-section h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 2rem; }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav id="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="32" height="32">
+                <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="/#product">Product</a>
+                <a href="/#features">Features</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+            </div>
+            <a href="download.html" class="nav-cta">Download for Mac</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/#product">Product</a>
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="download.html" class="nav-cta">Download for Mac</a>
+    </div>
+
+    <main id="main-content">
+        <div class="container">
+
+            <section class="feature-hero">
+                <div class="feature-badge">✓ Built into every project</div>
+                <h1>WCAG Caption Checker<br><span class="gradient-text">Accessibility validation, built in</span></h1>
+                <p>Vosuba automatically validates your subtitles against WCAG 2.2 AA, ADA, and FCC standards. Flag reading-speed violations, fix them with one click, and add SDH sound labels — all before you export.</p>
+                <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                    <a href="download.html" class="btn btn-primary btn-lg">Download for Mac — Free</a>
+                    <a href="/for-universities.html" class="btn btn-ghost btn-lg">University Use Case →</a>
+                </div>
+            </section>
+
+            <!-- CHECKS -->
+            <h2 style="font-size:1.75rem;font-weight:800;margin-bottom:1rem;">What Vosuba checks</h2>
+            <div class="checks-grid">
+                <div class="check-card">
+                    <div class="icon">⏱️</div>
+                    <h3>CPS (Characters Per Second)</h3>
+                    <p>Flags subtitle segments that exceed your target reading speed. Default threshold: 15 CPS (WCAG recommended). Configurable from 10–25 CPS depending on your audience. Segments in violation are highlighted in the timeline.</p>
+                </div>
+                <div class="check-card">
+                    <div class="icon">⏳</div>
+                    <h3>Minimum Display Duration</h3>
+                    <p>Ensures no subtitle segment is displayed for less than 1 second — the minimum recommended by WCAG and FCC. Flash-speed captions are flagged and can be auto-extended.</p>
+                </div>
+                <div class="check-card">
+                    <div class="icon">📊</div>
+                    <h3>Line Length & Line Count</h3>
+                    <p>Checks that no segment exceeds 2 lines or 42 characters per line (broadcast standard). Long segments are flagged for splitting into readable chunks.</p>
+                </div>
+                <div class="check-card">
+                    <div class="icon">🔊</div>
+                    <h3>Sound Detection (SDH)</h3>
+                    <p>AI detects 60+ non-speech sounds (music, applause, door slams, phone rings) and inserts SDH labels following DCMP guidelines. Essential for deaf and hard-of-hearing viewers.</p>
+                </div>
+                <div class="check-card">
+                    <div class="icon">👤</div>
+                    <h3>Speaker Identification</h3>
+                    <p>Diarization detects speaker changes and labels them in the subtitle track. WCAG recommends identifying speakers in multi-person content for comprehension.</p>
+                </div>
+                <div class="check-card">
+                    <div class="icon">📋</div>
+                    <h3>Compliance Dashboard</h3>
+                    <p>A single view showing your project's accessibility score across all checks. See exactly which segments pass or fail — then fix them inline or with the one-click auto-fix.</p>
+                </div>
+            </div>
+
+            <!-- AUTO-FIX -->
+            <div class="autofix-box">
+                <h3>⚡ One-Click Auto-Fix</h3>
+                <p>Vosuba doesn't just flag problems — it fixes them. The auto-fix engine splits long segments, extends display durations, rebalances line lengths, and retimes subtitles to meet your CPS target. Run it once and re-check. Most projects reach 100% compliance in seconds.</p>
+            </div>
+
+            <!-- STANDARDS -->
+            <section class="standards-section">
+                <h2>Standards covered</h2>
+                <div class="standard-row">
+                    <span class="standard-badge badge-wcag">WCAG</span>
+                    <div class="standard-text">
+                        <h3>WCAG 2.2 Level AA</h3>
+                        <p>Success Criteria 1.2.2 (Captions — Prerecorded) and 1.2.4 (Captions — Live). The global web accessibility standard.</p>
+                    </div>
+                </div>
+                <div class="standard-row">
+                    <span class="standard-badge badge-ada">ADA</span>
+                    <div class="standard-text">
+                        <h3>ADA Title II (US)</h3>
+                        <p>State and local government entities must provide accessible video content. ADA Title II digital accessibility compliance deadline: June 2026.</p>
+                    </div>
+                </div>
+                <div class="standard-row">
+                    <span class="standard-badge badge-eaa">EAA</span>
+                    <div class="standard-text">
+                        <h3>European Accessibility Act</h3>
+                        <p>Requires accessible digital products and services across EU member states. Enforcement began June 2025.</p>
+                    </div>
+                </div>
+                <div class="standard-row">
+                    <span class="standard-badge badge-fcc">FCC</span>
+                    <div class="standard-text">
+                        <h3>FCC Closed Captioning Rules</h3>
+                        <p>Accuracy, synchronicity, completeness, and placement requirements for broadcast and online video content in the United States.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WHO NEEDS THIS -->
+            <section class="who-section">
+                <h2>Who needs accessible captions?</h2>
+                <div class="who-grid">
+                    <div class="who-card">
+                        <h3>🎓 Universities</h3>
+                        <p>ADA Title II and Section 508 require accessible video for publicly funded institutions.</p>
+                    </div>
+                    <div class="who-card">
+                        <h3>🏛️ Government</h3>
+                        <p>State and local government entities must meet WCAG 2.2 AA by June 2026 under updated ADA rules.</p>
+                    </div>
+                    <div class="who-card">
+                        <h3>🏥 Healthcare</h3>
+                        <p>Patient-facing video content requires captions for HIPAA communication accessibility.</p>
+                    </div>
+                    <div class="who-card">
+                        <h3>💼 Enterprise</h3>
+                        <p>The European Accessibility Act affects all digital products sold in the EU from June 2025.</p>
+                    </div>
+                    <div class="who-card">
+                        <h3>🎬 Content Creators</h3>
+                        <p>80% of caption users are not deaf — accessible captions boost engagement, SEO, and audience reach.</p>
+                    </div>
+                    <div class="who-card">
+                        <h3>📺 Broadcasters</h3>
+                        <p>FCC rules mandate captioning quality for all online video content that was previously broadcast.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="faq-section">
+                <h2>Frequently asked questions</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>What is CPS in subtitles?</summary>
+                        <div class="faq-answer">
+                            <p>CPS stands for Characters Per Second — the speed at which a viewer must read a subtitle segment. WCAG 2.2 AA and broadcast standards recommend a maximum of 15–20 CPS to ensure readability. Subtitles exceeding this threshold are difficult for viewers with cognitive disabilities, reading difficulties, or non-native language skills. Vosuba flags segments that exceed your chosen CPS threshold and can auto-fix them by splitting or retiming.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What WCAG standard does Vosuba check against?</summary>
+                        <div class="faq-answer">
+                            <p>Vosuba validates subtitles against WCAG 2.2 Level AA, which covers Success Criteria 1.2.2 (Captions for Prerecorded media) and 1.2.4 (Captions for Live media). It also aligns with FCC closed captioning quality standards and DCMP guidelines for sound description labels.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What is SDH in subtitles?</summary>
+                        <div class="faq-answer">
+                            <p>SDH stands for Subtitles for the Deaf and Hard of Hearing. SDH captions include not only dialogue but also descriptions of non-speech sounds — music, sound effects, environmental audio, and speaker identification. Vosuba's sound detection engine identifies 60+ sound labels and inserts them into your subtitle track following DCMP guidelines.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Do I need WCAG-compliant captions?</summary>
+                        <div class="faq-answer">
+                            <p>If you publish video content for educational institutions (ADA Title II — effective June 2026), regulated industries, European markets (European Accessibility Act — effective June 2025), or government-funded organizations, WCAG 2.2 AA-compliant captions are increasingly a legal requirement. Even outside regulated environments, accessible captions improve SEO, audience reach, and engagement — 80% of captions users are not deaf or hard of hearing.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <div class="cta-strip">
+                <h2>Make your captions compliant — before you export</h2>
+                <p>Download Vosuba and validate your subtitles against WCAG 2.2 AA. One-click auto-fix. SDH sound labels. Offline on your Mac.</p>
+                <div class="cta-buttons">
+                    <a href="download.html" class="btn btn-primary btn-lg">Download for Mac — Free</a>
+                    <a href="/for-universities.html" class="btn btn-ghost btn-lg">For Universities →</a>
+                </div>
+            </div>
+
+            <nav aria-label="Breadcrumb" style="margin:2rem 0;font-size:0.875rem;">
+                <a href="/" style="color:rgba(255,255,255,0.4);">Vosuba AI</a> /
+                <a href="/wcag-caption-checker.html" style="color:rgba(255,255,255,0.65);" aria-current="page">WCAG Caption Checker</a>
+                &nbsp;·&nbsp;
+                Also see: <a href="/srt-generator.html" style="color:#c4a0ff;">SRT Generator</a>,
+                <a href="/ai-voiceover.html" style="color:#c4a0ff;">AI Voiceover</a>,
+                <a href="/for-regulated-industries.html" style="color:#c4a0ff;">For Regulated Industries</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo">
+                        <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="28" height="28">
+                        <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+                    </a>
+                    <p>AI subtitles &amp; voiceovers that never leave your Mac.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="/#product">Features</a>
+                        <a href="/#pricing">Pricing</a>
+                        <a href="/#faq">FAQ</a>
+                        <a href="/srt-generator.html">SRT Generator</a>
+                        <a href="/ai-voiceover.html">AI Voiceover</a>
+                        <a href="/wcag-caption-checker.html">WCAG Checker</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Compare</h4>
+                        <a href="/vs-macwhisper.html">vs MacWhisper</a>
+                        <a href="/vs-submagic.html">vs Submagic</a>
+                        <a href="/vs-captions-ai.html">vs Captions.ai</a>
+                        <a href="/vs-descript.html">vs Descript</a>
+                        <a href="/vs-capcut.html">vs CapCut</a>
+                        <a href="/vs-rev.html">vs Rev</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Use Cases</h4>
+                        <a href="/for-universities.html">Universities</a>
+                        <a href="/for-regulated-industries.html">Regulated Industries</a>
+                        <a href="/for-creators.html">Content Creators</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Support</h4>
+                        <a href="mailto:support@vosuba.com">Contact</a>
+                        <a href="mailto:sales@vosuba.com">Enterprise Sales</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="/cookies.html">Privacy &amp; Cookies</a>
+                        <a href="/terms.html">Terms of Service</a>
+                        <a href="/refund.html">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Shaking Sheep Studio Limited · Hong Kong SAR · All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

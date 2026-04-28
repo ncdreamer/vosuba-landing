@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free SRT Generator for Mac — Auto-Generate Subtitle Files Offline — Vosuba AI</title>
+    <meta name="description" content="Generate SRT, VTT, and ASS subtitle files from any video on your Mac — offline, unlimited, and free. Powered by OpenAI Whisper. Export directly to YouTube, Premiere Pro, DaVinci Resolve, or Final Cut Pro.">
+    <meta property="og:title" content="Free SRT Generator for Mac — Vosuba AI">
+    <meta property="og:description" content="Drop a video, get an SRT file. Runs 100% offline on your Mac with AI-powered transcription. No account, no cloud, no per-minute fees.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vosuba.com/srt-generator.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free SRT Generator for Mac — Vosuba AI">
+    <meta name="twitter:description" content="Auto-generate SRT subtitle files from any video. Offline, unlimited, free.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="canonical" href="https://vosuba.com/srt-generator.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CNDRRHHX3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2CNDRRHHX3');
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to generate SRT subtitle files on Mac with Vosuba",
+      "description": "Generate SRT, VTT, and ASS subtitle files from any video using Vosuba's offline AI transcription on macOS.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Download Vosuba",
+          "text": "Download and install Vosuba AI on your Mac. It's free and requires no account."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Import your video",
+          "text": "Drag and drop any video file (MP4, MOV, MKV, AVI) into the Vosuba editor."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Run AI transcription",
+          "text": "Click Transcribe to run OpenAI Whisper locally on your Mac. No internet required."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Edit and review",
+          "text": "Review the generated subtitles in the built-in timeline editor. Fix any errors, adjust timing, or split segments."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Export SRT",
+          "text": "Click Export and choose SRT, VTT, or ASS format. The file is ready to upload to YouTube, Premiere Pro, or any platform that accepts subtitle files."
+        }
+      ],
+      "tool": {
+        "@type": "SoftwareApplication",
+        "name": "Vosuba AI",
+        "operatingSystem": "macOS",
+        "applicationCategory": "MultimediaApplication",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is an SRT file?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SRT (SubRip Text) is the most widely supported subtitle format. It stores timed text segments with sequence numbers, timestamps, and caption text. SRT files can be uploaded to YouTube, Vimeo, and most social media platforms, or imported into video editors like Premiere Pro and DaVinci Resolve."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Vosuba's SRT generator really free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The free tier of Vosuba includes unlimited AI transcription and SRT export — no watermark on text files, no per-minute fees, no account required. The paid tiers (Creator $49, Pro $99) add styled visual captions, burn-in, voiceover, and batch processing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What video formats does the SRT generator support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vosuba accepts MP4, MOV, MKV, AVI, WEBM, and most other video and audio formats via FFmpeg. You can also import standalone audio files (MP3, WAV, M4A) to generate subtitle files from podcasts or voice recordings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I generate SRT files for YouTube?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Vosuba exports standard .srt files that are directly compatible with YouTube Studio's subtitle upload feature. You can also export VTT files for web players or ASS files for professional editors like DaVinci Resolve and Final Cut Pro."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        .feature-hero { padding: 6rem 0 3rem; text-align: center; }
+        .feature-hero h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
+        .feature-hero p { font-size: 1.15rem; color: rgba(255,255,255,0.82); max-width: 640px; margin: 0 auto 2rem; }
+        .feature-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(52,211,153,0.12); border: 1px solid rgba(52,211,153,0.3); border-radius: 2rem; padding: 0.45rem 1.1rem; font-size: 0.85rem; font-weight: 600; color: #34d399; margin-bottom: 1.5rem; }
+        .steps { counter-reset: step; margin: 3rem 0; }
+        .steps h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 2rem; }
+        .step { display: flex; gap: 1.25rem; margin-bottom: 2rem; align-items: flex-start; }
+        .step-num { counter-increment: step; flex-shrink: 0; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: rgba(149,71,247,0.15); border: 1px solid rgba(149,71,247,0.3); display: flex; align-items: center; justify-content: center; font-weight: 800; color: #c4a0ff; font-size: 0.9rem; }
+        .step-num::before { content: counter(step); }
+        .step-content h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem; }
+        .step-content p { font-size: 0.9rem; color: rgba(255,255,255,0.78); line-height: 1.6; }
+        .format-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2.5rem 0; }
+        .format-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.25rem; }
+        .format-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.35rem; color: #c4a0ff; }
+        .format-card p { font-size: 0.85rem; color: rgba(255,255,255,0.78); line-height: 1.5; }
+        .compat-section { margin: 3rem 0; }
+        .compat-section h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 1rem; }
+        .compat-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+        .compat-tag { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 2rem; padding: 0.35rem 0.9rem; font-size: 0.8rem; color: rgba(255,255,255,0.78); }
+        .cta-strip { background: rgba(149,71,247,0.1); border: 1px solid rgba(149,71,247,0.2); border-radius: 1.5rem; padding: 2.5rem; text-align: center; margin: 4rem 0; }
+        .cta-strip h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem; }
+        .cta-strip p { color: rgba(255,255,255,0.82); margin-bottom: 1.75rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .faq-section { margin: 4rem 0; }
+        .faq-section h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 2rem; }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav id="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="32" height="32">
+                <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="/#product">Product</a>
+                <a href="/#features">Features</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+            </div>
+            <a href="download.html" class="nav-cta">Download for Mac</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/#product">Product</a>
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="download.html" class="nav-cta">Download for Mac</a>
+    </div>
+
+    <main id="main-content">
+        <div class="container">
+
+            <section class="feature-hero">
+                <div class="feature-badge">✓ Free — no account required</div>
+                <h1>SRT Subtitle Generator<br><span class="gradient-text">for Mac — 100% Offline</span></h1>
+                <p>Drop any video file into Vosuba. Get a perfectly timed SRT file in seconds — powered by OpenAI Whisper, running locally on your Mac. No cloud upload, no per-minute fees, no watermark.</p>
+                <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                    <a href="download.html" class="btn btn-primary btn-lg">Download for Mac — Free</a>
+                </div>
+            </section>
+
+            <!-- HOW IT WORKS -->
+            <section class="steps">
+                <h2>How to generate SRT files with Vosuba</h2>
+                <div class="step">
+                    <div class="step-num"></div>
+                    <div class="step-content">
+                        <h3>Import your video or audio</h3>
+                        <p>Drag and drop any file — MP4, MOV, MKV, AVI, MP3, WAV, or M4A. Vosuba handles the format conversion automatically via FFmpeg.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num"></div>
+                    <div class="step-content">
+                        <h3>Run AI transcription</h3>
+                        <p>Click <strong>Transcribe</strong>. OpenAI's Whisper model runs locally on your Apple Silicon chip — no internet required, no data leaves your machine. Supports 99 languages.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num"></div>
+                    <div class="step-content">
+                        <h3>Edit in the timeline</h3>
+                        <p>Review and refine every segment in the built-in editor. Fix misheard words, adjust timing, split or merge segments. Changes are reflected in real-time on the video preview.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num"></div>
+                    <div class="step-content">
+                        <h3>Export SRT (or VTT / ASS)</h3>
+                        <p>Click <strong>Export</strong> and choose your format. The file is immediately ready to upload to YouTube Studio, import into Premiere Pro, or distribute alongside your video.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FORMATS -->
+            <h2 style="font-size:1.75rem;font-weight:800;margin-bottom:1rem;">Export formats</h2>
+            <p style="color:rgba(255,255,255,0.78);margin-bottom:1.5rem;">Vosuba exports all three major subtitle formats from a single project.</p>
+            <div class="format-grid">
+                <div class="format-card">
+                    <h3>SRT (SubRip Text)</h3>
+                    <p>The universal standard. Works with YouTube, Vimeo, Facebook, Premiere Pro, Final Cut Pro, and virtually every video player and platform.</p>
+                </div>
+                <div class="format-card">
+                    <h3>VTT (WebVTT)</h3>
+                    <p>The web-native format. Used by HTML5 video players, web-based LMS platforms, and streaming services. Supports styling hints and positioning.</p>
+                </div>
+                <div class="format-card">
+                    <h3>ASS (Advanced SSA)</h3>
+                    <p>The professional format. Full typographic control — fonts, colours, positioning, and effects. Imports natively into DaVinci Resolve and Aegisub.</p>
+                </div>
+            </div>
+
+            <!-- COMPATIBILITY -->
+            <section class="compat-section">
+                <h2>Works with your tools</h2>
+                <p style="color:rgba(255,255,255,0.78);margin-bottom:1rem;">SRT and VTT files from Vosuba import directly into:</p>
+                <div class="compat-list">
+                    <span class="compat-tag">YouTube Studio</span>
+                    <span class="compat-tag">Vimeo</span>
+                    <span class="compat-tag">Adobe Premiere Pro</span>
+                    <span class="compat-tag">DaVinci Resolve</span>
+                    <span class="compat-tag">Final Cut Pro</span>
+                    <span class="compat-tag">CapCut</span>
+                    <span class="compat-tag">iMovie</span>
+                    <span class="compat-tag">Facebook / Instagram</span>
+                    <span class="compat-tag">LinkedIn Video</span>
+                    <span class="compat-tag">Wistia</span>
+                    <span class="compat-tag">Moodle / LMS</span>
+                    <span class="compat-tag">WordPress</span>
+                </div>
+            </section>
+
+            <!-- FREE VS PAID -->
+            <h2 style="font-size:1.75rem;font-weight:800;margin:3rem 0 1rem;">Free vs paid</h2>
+            <p style="color:rgba(255,255,255,0.78);margin-bottom:1.5rem;">SRT generation is <strong>free and unlimited</strong>. Paid tiers unlock visual styling and advanced features.</p>
+            <div class="format-grid">
+                <div class="format-card">
+                    <h3 style="color:#34d399;">Free</h3>
+                    <p>Unlimited AI transcription. SRT, VTT, ASS export. Edit in timeline. No watermark on text files. No account needed.</p>
+                </div>
+                <div class="format-card">
+                    <h3>Creator — $49</h3>
+                    <p>All Whisper models. Styled visual captions with 10 presets. Burn subtitles into video. Sound detection (SDH). WCAG compliance dashboard.</p>
+                </div>
+                <div class="format-card">
+                    <h3>Pro — $99</h3>
+                    <p>Everything in Creator + AI voiceover (26 neural voices), voice cloning, batch processing, and priority support.</p>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <section class="faq-section">
+                <h2>Frequently asked questions</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>What is an SRT file?</summary>
+                        <div class="faq-answer">
+                            <p>SRT (SubRip Text) is the most widely supported subtitle format. It stores timed text segments with sequence numbers, timestamps, and caption text. SRT files can be uploaded to YouTube, Vimeo, and most social media platforms, or imported into video editors like Premiere Pro and DaVinci Resolve.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Is Vosuba's SRT generator really free?</summary>
+                        <div class="faq-answer">
+                            <p>Yes. The free tier of Vosuba includes unlimited AI transcription and SRT export — no watermark on text files, no per-minute fees, no account required. The paid tiers (Creator $49, Pro $99) add styled visual captions, burn-in, voiceover, and batch processing.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What video formats does the SRT generator support?</summary>
+                        <div class="faq-answer">
+                            <p>Vosuba accepts MP4, MOV, MKV, AVI, WEBM, and most other video and audio formats via FFmpeg. You can also import standalone audio files (MP3, WAV, M4A) to generate subtitle files from podcasts or voice recordings.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can I generate SRT files for YouTube?</summary>
+                        <div class="faq-answer">
+                            <p>Yes. Vosuba exports standard .srt files that are directly compatible with YouTube Studio's subtitle upload feature. You can also export VTT files for web players or ASS files for professional editors like DaVinci Resolve and Final Cut Pro.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <div class="cta-strip">
+                <h2>Generate your first SRT file in under a minute</h2>
+                <p>Download Vosuba free. Drop a video. Export the subtitle file. No cloud, no account, no fees.</p>
+                <div class="cta-buttons">
+                    <a href="download.html" class="btn btn-primary btn-lg">Download for Mac — Free</a>
+                    <a href="/#pricing" class="btn btn-ghost btn-lg">See All Plans →</a>
+                </div>
+            </div>
+
+            <nav aria-label="Breadcrumb" style="margin:2rem 0;font-size:0.875rem;">
+                <a href="/" style="color:rgba(255,255,255,0.4);">Vosuba AI</a> /
+                <a href="/srt-generator.html" style="color:rgba(255,255,255,0.65);" aria-current="page">SRT Generator</a>
+                &nbsp;·&nbsp;
+                Also see: <a href="/ai-voiceover.html" style="color:#c4a0ff;">AI Voiceover</a>,
+                <a href="/wcag-caption-checker.html" style="color:#c4a0ff;">WCAG Caption Checker</a>,
+                <a href="/for-creators.html" style="color:#c4a0ff;">For Creators</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo">
+                        <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="28" height="28">
+                        <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+                    </a>
+                    <p>AI subtitles &amp; voiceovers that never leave your Mac.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="/#product">Features</a>
+                        <a href="/#pricing">Pricing</a>
+                        <a href="/#faq">FAQ</a>
+                        <a href="/srt-generator.html">SRT Generator</a>
+                        <a href="/ai-voiceover.html">AI Voiceover</a>
+                        <a href="/wcag-caption-checker.html">WCAG Checker</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Compare</h4>
+                        <a href="/vs-macwhisper.html">vs MacWhisper</a>
+                        <a href="/vs-submagic.html">vs Submagic</a>
+                        <a href="/vs-captions-ai.html">vs Captions.ai</a>
+                        <a href="/vs-descript.html">vs Descript</a>
+                        <a href="/vs-capcut.html">vs CapCut</a>
+                        <a href="/vs-rev.html">vs Rev</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Use Cases</h4>
+                        <a href="/for-universities.html">Universities</a>
+                        <a href="/for-regulated-industries.html">Regulated Industries</a>
+                        <a href="/for-creators.html">Content Creators</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Support</h4>
+                        <a href="mailto:support@vosuba.com">Contact</a>
+                        <a href="mailto:sales@vosuba.com">Enterprise Sales</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="/cookies.html">Privacy &amp; Cookies</a>
+                        <a href="/terms.html">Terms of Service</a>
+                        <a href="/refund.html">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Shaking Sheep Studio Limited · Hong Kong SAR · All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

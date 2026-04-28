@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Voiceover for Mac — Offline Text-to-Speech with 26 Neural Voices — Vosuba AI</title>
+    <meta name="description" content="Turn any script into natural-sounding narration with 26 neural AI voices — entirely offline on your Mac. Voice cloning, emotion transfer, SSML control, and multi-format export. No subscription, no cloud upload.">
+    <meta property="og:title" content="AI Voiceover for Mac — 26 Neural Voices, 100% Offline — Vosuba AI">
+    <meta property="og:description" content="Professional text-to-speech that runs on your Mac. 26 voices, voice cloning, emotion control. No subscription or internet required.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vosuba.com/ai-voiceover.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Voiceover for Mac — Offline Text-to-Speech — Vosuba AI">
+    <meta name="twitter:description" content="26 neural voices, voice cloning, emotion transfer. All offline on your Mac, no subscription.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="canonical" href="https://vosuba.com/ai-voiceover.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CNDRRHHX3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2CNDRRHHX3');
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Vosuba AI Voiceover Studio",
+      "operatingSystem": "macOS",
+      "applicationCategory": "MultimediaApplication",
+      "description": "Offline AI text-to-speech application for Mac with 26 neural voices, voice cloning, and emotion transfer.",
+      "offers": { "@type": "Offer", "price": "99", "priceCurrency": "USD" },
+      "url": "https://vosuba.com/ai-voiceover.html"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does the AI voiceover require internet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Vosuba's voiceover engine runs 100% offline on your Mac using on-device neural network inference. No audio is sent to any server — ever. This makes it suitable for confidential scripts, internal training materials, and pre-release content."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many voices are included?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vosuba Pro includes 26 neural voices spanning male, female, and neutral tones across multiple accents (American, British, Australian, and more). Each voice supports emotion transfer — you can adjust warmth, authority, and energy without changing the voice itself."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I clone my own voice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Vosuba Pro includes voice cloning that works entirely on your Mac. Provide a short sample recording, and the system creates a custom voice model for text-to-speech generation. Your voice data never leaves your machine."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What audio formats can I export?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vosuba exports voiceover audio in WAV (uncompressed, broadcast-quality) and MP3 (compressed, web-ready). You can also burn the voiceover directly into your video alongside styled subtitles."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        .feature-hero { padding: 6rem 0 3rem; text-align: center; }
+        .feature-hero h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
+        .feature-hero p { font-size: 1.15rem; color: rgba(255,255,255,0.82); max-width: 640px; margin: 0 auto 2rem; }
+        .feature-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(149,71,247,0.12); border: 1px solid rgba(149,71,247,0.3); border-radius: 2rem; padding: 0.45rem 1.1rem; font-size: 0.85rem; font-weight: 600; color: #c4a0ff; margin-bottom: 1.5rem; }
+        .voice-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin: 3rem 0; }
+        .stat-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.25rem; text-align: center; }
+        .stat-card .num { font-size: 2.25rem; font-weight: 900; color: #c4a0ff; margin-bottom: 0.25rem; }
+        .stat-card .label { font-size: 0.85rem; color: rgba(255,255,255,0.65); }
+        .use-cases { margin: 3rem 0; }
+        .use-cases h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 1.5rem; }
+        .use-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+        .use-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.25rem; }
+        .use-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.35rem; }
+        .use-card p { font-size: 0.85rem; color: rgba(255,255,255,0.78); line-height: 1.5; }
+        .use-card .icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .cap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 2.5rem 0; }
+        .cap-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.25rem; }
+        .cap-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.35rem; color: #c4a0ff; }
+        .cap-card p { font-size: 0.85rem; color: rgba(255,255,255,0.78); line-height: 1.5; }
+        .offline-banner { background: rgba(52,211,153,0.08); border: 1px solid rgba(52,211,153,0.2); border-radius: 1rem; padding: 1.5rem; margin: 2rem 0; text-align: center; }
+        .offline-banner h3 { color: #34d399; font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .offline-banner p { color: rgba(255,255,255,0.82); font-size: 0.9rem; line-height: 1.6; }
+        .cta-strip { background: rgba(149,71,247,0.1); border: 1px solid rgba(149,71,247,0.2); border-radius: 1.5rem; padding: 2.5rem; text-align: center; margin: 4rem 0; }
+        .cta-strip h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem; }
+        .cta-strip p { color: rgba(255,255,255,0.82); margin-bottom: 1.75rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .faq-section { margin: 4rem 0; }
+        .faq-section h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 2rem; }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav id="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="32" height="32">
+                <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="/#product">Product</a>
+                <a href="/#features">Features</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+            </div>
+            <a href="download.html" class="nav-cta">Download for Mac</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/#product">Product</a>
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="download.html" class="nav-cta">Download for Mac</a>
+    </div>
+
+    <main id="main-content">
+        <div class="container">
+
+            <section class="feature-hero">
+                <div class="feature-badge">Pro — $99 one-time</div>
+                <h1>AI Voiceover Studio<br><span class="gradient-text">26 neural voices — offline on Mac</span></h1>
+                <p>Turn any script into broadcast-quality narration without leaving your Mac. 26 voices, emotion transfer, voice cloning, SSML control — all running locally with zero internet dependency.</p>
+                <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                    <a href="download.html" class="btn btn-primary btn-lg">Download for Mac</a>
+                    <a href="/#pricing" class="btn btn-ghost btn-lg">See Pricing →</a>
+                </div>
+            </section>
+
+            <!-- STATS -->
+            <div class="voice-stats">
+                <div class="stat-card">
+                    <div class="num">26</div>
+                    <div class="label">Neural Voices</div>
+                </div>
+                <div class="stat-card">
+                    <div class="num">100%</div>
+                    <div class="label">Offline</div>
+                </div>
+                <div class="stat-card">
+                    <div class="num">$0</div>
+                    <div class="label">Per-minute cost</div>
+                </div>
+                <div class="stat-card">
+                    <div class="num">∞</div>
+                    <div class="label">Usage limit</div>
+                </div>
+            </div>
+
+            <!-- OFFLINE BANNER -->
+            <div class="offline-banner">
+                <h3>🔒 Your scripts never leave your Mac</h3>
+                <p>Unlike ElevenLabs, Murf, or Play.ht, Vosuba's voiceover engine runs entirely on your device. No audio is uploaded to any server. This makes it safe for unreleased content, internal training, and confidential material.</p>
+            </div>
+
+            <!-- CAPABILITIES -->
+            <h2 style="font-size:1.75rem;font-weight:800;margin:3rem 0 1rem;">What's included</h2>
+            <div class="cap-grid">
+                <div class="cap-card">
+                    <h3>26 Neural Voices</h3>
+                    <p>Male, female, and neutral tones across American, British, Australian, and multilingual accents. Each voice is a full neural network running on your Mac's GPU.</p>
+                </div>
+                <div class="cap-card">
+                    <h3>Emotion Transfer</h3>
+                    <p>Adjust warmth, authority, and energy per sentence without changing the voice. Make narration feel conversational, authoritative, or empathetic — by adjusting a slider.</p>
+                </div>
+                <div class="cap-card">
+                    <h3>Voice Cloning</h3>
+                    <p>Provide a short recording of any voice. Vosuba creates a local voice model that synthesizes new speech in that voice. Your samples never leave your machine.</p>
+                </div>
+                <div class="cap-card">
+                    <h3>SSML Control</h3>
+                    <p>Fine-tune pronunciation, pauses, emphasis, and speaking rate with SSML tags. Essential for technical content, product names, and multilingual scripts.</p>
+                </div>
+                <div class="cap-card">
+                    <h3>Multi-Format Export</h3>
+                    <p>Export to WAV (broadcast-quality) or MP3 (web-ready). Or burn the voiceover directly into your video alongside styled subtitles — all in one export pass.</p>
+                </div>
+                <div class="cap-card">
+                    <h3>Subtitle + Voiceover</h3>
+                    <p>Generate subtitles and voiceover from the same project. Vosuba auto-syncs the narration with your caption timeline for a polished, accessible final video.</p>
+                </div>
+            </div>
+
+            <!-- USE CASES -->
+            <section class="use-cases">
+                <h2>Use cases</h2>
+                <div class="use-grid">
+                    <div class="use-card">
+                        <div class="icon">🎬</div>
+                        <h3>YouTube Narration</h3>
+                        <p>Create channel intros, explainer voiceovers, or full narration tracks without hiring voice talent. Generate unlimited takes with different styles.</p>
+                    </div>
+                    <div class="use-card">
+                        <div class="icon">🎓</div>
+                        <h3>E-Learning & Courses</h3>
+                        <p>Produce consistent, clear narration for online courses, LMS modules, and training videos. Update scripts without re-recording.</p>
+                    </div>
+                    <div class="use-card">
+                        <div class="icon">🎙️</div>
+                        <h3>Podcast Intros</h3>
+                        <p>Generate professional-sounding show intros, sponsorship reads, or segment transitions. Export as MP3 and drop into your podcast editor.</p>
+                    </div>
+                    <div class="use-card">
+                        <div class="icon">🏢</div>
+                        <h3>Internal Communications</h3>
+                        <p>Create narrated announcements, onboarding videos, and compliance training — using an offline tool that keeps sensitive content private.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="faq-section">
+                <h2>Frequently asked questions</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Does the AI voiceover require internet?</summary>
+                        <div class="faq-answer">
+                            <p>No. Vosuba's voiceover engine runs 100% offline on your Mac using on-device neural network inference. No audio is sent to any server — ever. This makes it suitable for confidential scripts, internal training materials, and pre-release content.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How many voices are included?</summary>
+                        <div class="faq-answer">
+                            <p>Vosuba Pro includes 26 neural voices spanning male, female, and neutral tones across multiple accents (American, British, Australian, and more). Each voice supports emotion transfer — you can adjust warmth, authority, and energy without changing the voice itself.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can I clone my own voice?</summary>
+                        <div class="faq-answer">
+                            <p>Yes. Vosuba Pro includes voice cloning that works entirely on your Mac. Provide a short sample recording, and the system creates a custom voice model for text-to-speech generation. Your voice data never leaves your machine.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What audio formats can I export?</summary>
+                        <div class="faq-answer">
+                            <p>Vosuba exports voiceover audio in WAV (uncompressed, broadcast-quality) and MP3 (compressed, web-ready). You can also burn the voiceover directly into your video alongside styled subtitles.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <div class="cta-strip">
+                <h2>Turn any script into broadcast-quality narration</h2>
+                <p>Download Vosuba Pro. Pick a voice. Type your script. Export. No subscription, no per-word fees, no cloud dependency.</p>
+                <div class="cta-buttons">
+                    <a href="download.html" class="btn btn-primary btn-lg">Download for Mac</a>
+                    <a href="/#pricing" class="btn btn-ghost btn-lg">See All Plans →</a>
+                </div>
+            </div>
+
+            <nav aria-label="Breadcrumb" style="margin:2rem 0;font-size:0.875rem;">
+                <a href="/" style="color:rgba(255,255,255,0.4);">Vosuba AI</a> /
+                <a href="/ai-voiceover.html" style="color:rgba(255,255,255,0.65);" aria-current="page">AI Voiceover</a>
+                &nbsp;·&nbsp;
+                Also see: <a href="/srt-generator.html" style="color:#c4a0ff;">SRT Generator</a>,
+                <a href="/wcag-caption-checker.html" style="color:#c4a0ff;">WCAG Caption Checker</a>,
+                <a href="/for-creators.html" style="color:#c4a0ff;">For Creators</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo">
+                        <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="28" height="28">
+                        <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+                    </a>
+                    <p>AI subtitles &amp; voiceovers that never leave your Mac.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="/#product">Features</a>
+                        <a href="/#pricing">Pricing</a>
+                        <a href="/#faq">FAQ</a>
+                        <a href="/srt-generator.html">SRT Generator</a>
+                        <a href="/ai-voiceover.html">AI Voiceover</a>
+                        <a href="/wcag-caption-checker.html">WCAG Checker</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Compare</h4>
+                        <a href="/vs-macwhisper.html">vs MacWhisper</a>
+                        <a href="/vs-submagic.html">vs Submagic</a>
+                        <a href="/vs-captions-ai.html">vs Captions.ai</a>
+                        <a href="/vs-descript.html">vs Descript</a>
+                        <a href="/vs-capcut.html">vs CapCut</a>
+                        <a href="/vs-rev.html">vs Rev</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Use Cases</h4>
+                        <a href="/for-universities.html">Universities</a>
+                        <a href="/for-regulated-industries.html">Regulated Industries</a>
+                        <a href="/for-creators.html">Content Creators</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Support</h4>
+                        <a href="mailto:support@vosuba.com">Contact</a>
+                        <a href="mailto:sales@vosuba.com">Enterprise Sales</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="/cookies.html">Privacy &amp; Cookies</a>
+                        <a href="/terms.html">Terms of Service</a>
+                        <a href="/refund.html">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Shaking Sheep Studio Limited · Hong Kong SAR · All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

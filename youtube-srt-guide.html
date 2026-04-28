@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Upload SRT Subtitles to YouTube (2026) — Step-by-Step Guide — Vosuba AI</title>
+    <meta name="description" content="Upload SRT or VTT subtitle files to YouTube in 3 steps. Learn which formats YouTube accepts, how to auto-generate SRT files, and fix common upload errors. Updated for 2026.">
+    <meta property="og:title" content="How to Upload SRT Subtitles to YouTube — Step-by-Step Guide">
+    <meta property="og:description" content="YouTube accepts SRT, VTT, and SBV subtitle files. Here's how to generate and upload them — plus troubleshooting tips.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://vosuba.com/youtube-srt-guide.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Upload SRT Subtitles to YouTube (2026)">
+    <meta name="twitter:description" content="Generate and upload subtitle files to YouTube. SRT vs VTT explained.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="canonical" href="https://vosuba.com/youtube-srt-guide.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CNDRRHHX3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2CNDRRHHX3');
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to upload SRT subtitles to YouTube",
+      "description": "Step-by-step guide to uploading SRT or VTT subtitle files to YouTube Studio for any video.",
+      "step": [
+        { "@type": "HowToStep", "name": "Generate your SRT file", "text": "Use Vosuba or another tool to create an .srt file from your video. Vosuba generates SRT files for free using offline AI transcription." },
+        { "@type": "HowToStep", "name": "Open YouTube Studio", "text": "Go to studio.youtube.com, select the video you want to add subtitles to, and click 'Subtitles' in the left sidebar." },
+        { "@type": "HowToStep", "name": "Upload the file", "text": "Click 'Add language', select your language, then click 'Add' next to 'Subtitles'. Choose 'Upload file', select 'With timing', and upload your .srt file." },
+        { "@type": "HowToStep", "name": "Review and publish", "text": "Preview the subtitles in YouTube's editor. Make any final corrections, then click 'Publish' to make them live on your video." }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What subtitle format does YouTube accept?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "YouTube accepts SRT (.srt), VTT (.vtt), SBV (.sbv), DFXP/TTML (.ttml), and several other formats. SRT is the most widely used and recommended format — it's simple, well-supported, and compatible with virtually every subtitle tool."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I use SRT or VTT for YouTube?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both work. SRT is the simpler format and universally supported. VTT supports additional features like positioning and styling hints, but YouTube ignores most VTT styling. For YouTube uploads, SRT is the safer choice. For web embedding (HTML5 video players), VTT is the standard."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are my YouTube subtitles out of sync?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This usually happens when the SRT timestamps don't match the video's actual timing — often because the SRT was generated from a different cut or version of the video. To fix this, regenerate the SRT file from the exact video file you uploaded to YouTube. Vosuba generates timestamps directly from your video's audio, so the timing will always match."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I auto-generate subtitles for YouTube?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. YouTube has built-in auto-captions, but they often contain errors and provide limited control over timing and formatting. For higher-quality results, use a dedicated tool like Vosuba to generate and edit your subtitles, then upload the polished SRT file to YouTube Studio."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        .guide-hero { padding: 6rem 0 3rem; text-align: center; }
+        .guide-hero h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
+        .guide-hero p { font-size: 1.15rem; color: rgba(255,255,255,0.82); max-width: 640px; margin: 0 auto 2rem; }
+        .guide-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(239,68,68,0.12); border: 1px solid rgba(239,68,68,0.3); border-radius: 2rem; padding: 0.45rem 1.1rem; font-size: 0.85rem; font-weight: 600; color: #f87171; margin-bottom: 1.5rem; }
+        .section-block { margin: 3rem 0; }
+        .section-block h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; }
+        .section-block h3 { font-size: 1.1rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+        .section-block p, .section-block li { font-size: 0.92rem; color: rgba(255,255,255,0.85); line-height: 1.7; }
+        .section-block ol, .section-block ul { padding-left: 1.25rem; }
+        .section-block ol li, .section-block ul li { margin-bottom: 0.6rem; }
+        .format-compare { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+        .format-compare th, .format-compare td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.07); }
+        .format-compare thead th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.65); font-weight: 600; }
+        .format-compare .yes { color: #34d399; }
+        .format-compare .no { color: rgba(255,255,255,0.4); }
+        .tip-box { background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.2); border-radius: 1rem; padding: 1.25rem; margin: 1.5rem 0; }
+        .tip-box h4 { color: #60a5fa; font-size: 0.9rem; margin-bottom: 0.35rem; }
+        .tip-box p { font-size: 0.88rem; color: rgba(255,255,255,0.82); line-height: 1.6; }
+        .warn-box { background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); border-radius: 1rem; padding: 1.25rem; margin: 1.5rem 0; }
+        .warn-box h4 { color: #fbbf24; font-size: 0.9rem; margin-bottom: 0.35rem; }
+        .warn-box p { font-size: 0.88rem; color: rgba(255,255,255,0.82); line-height: 1.6; }
+        .cta-strip { background: rgba(149,71,247,0.1); border: 1px solid rgba(149,71,247,0.2); border-radius: 1.5rem; padding: 2.5rem; text-align: center; margin: 4rem 0; }
+        .cta-strip h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem; }
+        .cta-strip p { color: rgba(255,255,255,0.82); margin-bottom: 1.75rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .faq-section { margin: 4rem 0; }
+        .faq-section h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 2rem; }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav id="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="32" height="32">
+                <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="/#product">Product</a>
+                <a href="/#features">Features</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+            </div>
+            <a href="download.html" class="nav-cta">Download for Mac</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/#product">Product</a>
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="download.html" class="nav-cta">Download for Mac</a>
+    </div>
+
+    <main id="main-content">
+        <div class="container" style="max-width:780px;">
+
+            <section class="guide-hero">
+                <div class="guide-badge">▶ YouTube · Updated April 2026</div>
+                <h1>How to Upload SRT<br>Subtitles to YouTube</h1>
+                <p>YouTube accepts SRT, VTT, and SBV subtitle files. This guide covers how to generate an SRT file, upload it to YouTube Studio, and fix the most common issues.</p>
+            </section>
+
+            <!-- STEP 1: GENERATE -->
+            <section class="section-block">
+                <h2>Step 1: Generate your SRT file</h2>
+                <p>If you already have an .srt file, skip to Step 2. If not, the fastest way to create one is with <a href="/srt-generator.html" style="color:#c4a0ff;">Vosuba's free SRT generator</a>:</p>
+                <ol>
+                    <li>Download Vosuba from <a href="download.html" style="color:#c4a0ff;">vosuba.com/download</a> (free, no account required).</li>
+                    <li>Drag your video file into the editor.</li>
+                    <li>Click <strong>Transcribe</strong> — AI generates timed subtitles offline on your Mac.</li>
+                    <li>Review and edit any errors in the timeline.</li>
+                    <li>Click <strong>Export > SRT</strong>. Done.</li>
+                </ol>
+                <div class="tip-box">
+                    <h4>💡 Tip: Use the same video file</h4>
+                    <p>Generate your SRT from the exact video file you'll upload to YouTube. If you use a different cut or version, the timestamps won't match and your subtitles will be out of sync.</p>
+                </div>
+            </section>
+
+            <!-- STEP 2: UPLOAD -->
+            <section class="section-block">
+                <h2>Step 2: Upload to YouTube Studio</h2>
+                <ol>
+                    <li>Go to <a href="https://studio.youtube.com" style="color:#c4a0ff;" rel="noopener">studio.youtube.com</a>.</li>
+                    <li>Select the video you want to add subtitles to.</li>
+                    <li>Click <strong>Subtitles</strong> in the left sidebar.</li>
+                    <li>Click <strong>Add language</strong> and select your subtitle language.</li>
+                    <li>Click <strong>Add</strong> next to "Subtitles" (not "Title and description").</li>
+                    <li>Select <strong>"Upload file"</strong>.</li>
+                    <li>Choose <strong>"With timing"</strong> (since your SRT file includes timestamps).</li>
+                    <li>Select your .srt file and click <strong>Upload</strong>.</li>
+                </ol>
+            </section>
+
+            <!-- STEP 3: REVIEW -->
+            <section class="section-block">
+                <h2>Step 3: Review and publish</h2>
+                <ol>
+                    <li>YouTube will show a preview of your subtitles synced to the video.</li>
+                    <li>Use YouTube's built-in editor to make any final corrections.</li>
+                    <li>Click <strong>Publish</strong> to make the subtitles live.</li>
+                </ol>
+                <p>Once published, viewers can toggle subtitles on/off using the CC button on the video player. YouTube also indexes subtitle text for search — adding captions can improve your video's discoverability.</p>
+            </section>
+
+            <!-- FORMAT COMPARISON -->
+            <section class="section-block">
+                <h2>Which format should I use?</h2>
+                <p>YouTube supports multiple subtitle formats. Here's a quick comparison:</p>
+                <table class="format-compare" aria-label="YouTube subtitle format comparison">
+                    <thead>
+                        <tr>
+                            <th>Format</th>
+                            <th>Extension</th>
+                            <th>YouTube</th>
+                            <th>Styling</th>
+                            <th>Best for</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>SRT</strong></td>
+                            <td>.srt</td>
+                            <td class="yes">✓</td>
+                            <td>None</td>
+                            <td>YouTube, Vimeo, most platforms</td>
+                        </tr>
+                        <tr>
+                            <td><strong>VTT</strong></td>
+                            <td>.vtt</td>
+                            <td class="yes">✓</td>
+                            <td>Positioning</td>
+                            <td>HTML5 video, web players</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SBV</strong></td>
+                            <td>.sbv</td>
+                            <td class="yes">✓</td>
+                            <td>None</td>
+                            <td>YouTube legacy format</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ASS</strong></td>
+                            <td>.ass</td>
+                            <td class="no">✗</td>
+                            <td>Full</td>
+                            <td>DaVinci Resolve, Aegisub</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="tip-box">
+                    <h4>💡 Recommendation: Use SRT for YouTube</h4>
+                    <p>SRT is the simplest, most compatible format. YouTube ignores VTT styling anyway, so there's no advantage to using VTT for YouTube uploads. Save VTT for web embedding and ASS for professional NLE workflows.</p>
+                </div>
+            </section>
+
+            <!-- TROUBLESHOOTING -->
+            <section class="section-block">
+                <h2>Troubleshooting common issues</h2>
+
+                <h3>Subtitles are out of sync</h3>
+                <p>This happens when the SRT was generated from a different version of the video. Regenerate the SRT from the exact file you uploaded to YouTube.</p>
+
+                <h3>"Upload failed" error</h3>
+                <p>Check that your file has the correct extension (.srt) and is encoded in UTF-8. Most tools export UTF-8 by default — if you edited the file in a text editor, save it with UTF-8 encoding.</p>
+
+                <h3>Special characters look wrong</h3>
+                <p>This is an encoding issue. Open the SRT in a text editor and re-save as UTF-8 (without BOM). Vosuba exports UTF-8 by default, so this only applies to manually edited files.</p>
+
+                <div class="warn-box">
+                    <h4>⚠️ YouTube auto-captions vs uploaded subtitles</h4>
+                    <p>YouTube generates auto-captions for many videos, but they're often inaccurate — especially for technical terms, accents, and multi-speaker content. Uploaded SRT files always take priority over auto-captions and give you full control over accuracy, timing, and presentation.</p>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="faq-section">
+                <h2>Frequently asked questions</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>What subtitle format does YouTube accept?</summary>
+                        <div class="faq-answer">
+                            <p>YouTube accepts SRT (.srt), VTT (.vtt), SBV (.sbv), DFXP/TTML (.ttml), and several other formats. SRT is the most widely used and recommended format — it's simple, well-supported, and compatible with virtually every subtitle tool.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Should I use SRT or VTT for YouTube?</summary>
+                        <div class="faq-answer">
+                            <p>Both work. SRT is the simpler format and universally supported. VTT supports additional features like positioning and styling hints, but YouTube ignores most VTT styling. For YouTube uploads, SRT is the safer choice. For web embedding (HTML5 video players), VTT is the standard.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Why are my YouTube subtitles out of sync?</summary>
+                        <div class="faq-answer">
+                            <p>This usually happens when the SRT timestamps don't match the video's actual timing — often because the SRT was generated from a different cut or version of the video. To fix this, regenerate the SRT file from the exact video file you uploaded to YouTube.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can I auto-generate subtitles for YouTube?</summary>
+                        <div class="faq-answer">
+                            <p>Yes. YouTube has built-in auto-captions, but they often contain errors and provide limited control over timing and formatting. For higher-quality results, use a dedicated tool like Vosuba to generate and edit your subtitles, then upload the polished SRT file to YouTube Studio.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <div class="cta-strip">
+                <h2>Generate YouTube-ready SRT files for free</h2>
+                <p>Vosuba auto-transcribes your video and exports SRT files — unlimited, free, offline. No typing, no cloud.</p>
+                <div class="cta-buttons">
+                    <a href="download.html" class="btn btn-primary btn-lg">Download Vosuba — Free</a>
+                    <a href="/srt-generator.html" class="btn btn-ghost btn-lg">SRT Generator →</a>
+                </div>
+            </div>
+
+            <nav aria-label="Breadcrumb" style="margin:2rem 0;font-size:0.875rem;">
+                <a href="/" style="color:rgba(255,255,255,0.4);">Vosuba AI</a> /
+                <a href="/youtube-srt-guide.html" style="color:rgba(255,255,255,0.65);" aria-current="page">YouTube SRT Guide</a>
+                &nbsp;·&nbsp;
+                Also see: <a href="/how-to-add-subtitles-mac.html" style="color:#c4a0ff;">Add Subtitles on Mac</a>,
+                <a href="/subtitle-formats-explained.html" style="color:#c4a0ff;">SRT vs VTT vs ASS</a>,
+                <a href="/srt-generator.html" style="color:#c4a0ff;">SRT Generator</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo">
+                        <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="28" height="28">
+                        <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+                    </a>
+                    <p>AI subtitles &amp; voiceovers that never leave your Mac.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="/#product">Features</a>
+                        <a href="/#pricing">Pricing</a>
+                        <a href="/srt-generator.html">SRT Generator</a>
+                        <a href="/ai-voiceover.html">AI Voiceover</a>
+                        <a href="/wcag-caption-checker.html">WCAG Checker</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Compare</h4>
+                        <a href="/vs-macwhisper.html">vs MacWhisper</a>
+                        <a href="/vs-descript.html">vs Descript</a>
+                        <a href="/vs-capcut.html">vs CapCut</a>
+                        <a href="/vs-rev.html">vs Rev</a>
+                        <a href="/vs-submagic.html">vs Submagic</a>
+                        <a href="/vs-captions-ai.html">vs Captions.ai</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Guides</h4>
+                        <a href="/how-to-add-subtitles-mac.html">Add Subtitles on Mac</a>
+                        <a href="/youtube-srt-guide.html">YouTube SRT Guide</a>
+                        <a href="/subtitle-formats-explained.html">SRT vs VTT vs ASS</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="/cookies.html">Privacy &amp; Cookies</a>
+                        <a href="/terms.html">Terms of Service</a>
+                        <a href="/refund.html">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Shaking Sheep Studio Limited · Hong Kong SAR · All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

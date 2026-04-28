@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Add Subtitles to Video on Mac (2026) — 4 Methods Compared — Vosuba AI</title>
+    <meta name="description" content="4 ways to add subtitles to a video on Mac in 2026: Vosuba (offline AI), iMovie (manual), DaVinci Resolve (pro), and HandBrake (SRT burn-in). Step-by-step instructions with pros, cons, and best use cases.">
+    <meta property="og:title" content="How to Add Subtitles to Video on Mac — 4 Methods (2026)">
+    <meta property="og:description" content="From free AI-powered tools to manual text overlays. The complete guide to adding subtitles on macOS.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://vosuba.com/how-to-add-subtitles-mac.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Add Subtitles to Video on Mac (2026)">
+    <meta name="twitter:description" content="4 methods compared: Vosuba, iMovie, DaVinci Resolve, and HandBrake.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="canonical" href="https://vosuba.com/how-to-add-subtitles-mac.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CNDRRHHX3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2CNDRRHHX3');
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to add subtitles to a video on Mac",
+      "description": "A step-by-step guide to adding subtitles to a video on macOS using Vosuba AI — the fastest offline method for Mac users.",
+      "step": [
+        { "@type": "HowToStep", "name": "Download Vosuba", "text": "Download and install Vosuba AI on your Mac. It's free and requires no account or internet connection after installation." },
+        { "@type": "HowToStep", "name": "Import your video", "text": "Drag and drop any video file (MP4, MOV, MKV, AVI) into Vosuba." },
+        { "@type": "HowToStep", "name": "Auto-generate subtitles", "text": "Click 'Transcribe' to run OpenAI Whisper locally on your Mac. The AI generates timed subtitles in seconds." },
+        { "@type": "HowToStep", "name": "Edit and style", "text": "Review the generated captions, fix any errors, and choose from 10 visual caption presets or customise your own." },
+        { "@type": "HowToStep", "name": "Export or burn-in", "text": "Export as SRT/VTT for YouTube, or burn the subtitles directly into the video file for social media sharing." }
+      ]
+    }
+    </script>
+
+    <style>
+        .guide-hero { padding: 6rem 0 3rem; text-align: center; }
+        .guide-hero h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
+        .guide-hero p { font-size: 1.15rem; color: rgba(255,255,255,0.82); max-width: 640px; margin: 0 auto 2rem; }
+        .guide-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(59,130,246,0.12); border: 1px solid rgba(59,130,246,0.3); border-radius: 2rem; padding: 0.45rem 1.1rem; font-size: 0.85rem; font-weight: 600; color: #60a5fa; margin-bottom: 1.5rem; }
+        .toc { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem; margin: 2rem 0; }
+        .toc h2 { font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; }
+        .toc ol { padding-left: 1.25rem; }
+        .toc li { margin-bottom: 0.35rem; }
+        .toc a { color: #c4a0ff; text-decoration: none; font-size: 0.9rem; }
+        .toc a:hover { text-decoration: underline; }
+        .method { margin: 3.5rem 0; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); }
+        .method h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .method .subtitle { font-size: 0.95rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; }
+        .method-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.25rem; font-size: 0.85rem; }
+        .method-meta span { color: rgba(255,255,255,0.6); }
+        .method-meta strong { color: rgba(255,255,255,0.9); }
+        .method ol { padding-left: 1.25rem; }
+        .method ol li { margin-bottom: 0.75rem; font-size: 0.92rem; color: rgba(255,255,255,0.85); line-height: 1.6; }
+        .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+        .pros, .cons { background: rgba(255,255,255,0.03); border-radius: 0.75rem; padding: 1rem; }
+        .pros h4 { color: #34d399; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+        .cons h4 { color: #f87171; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+        .pros ul, .cons ul { list-style: none; padding: 0; }
+        .pros li, .cons li { font-size: 0.85rem; color: rgba(255,255,255,0.78); margin-bottom: 0.25rem; padding-left: 1.25rem; position: relative; }
+        .pros li::before { content: "✓"; position: absolute; left: 0; color: #34d399; }
+        .cons li::before { content: "✗"; position: absolute; left: 0; color: #f87171; }
+        .rec-box { background: rgba(149,71,247,0.08); border: 1px solid rgba(149,71,247,0.2); border-radius: 1rem; padding: 1.25rem; margin-top: 1rem; }
+        .rec-box p { font-size: 0.88rem; color: rgba(255,255,255,0.82); line-height: 1.6; }
+        .rec-box strong { color: #c4a0ff; }
+        .cta-strip { background: rgba(149,71,247,0.1); border: 1px solid rgba(149,71,247,0.2); border-radius: 1.5rem; padding: 2.5rem; text-align: center; margin: 4rem 0; }
+        .cta-strip h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem; }
+        .cta-strip p { color: rgba(255,255,255,0.82); margin-bottom: 1.75rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        @media (max-width: 600px) {
+            .pros-cons { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav id="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="32" height="32">
+                <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="/#product">Product</a>
+                <a href="/#features">Features</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+            </div>
+            <a href="download.html" class="nav-cta">Download for Mac</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/#product">Product</a>
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="download.html" class="nav-cta">Download for Mac</a>
+    </div>
+
+    <main id="main-content">
+        <div class="container" style="max-width:780px;">
+
+            <section class="guide-hero">
+                <div class="guide-badge">📖 Step-by-step guide · Updated April 2026</div>
+                <h1>How to Add Subtitles<br>to a Video on Mac</h1>
+                <p>4 methods compared — from AI-powered automation to manual text overlays. We'll cover which tools are free, which handle SRT files, and which can burn subtitles directly into your video.</p>
+            </section>
+
+            <!-- TOC -->
+            <div class="toc">
+                <h2>In this guide</h2>
+                <ol>
+                    <li><a href="#method-vosuba">Method 1: Vosuba AI (fastest — AI-powered, offline)</a></li>
+                    <li><a href="#method-imovie">Method 2: iMovie (manual text overlays)</a></li>
+                    <li><a href="#method-davinci">Method 3: DaVinci Resolve (professional editor)</a></li>
+                    <li><a href="#method-handbrake">Method 4: HandBrake (burn existing SRT into video)</a></li>
+                </ol>
+            </div>
+
+            <!-- METHOD 1 -->
+            <section class="method" id="method-vosuba">
+                <h2>Method 1: Vosuba AI</h2>
+                <p class="subtitle">Best for: Auto-generated subtitles with styled captions and SRT export</p>
+                <div class="method-meta">
+                    <span>Price: <strong>Free (SRT) / $49+ (styled)</strong></span>
+                    <span>Speed: <strong>~30 seconds per minute of video</strong></span>
+                    <span>Offline: <strong>✓ Yes</strong></span>
+                </div>
+                <ol>
+                    <li><strong>Download Vosuba</strong> from <a href="download.html" style="color:#c4a0ff;">vosuba.com/download</a>. Install it on your Mac — no account or internet required.</li>
+                    <li><strong>Import your video.</strong> Drag and drop any file — MP4, MOV, MKV, or AVI.</li>
+                    <li><strong>Click "Transcribe."</strong> Vosuba runs OpenAI's Whisper model locally on your Apple Silicon chip. It generates word-level timestamps in 99 languages.</li>
+                    <li><strong>Edit in the timeline.</strong> Fix any misheard words, adjust timing, or split long segments. Changes are reflected in real-time on the video preview.</li>
+                    <li><strong>Choose your output:</strong>
+                        <ul style="margin-top:0.5rem;">
+                            <li><strong>Export SRT/VTT</strong> — upload to YouTube, Vimeo, or import into Premiere Pro.</li>
+                            <li><strong>Burn into video</strong> — permanently embed styled captions into your video file for social media.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Pros</h4>
+                        <ul>
+                            <li>AI auto-generates subtitles (no typing)</li>
+                            <li>100% offline — no cloud upload</li>
+                            <li>SRT export free and unlimited</li>
+                            <li>Styled captions with 10 presets</li>
+                            <li>WCAG compliance checker built in</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Cons</h4>
+                        <ul>
+                            <li>macOS only (no Windows or web)</li>
+                            <li>Styled captions require paid tier ($49+)</li>
+                            <li>Not a full video editor (no cuts/transitions)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="rec-box">
+                    <p><strong>Best for:</strong> Creators and professionals who need subtitles fast, with professional export formats (SRT, VTT, ASS), without uploading footage to the cloud. The free tier is genuinely useful — unlimited AI transcription and SRT export with no watermark.</p>
+                </div>
+            </section>
+
+            <!-- METHOD 2 -->
+            <section class="method" id="method-imovie">
+                <h2>Method 2: iMovie</h2>
+                <p class="subtitle">Best for: Quick manual text overlays on short clips</p>
+                <div class="method-meta">
+                    <span>Price: <strong>Free (pre-installed)</strong></span>
+                    <span>Speed: <strong>Slow (manual per-segment)</strong></span>
+                    <span>Offline: <strong>✓ Yes</strong></span>
+                </div>
+                <ol>
+                    <li>Open iMovie and create a new project.</li>
+                    <li>Import your video into the timeline.</li>
+                    <li>Click <strong>Titles</strong> in the toolbar. Choose a style (e.g. "Lower Third").</li>
+                    <li>Drag the title onto your timeline at the position where you want the subtitle.</li>
+                    <li>Double-click the title to edit the text. Manually type your subtitle.</li>
+                    <li>Adjust the duration by dragging the title's edges to match the spoken timing.</li>
+                    <li>Repeat for every line of dialogue.</li>
+                    <li>Export via <strong>Share > File</strong>.</li>
+                </ol>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Pros</h4>
+                        <ul>
+                            <li>Free and pre-installed on every Mac</li>
+                            <li>No internet required</li>
+                            <li>Simple interface</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Cons</h4>
+                        <ul>
+                            <li>No auto-transcription — type every word</li>
+                            <li>No SRT/VTT export</li>
+                            <li>Extremely slow for long videos</li>
+                            <li>Limited text positioning and styling</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- METHOD 3 -->
+            <section class="method" id="method-davinci">
+                <h2>Method 3: DaVinci Resolve (Free)</h2>
+                <p class="subtitle">Best for: Professional editing with full subtitle track control</p>
+                <div class="method-meta">
+                    <span>Price: <strong>Free</strong></span>
+                    <span>Speed: <strong>Moderate (manual or SRT import)</strong></span>
+                    <span>Offline: <strong>✓ Yes</strong></span>
+                </div>
+                <ol>
+                    <li>Download DaVinci Resolve from Blackmagic Design (free).</li>
+                    <li>Import your video into a new project.</li>
+                    <li><strong>If you have an SRT file</strong> (e.g. from Vosuba): Go to <strong>File > Import > Subtitle</strong> and load your .srt file.</li>
+                    <li><strong>If you don't have an SRT file:</strong> Create subtitles manually via the "Subtitle" track in the Edit or Fairlight page.</li>
+                    <li>Style your captions using the Inspector panel — font, size, colour, background.</li>
+                    <li>To burn subtitles into the video, enable the subtitle track before rendering in the Deliver page.</li>
+                </ol>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Pros</h4>
+                        <ul>
+                            <li>Professional-grade editor (free version)</li>
+                            <li>Imports SRT/VTT files natively</li>
+                            <li>Full styling control over subtitle appearance</li>
+                            <li>Can burn-in or export subtitles separately</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Cons</h4>
+                        <ul>
+                            <li>Steep learning curve for beginners</li>
+                            <li>No auto-transcription (need SRT from another tool)</li>
+                            <li>Large download (~3 GB)</li>
+                            <li>Resource-intensive</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="rec-box">
+                    <p><strong>Pro tip:</strong> Use <a href="/srt-generator.html" style="color:#c4a0ff;">Vosuba's free SRT generator</a> to auto-transcribe your video, then import the .srt file into DaVinci Resolve for professional editing. This gives you AI accuracy + DaVinci's full editing power.</p>
+                </div>
+            </section>
+
+            <!-- METHOD 4 -->
+            <section class="method" id="method-handbrake">
+                <h2>Method 4: HandBrake</h2>
+                <p class="subtitle">Best for: Burning an existing SRT file into a video</p>
+                <div class="method-meta">
+                    <span>Price: <strong>Free (open source)</strong></span>
+                    <span>Speed: <strong>Fast (if you already have SRT)</strong></span>
+                    <span>Offline: <strong>✓ Yes</strong></span>
+                </div>
+                <ol>
+                    <li>Download HandBrake from <a href="https://handbrake.fr" style="color:#c4a0ff;" rel="noopener">handbrake.fr</a>.</li>
+                    <li>Open your video file in HandBrake.</li>
+                    <li>Go to the <strong>Subtitles</strong> tab.</li>
+                    <li>Click <strong>Import SRT</strong> and select your .srt file.</li>
+                    <li>Check <strong>"Burn In"</strong> to permanently embed the subtitles.</li>
+                    <li>Choose your output format and click <strong>Start Encode</strong>.</li>
+                </ol>
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Pros</h4>
+                        <ul>
+                            <li>Free and open source</li>
+                            <li>Fast batch processing</li>
+                            <li>Simple one-purpose workflow</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Cons</h4>
+                        <ul>
+                            <li>Requires an existing SRT file</li>
+                            <li>No auto-transcription</li>
+                            <li>Very limited subtitle styling (no colours, no positioning)</li>
+                            <li>Re-encodes the entire video (quality loss possible)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <div class="cta-strip">
+                <h2>The fastest path: auto-generate + export</h2>
+                <p>Vosuba turns any video into timed subtitles in seconds — no typing, no cloud, no subscription. Free SRT export, unlimited use.</p>
+                <div class="cta-buttons">
+                    <a href="download.html" class="btn btn-primary btn-lg">Download Vosuba — Free</a>
+                    <a href="/srt-generator.html" class="btn btn-ghost btn-lg">Learn More →</a>
+                </div>
+            </div>
+
+            <nav aria-label="Breadcrumb" style="margin:2rem 0;font-size:0.875rem;">
+                <a href="/" style="color:rgba(255,255,255,0.4);">Vosuba AI</a> /
+                <a href="/how-to-add-subtitles-mac.html" style="color:rgba(255,255,255,0.65);" aria-current="page">How to Add Subtitles on Mac</a>
+                &nbsp;·&nbsp;
+                Also see: <a href="/srt-generator.html" style="color:#c4a0ff;">SRT Generator</a>,
+                <a href="/youtube-srt-guide.html" style="color:#c4a0ff;">YouTube SRT Guide</a>,
+                <a href="/subtitle-formats-explained.html" style="color:#c4a0ff;">SRT vs VTT vs ASS</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo">
+                        <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="28" height="28">
+                        <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+                    </a>
+                    <p>AI subtitles &amp; voiceovers that never leave your Mac.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="/#product">Features</a>
+                        <a href="/#pricing">Pricing</a>
+                        <a href="/srt-generator.html">SRT Generator</a>
+                        <a href="/ai-voiceover.html">AI Voiceover</a>
+                        <a href="/wcag-caption-checker.html">WCAG Checker</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Compare</h4>
+                        <a href="/vs-macwhisper.html">vs MacWhisper</a>
+                        <a href="/vs-descript.html">vs Descript</a>
+                        <a href="/vs-capcut.html">vs CapCut</a>
+                        <a href="/vs-rev.html">vs Rev</a>
+                        <a href="/vs-submagic.html">vs Submagic</a>
+                        <a href="/vs-captions-ai.html">vs Captions.ai</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Guides</h4>
+                        <a href="/how-to-add-subtitles-mac.html">Add Subtitles on Mac</a>
+                        <a href="/youtube-srt-guide.html">YouTube SRT Guide</a>
+                        <a href="/subtitle-formats-explained.html">SRT vs VTT vs ASS</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="/cookies.html">Privacy &amp; Cookies</a>
+                        <a href="/terms.html">Terms of Service</a>
+                        <a href="/refund.html">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Shaking Sheep Studio Limited · Hong Kong SAR · All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

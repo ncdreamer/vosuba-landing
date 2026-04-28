@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vosuba vs Descript — Offline Mac Subtitle Tool vs Cloud Editor Comparison</title>
+    <meta name="description" content="Vosuba vs Descript: compare the offline Mac subtitle and voiceover studio against the cloud-based transcript editor. Privacy, pricing model, WCAG compliance, and feature differences explained.">
+    <meta property="og:title" content="Vosuba vs Descript — Which Subtitle Tool Is Right for You?">
+    <meta property="og:description" content="Descript edits video via transcript in the cloud. Vosuba styles and burns subtitles offline on your Mac. Here's the full comparison.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://vosuba.com/vs-descript.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vosuba vs Descript — Subtitle Tool Comparison">
+    <meta name="twitter:description" content="Cloud transcript editor vs offline subtitle studio. Compare pricing, privacy, and features.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="canonical" href="https://vosuba.com/vs-descript.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CNDRRHHX3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2CNDRRHHX3');
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Vosuba vs Descript: Offline Mac Subtitle Tool vs Cloud Editor",
+      "description": "A detailed feature-by-feature comparison of Vosuba and Descript — an offline Mac subtitle studio versus a cloud-based transcript editor.",
+      "url": "https://vosuba.com/vs-descript.html",
+      "publisher": { "@type": "Organization", "name": "Vosuba AI", "url": "https://vosuba.com" },
+      "datePublished": "2026-04-28"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Vosuba a Descript alternative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, for subtitle-focused workflows. Vosuba covers transcription, styled captions, burn-in, WCAG compliance, and AI voiceover — all offline on Mac. Descript is a broader cloud-based video editor that uses transcript-based editing. If you primarily need subtitles and voiceovers without uploading footage, Vosuba is the stronger offline alternative."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Descript work offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Descript requires an internet connection for transcription, AI features, and project syncing. All media is processed on Descript's cloud servers. Vosuba runs 100% offline on your Mac — no internet required after the initial download."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which is cheaper, Vosuba or Descript?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vosuba is a one-time purchase starting at $49 (Creator) or $99 (Pro with voiceover). Descript charges $24/month (Hobbyist) or $33/month (Professional), which totals $288–$396 per year. Over two years, Vosuba costs 75–87% less than Descript."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Vosuba replace Descript for YouTube subtitles?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if your primary workflow is adding subtitles to videos. Vosuba transcribes, styles, and exports SRT/VTT files for YouTube upload, or burns captions directly into your video — all without a subscription or cloud upload. For full video editing (cuts, transitions, effects), Descript offers more, but it requires a monthly subscription."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        .comp-hero { padding: 6rem 0 4rem; text-align: center; }
+        .comp-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
+        .comp-hero p { font-size: 1.15rem; color: var(--text-secondary, rgba(255,255,255,0.65)); max-width: 640px; margin: 0 auto 2rem; }
+        .verdict-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(149,71,247,0.12); border: 1px solid rgba(149,71,247,0.3); border-radius: 2rem; padding: 0.5rem 1.25rem; font-size: 0.9rem; font-weight: 600; color: #c4a0ff; margin-bottom: 2rem; }
+        .comp-table-wrap { overflow-x: auto; margin: 3rem 0; }
+        .comp-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+        .comp-table th, .comp-table td { padding: 0.9rem 1.25rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.07); }
+        .comp-table thead th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.78); font-weight: 600; }
+        .col-vosuba { color: #c4a0ff; font-weight: 600; }
+        .col-comp { color: rgba(255,255,255,0.5); }
+        .win { color: #34d399; }
+        .lose { color: rgba(255,255,255,0.65); }
+        .partial { color: #fbbf24; }
+        .comp-table tr:hover td { background: rgba(255,255,255,0.02); }
+        .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.65); font-weight: 700; padding-top: 1.5rem !important; border-top: 1px solid rgba(255,255,255,0.05) !important; }
+        .verdict-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin: 3rem 0; }
+        .verdict-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem; }
+        .verdict-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .verdict-card p { font-size: 0.9rem; color: rgba(255,255,255,0.82); line-height: 1.6; }
+        .verdict-card.vosuba-card { border-color: rgba(149,71,247,0.3); background: rgba(149,71,247,0.05); }
+        .verdict-card.vosuba-card h3 { color: #c4a0ff; }
+        .faq-section { margin: 4rem 0; }
+        .faq-section h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 2rem; }
+        .cta-strip { background: rgba(149,71,247,0.1); border: 1px solid rgba(149,71,247,0.2); border-radius: 1.5rem; padding: 2.5rem; text-align: center; margin: 4rem 0; }
+        .cta-strip h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem; }
+        .cta-strip p { color: rgba(255,255,255,0.82); margin-bottom: 1.75rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .cost-box { background: rgba(52,211,153,0.08); border: 1px solid rgba(52,211,153,0.2); border-radius: 1rem; padding: 1.5rem; margin: 2rem 0; text-align: center; }
+        .cost-box h3 { color: #34d399; font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .cost-box p { color: rgba(255,255,255,0.82); font-size: 0.9rem; line-height: 1.6; }
+        @media (max-width: 600px) {
+            .comp-table th:nth-child(3), .comp-table td:nth-child(3) { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav id="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="32" height="32">
+                <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="/#product">Product</a>
+                <a href="/#features">Features</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+            </div>
+            <a href="download.html" class="nav-cta">Download for Mac</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/#product">Product</a>
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="download.html" class="nav-cta">Download for Mac</a>
+    </div>
+
+    <main id="main-content">
+        <div class="container">
+
+            <section class="comp-hero">
+                <div class="verdict-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    Different tools for different workflows
+                </div>
+                <h1>Vosuba vs Descript<br><span class="gradient-text">Offline subtitle studio vs cloud transcript editor</span></h1>
+                <p>Descript edits video by editing text in the cloud. Vosuba styles, burns, and exports subtitles entirely on your Mac. Here's when to use each — and why the pricing models are worlds apart.</p>
+            </section>
+
+            <!-- COST COMPARISON -->
+            <div class="cost-box">
+                <h3>💰 2-Year Cost Comparison</h3>
+                <p>Vosuba Pro: <strong>$99 one-time</strong> (total: $99). Descript Professional: <strong>$33/month</strong> (total: $792).<br>Vosuba costs <strong>87% less</strong> over 2 years — with no ongoing subscription.</p>
+            </div>
+
+            <!-- FEATURE TABLE -->
+            <div class="comp-table-wrap">
+                <table class="comp-table" aria-label="Feature comparison between Vosuba and Descript">
+                    <thead>
+                        <tr>
+                            <th scope="col">Feature</th>
+                            <th scope="col" class="col-vosuba">Vosuba AI</th>
+                            <th scope="col" class="col-comp">Descript</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="section-label" colspan="3">Architecture & Privacy</td></tr>
+                        <tr>
+                            <td>Runs offline</td>
+                            <td class="win">✓ 100% local</td>
+                            <td class="lose">✗ Cloud required</td>
+                        </tr>
+                        <tr>
+                            <td>Footage uploaded to servers</td>
+                            <td class="win">Never</td>
+                            <td class="lose">Always (Descript Cloud)</td>
+                        </tr>
+                        <tr>
+                            <td>Internet required</td>
+                            <td class="win">No (after download)</td>
+                            <td class="lose">Yes (for all AI features)</td>
+                        </tr>
+                        <tr>
+                            <td>Platform</td>
+                            <td>macOS (Apple Silicon)</td>
+                            <td>macOS, Windows, Web</td>
+                        </tr>
+
+                        <tr><td class="section-label" colspan="3">Transcription</td></tr>
+                        <tr>
+                            <td>AI transcription engine</td>
+                            <td class="win">Whisper (local)</td>
+                            <td class="partial">Proprietary (cloud)</td>
+                        </tr>
+                        <tr>
+                            <td>Word-level timestamps</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="win">✓ Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Speaker diarization</td>
+                            <td class="win">✓ Yes (Creator+)</td>
+                            <td class="win">✓ Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Multi-language support</td>
+                            <td class="win">✓ 99 languages</td>
+                            <td class="partial">24 languages</td>
+                        </tr>
+
+                        <tr><td class="section-label" colspan="3">Caption Styling & Output</td></tr>
+                        <tr>
+                            <td>Visual subtitle presets</td>
+                            <td class="win">✓ 10 presets + custom</td>
+                            <td class="partial">Limited styling</td>
+                        </tr>
+                        <tr>
+                            <td>Animated word highlighting</td>
+                            <td class="win">✓ 5 animation styles</td>
+                            <td class="partial">Basic highlight</td>
+                        </tr>
+                        <tr>
+                            <td>Burn subtitles into video</td>
+                            <td class="win">✓ Yes (FFmpeg)</td>
+                            <td class="win">✓ Yes (export)</td>
+                        </tr>
+                        <tr>
+                            <td>SRT export</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="win">✓ Yes</td>
+                        </tr>
+                        <tr>
+                            <td>VTT export</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="win">✓ Yes</td>
+                        </tr>
+                        <tr>
+                            <td>ASS export (DaVinci/FCP)</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td>Real-time preview on video</td>
+                            <td class="win">✓ WYSIWYG</td>
+                            <td class="partial">In transcript view</td>
+                        </tr>
+
+                        <tr><td class="section-label" colspan="3">Accessibility & Compliance</td></tr>
+                        <tr>
+                            <td>WCAG 2.2 AA validation</td>
+                            <td class="win">✓ Built-in dashboard</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td>CPS auto-fix</td>
+                            <td class="win">✓ One-click</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td>Sound detection (SDH)</td>
+                            <td class="win">✓ 60 labels, DCMP</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+
+                        <tr><td class="section-label" colspan="3">Voiceover & Audio</td></tr>
+                        <tr>
+                            <td>AI voiceover synthesis</td>
+                            <td class="win">✓ 26 voices (offline)</td>
+                            <td class="partial">✓ Stock voices (cloud)</td>
+                        </tr>
+                        <tr>
+                            <td>Voice cloning</td>
+                            <td class="win">✓ Local (Pro+)</td>
+                            <td class="partial">✓ Cloud (paid)</td>
+                        </tr>
+                        <tr>
+                            <td>Voiceover runs offline</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="lose">✗ Cloud only</td>
+                        </tr>
+
+                        <tr><td class="section-label" colspan="3">Video Editing</td></tr>
+                        <tr>
+                            <td>Transcript-based editing</td>
+                            <td class="lose">✗ No</td>
+                            <td class="win">✓ Yes (core feature)</td>
+                        </tr>
+                        <tr>
+                            <td>Timeline cuts & transitions</td>
+                            <td class="lose">✗ No</td>
+                            <td class="win">✓ Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Screen recording</td>
+                            <td class="lose">✗ No</td>
+                            <td class="win">✓ Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Filler word removal</td>
+                            <td class="lose">✗ No</td>
+                            <td class="win">✓ Yes (auto)</td>
+                        </tr>
+
+                        <tr><td class="section-label" colspan="3">Pricing</td></tr>
+                        <tr>
+                            <td>Business model</td>
+                            <td class="win">One-time purchase</td>
+                            <td class="lose">Monthly subscription</td>
+                        </tr>
+                        <tr>
+                            <td>Starting price</td>
+                            <td class="win">$49 one-time</td>
+                            <td class="lose">$24/month ($288/yr)</td>
+                        </tr>
+                        <tr>
+                            <td>Free tier</td>
+                            <td class="win">✓ Unlimited SRT</td>
+                            <td class="partial">1 hr transcription</td>
+                        </tr>
+                        <tr>
+                            <td>Enterprise licensing</td>
+                            <td class="win">✓ Volume seats</td>
+                            <td class="win">✓ Enterprise plan</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:0.5rem;">Descript pricing from <a href="https://www.descript.com/pricing" style="color:#c4a0ff;" rel="noopener">descript.com/pricing</a> as of April 2026. Subject to change.</p>
+
+            <!-- VERDICT CARDS -->
+            <h2 style="font-size:1.75rem; font-weight:800; margin-bottom:1.5rem;">The bottom line</h2>
+            <div class="verdict-grid">
+                <div class="verdict-card" style="border-color:rgba(255,255,255,0.15);">
+                    <h3>Use Descript if…</h3>
+                    <p>You need a full video editor that uses transcript-based editing. Descript excels at removing filler words, cutting clips by deleting text, screen recording, and collaborative team workflows. It's built for creators who edit long-form content and want an all-in-one cloud platform.</p>
+                </div>
+                <div class="verdict-card vosuba-card">
+                    <h3>Use Vosuba if…</h3>
+                    <p>You need professional subtitles without uploading your footage. Vosuba is the better choice for styled captions, WCAG compliance, ASS export for DaVinci Resolve, AI voiceover, and batch processing — all running offline on your Mac with a single payment instead of a monthly subscription.</p>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <section class="faq-section">
+                <h2>Common questions</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Is Vosuba a Descript alternative?</summary>
+                        <div class="faq-answer">
+                            <p>Yes, for subtitle-focused workflows. Vosuba covers transcription, styled captions, burn-in, WCAG compliance, and AI voiceover — all offline on Mac. Descript is a broader cloud-based video editor that uses transcript-based editing. If you primarily need subtitles and voiceovers without uploading footage, Vosuba is the stronger offline alternative.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Does Descript work offline?</summary>
+                        <div class="faq-answer">
+                            <p>No. Descript requires an internet connection for transcription, AI features, and project syncing. All media is processed on Descript's cloud servers. Vosuba runs 100% offline on your Mac — no internet required after the initial download.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Which is cheaper, Vosuba or Descript?</summary>
+                        <div class="faq-answer">
+                            <p>Vosuba is a one-time purchase starting at $49 (Creator) or $99 (Pro with voiceover). Descript charges $24/month (Hobbyist) or $33/month (Professional), which totals $288–$396 per year. Over two years, Vosuba costs 75–87% less than Descript.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can Vosuba replace Descript for YouTube subtitles?</summary>
+                        <div class="faq-answer">
+                            <p>Yes, if your primary workflow is adding subtitles to videos. Vosuba transcribes, styles, and exports SRT/VTT files for YouTube upload, or burns captions directly into your video — all without a subscription or cloud upload. For full video editing (cuts, transitions, effects), Descript offers more, but it requires a monthly subscription.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <div class="cta-strip">
+                <h2>Try Vosuba free — no account needed</h2>
+                <p>Download and start generating subtitles immediately. Unlimited SRT exports on the free tier. No cloud upload. No subscription.</p>
+                <div class="cta-buttons">
+                    <a href="download.html" class="btn btn-primary btn-lg">Download for Mac — Free</a>
+                    <a href="/#pricing" class="btn btn-ghost btn-lg">See Pricing →</a>
+                </div>
+            </div>
+
+            <!-- BREADCRUMBS -->
+            <nav aria-label="Comparisons" style="margin: 2rem 0; font-size:0.875rem; color:rgba(255,255,255,0.4);">
+                <a href="/" style="color:rgba(255,255,255,0.4);">Vosuba AI</a> /
+                <a href="/vs-descript.html" style="color:rgba(255,255,255,0.65);" aria-current="page">Vosuba vs Descript</a>
+                &nbsp;·&nbsp;
+                Also compare: <a href="/vs-macwhisper.html" style="color:#c4a0ff;">vs MacWhisper</a>,
+                <a href="/vs-submagic.html" style="color:#c4a0ff;">vs Submagic</a>,
+                <a href="/vs-capcut.html" style="color:#c4a0ff;">vs CapCut</a>,
+                <a href="/vs-captions-ai.html" style="color:#c4a0ff;">vs Captions.ai</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo">
+                        <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="28" height="28">
+                        <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+                    </a>
+                    <p>AI subtitles &amp; voiceovers that never leave your Mac.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="/#product">Features</a>
+                        <a href="/#pricing">Pricing</a>
+                        <a href="/#faq">FAQ</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Compare</h4>
+                        <a href="/vs-macwhisper.html">vs MacWhisper</a>
+                        <a href="/vs-submagic.html">vs Submagic</a>
+                        <a href="/vs-captions-ai.html">vs Captions.ai</a>
+                        <a href="/vs-descript.html">vs Descript</a>
+                        <a href="/vs-capcut.html">vs CapCut</a>
+                        <a href="/vs-rev.html">vs Rev</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Use Cases</h4>
+                        <a href="/for-universities.html">Universities</a>
+                        <a href="/for-regulated-industries.html">Regulated Industries</a>
+                        <a href="/for-creators.html">Content Creators</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Support</h4>
+                        <a href="mailto:support@vosuba.com">Contact</a>
+                        <a href="mailto:sales@vosuba.com">Enterprise Sales</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="/cookies.html">Privacy &amp; Cookies</a>
+                        <a href="/terms.html">Terms of Service</a>
+                        <a href="/refund.html">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Shaking Sheep Studio Limited · Hong Kong SAR · All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

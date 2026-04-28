@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vosuba vs CapCut — Offline Privacy-First Subtitle Tool vs Free Cloud Editor</title>
+    <meta name="description" content="Vosuba vs CapCut for subtitles: compare the offline Mac subtitle studio against CapCut's free cloud editor. Privacy, data handling, professional export formats, and WCAG compliance compared.">
+    <meta property="og:title" content="Vosuba vs CapCut — Which Subtitle Tool Keeps Your Footage Private?">
+    <meta property="og:description" content="CapCut is free but uploads everything to ByteDance servers. Vosuba runs offline on your Mac. Full comparison.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://vosuba.com/vs-capcut.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vosuba vs CapCut — Subtitle Tool Comparison">
+    <meta name="twitter:description" content="Free cloud editor vs offline privacy-first subtitle studio. Compare features, data handling, and export formats.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="canonical" href="https://vosuba.com/vs-capcut.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CNDRRHHX3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2CNDRRHHX3');
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Vosuba vs CapCut: Offline Mac Subtitle Tool vs Free Cloud Editor",
+      "description": "A detailed comparison of Vosuba and CapCut for adding subtitles to video — covering privacy, professional export formats, WCAG compliance, and pricing.",
+      "url": "https://vosuba.com/vs-capcut.html",
+      "publisher": { "@type": "Organization", "name": "Vosuba AI", "url": "https://vosuba.com" },
+      "datePublished": "2026-04-28"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is CapCut safe for private or unreleased footage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CapCut is owned by ByteDance (the parent company of TikTok). When you use CapCut's auto-caption feature, your video is uploaded to ByteDance servers for processing. Their terms of service grant broad rights to uploaded content. If you work with unreleased footage, client projects, or confidential material, an offline tool like Vosuba keeps your files on your machine — nothing is ever uploaded."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is CapCut really free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CapCut's basic features are free, but premium effects, advanced AI features, and commercial-use licences require CapCut Pro ($7.99/month or $74.99/year). Free exports may include watermarks on certain features. Vosuba's free tier offers unlimited SRT export with no watermark on text-based subtitle files."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Vosuba do everything CapCut does?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — they serve different purposes. CapCut is a general-purpose video editor with transitions, effects, templates, and social media integration. Vosuba is a specialist subtitle and voiceover studio. If you need professional subtitle export (SRT, VTT, ASS), WCAG compliance checking, AI voiceover, or batch processing — Vosuba is the better tool. If you need video cuts, transitions, and TikTok templates, CapCut is more appropriate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does CapCut export SRT files?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CapCut's auto-caption feature generates styled text overlays but does not export standard SRT, VTT, or ASS subtitle files. This means captions created in CapCut cannot be imported into YouTube's subtitle system, DaVinci Resolve, or other professional tools. Vosuba exports all three formats natively."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        .comp-hero { padding: 6rem 0 4rem; text-align: center; }
+        .comp-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
+        .comp-hero p { font-size: 1.15rem; color: var(--text-secondary, rgba(255,255,255,0.65)); max-width: 640px; margin: 0 auto 2rem; }
+        .verdict-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(149,71,247,0.12); border: 1px solid rgba(149,71,247,0.3); border-radius: 2rem; padding: 0.5rem 1.25rem; font-size: 0.9rem; font-weight: 600; color: #c4a0ff; margin-bottom: 2rem; }
+        .comp-table-wrap { overflow-x: auto; margin: 3rem 0; }
+        .comp-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+        .comp-table th, .comp-table td { padding: 0.9rem 1.25rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.07); }
+        .comp-table thead th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.78); font-weight: 600; }
+        .col-vosuba { color: #c4a0ff; font-weight: 600; }
+        .col-comp { color: rgba(255,255,255,0.5); }
+        .win { color: #34d399; }
+        .lose { color: rgba(255,255,255,0.65); }
+        .partial { color: #fbbf24; }
+        .comp-table tr:hover td { background: rgba(255,255,255,0.02); }
+        .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.65); font-weight: 700; padding-top: 1.5rem !important; border-top: 1px solid rgba(255,255,255,0.05) !important; }
+        .verdict-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin: 3rem 0; }
+        .verdict-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem; }
+        .verdict-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .verdict-card p { font-size: 0.9rem; color: rgba(255,255,255,0.82); line-height: 1.6; }
+        .verdict-card.vosuba-card { border-color: rgba(149,71,247,0.3); background: rgba(149,71,247,0.05); }
+        .verdict-card.vosuba-card h3 { color: #c4a0ff; }
+        .faq-section { margin: 4rem 0; }
+        .faq-section h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 2rem; }
+        .cta-strip { background: rgba(149,71,247,0.1); border: 1px solid rgba(149,71,247,0.2); border-radius: 1.5rem; padding: 2.5rem; text-align: center; margin: 4rem 0; }
+        .cta-strip h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem; }
+        .cta-strip p { color: rgba(255,255,255,0.82); margin-bottom: 1.75rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .privacy-box { background: rgba(249,115,22,0.08); border: 1px solid rgba(249,115,22,0.2); border-radius: 1rem; padding: 1.5rem; margin: 2rem 0; }
+        .privacy-box h3 { color: #fb923c; font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .privacy-box p { color: rgba(255,255,255,0.82); font-size: 0.9rem; line-height: 1.6; }
+        @media (max-width: 600px) {
+            .comp-table th:nth-child(3), .comp-table td:nth-child(3) { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav id="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="32" height="32">
+                <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="/#product">Product</a>
+                <a href="/#features">Features</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+            </div>
+            <a href="download.html" class="nav-cta">Download for Mac</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/#product">Product</a>
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="download.html" class="nav-cta">Download for Mac</a>
+    </div>
+
+    <main id="main-content">
+        <div class="container">
+
+            <section class="comp-hero">
+                <div class="verdict-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Privacy is the deciding factor
+                </div>
+                <h1>Vosuba vs CapCut<br><span class="gradient-text">Offline subtitle studio vs free cloud editor</span></h1>
+                <p>CapCut is free and powerful — but it uploads your footage to ByteDance servers. Vosuba keeps everything on your Mac. Here's the full picture for subtitle workflows.</p>
+            </section>
+
+            <!-- PRIVACY CALLOUT -->
+            <div class="privacy-box">
+                <h3>🔒 Data Handling Difference</h3>
+                <p>CapCut's auto-caption feature processes video on ByteDance (TikTok parent company) cloud servers. Their <a href="https://www.capcut.com/policy/privacy-policy" style="color:#fb923c;" rel="noopener">privacy policy</a> grants broad usage rights to uploaded content. Vosuba processes everything locally on your Mac — your footage never leaves your machine, and no account is required.</p>
+            </div>
+
+            <!-- FEATURE TABLE -->
+            <div class="comp-table-wrap">
+                <table class="comp-table" aria-label="Feature comparison between Vosuba and CapCut">
+                    <thead>
+                        <tr>
+                            <th scope="col">Feature</th>
+                            <th scope="col" class="col-vosuba">Vosuba AI</th>
+                            <th scope="col" class="col-comp">CapCut</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="section-label" colspan="3">Architecture & Privacy</td></tr>
+                        <tr>
+                            <td>Runs offline</td>
+                            <td class="win">✓ 100% local</td>
+                            <td class="lose">✗ Cloud required for AI</td>
+                        </tr>
+                        <tr>
+                            <td>Footage uploaded to servers</td>
+                            <td class="win">Never</td>
+                            <td class="lose">Yes (ByteDance)</td>
+                        </tr>
+                        <tr>
+                            <td>Account required</td>
+                            <td class="win">No</td>
+                            <td class="lose">Yes (TikTok/ByteDance)</td>
+                        </tr>
+                        <tr>
+                            <td>Platform</td>
+                            <td>macOS (Apple Silicon)</td>
+                            <td>macOS, Windows, iOS, Android, Web</td>
+                        </tr>
+
+                        <tr><td class="section-label" colspan="3">Auto Captioning</td></tr>
+                        <tr>
+                            <td>Auto-generate captions</td>
+                            <td class="win">✓ Whisper (local)</td>
+                            <td class="win">✓ Proprietary (cloud)</td>
+                        </tr>
+                        <tr>
+                            <td>Word-level timestamps</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="win">✓ Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Multi-language support</td>
+                            <td class="win">✓ 99 languages</td>
+                            <td class="partial">~20 languages</td>
+                        </tr>
+                        <tr>
+                            <td>Speaker diarization</td>
+                            <td class="win">✓ Yes (Creator+)</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+
+                        <tr><td class="section-label" colspan="3">Caption Export & Compatibility</td></tr>
+                        <tr>
+                            <td>SRT export</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="lose">✗ No native export</td>
+                        </tr>
+                        <tr>
+                            <td>VTT export</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td>ASS export (DaVinci/FCP)</td>
+                            <td class="win">✓ Yes</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td>Burn subtitles into video</td>
+                            <td class="win">✓ Yes (FFmpeg)</td>
+                            <td class="win">✓ Yes (export)</td>
+                        </tr>
+                        <tr>
+                            <td>Upload SRT to YouTube</td>
+                            <td class="win">✓ Direct export</td>
+                            <td class="lose">✗ No SRT file output</td>
+                        </tr>
+
+                        <tr><td class="section-label" colspan="3">Professional Features</td></tr>
+                        <tr>
+                            <td>WCAG 2.2 AA validation</td>
+                            <td class="win">✓ Built-in dashboard</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td>CPS / reading speed check</td>
+                            <td class="win">✓ Auto-fix</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td>Sound detection (SDH)</td>
+                            <td class="win">✓ 60 labels</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+                        <tr>
+                            <td>AI voiceover</td>
+                            <td class="win">✓ 26 voices (offline)</td>
+                            <td class="partial">✓ Cloud voices (limited)</td>
+                        </tr>
+                        <tr>
+                            <td>Batch processing</td>
+                            <td class="win">✓ Yes (Pro+)</td>
+                            <td class="lose">✗ No</td>
+                        </tr>
+
+                        <tr><td class="section-label" colspan="3">Video Editing</td></tr>
+                        <tr>
+                            <td>Timeline editor</td>
+                            <td class="lose">Subtitle timeline only</td>
+                            <td class="win">✓ Full video editor</td>
+                        </tr>
+                        <tr>
+                            <td>Transitions & effects</td>
+                            <td class="lose">✗ No</td>
+                            <td class="win">✓ Extensive library</td>
+                        </tr>
+                        <tr>
+                            <td>Templates (TikTok/Reels)</td>
+                            <td class="lose">✗ No</td>
+                            <td class="win">✓ Thousands</td>
+                        </tr>
+
+                        <tr><td class="section-label" colspan="3">Pricing</td></tr>
+                        <tr>
+                            <td>Free tier</td>
+                            <td class="win">✓ Unlimited SRT</td>
+                            <td class="win">✓ Full editor (watermark on some)</td>
+                        </tr>
+                        <tr>
+                            <td>Paid price</td>
+                            <td>$49 one-time (Creator)</td>
+                            <td>$7.99/mo or $74.99/yr (Pro)</td>
+                        </tr>
+                        <tr>
+                            <td>Business model</td>
+                            <td class="win">One-time purchase</td>
+                            <td class="lose">Monthly subscription</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:0.5rem;">CapCut pricing from <a href="https://www.capcut.com/pricing" style="color:#c4a0ff;" rel="noopener">capcut.com</a> as of April 2026. Subject to change.</p>
+
+            <!-- VERDICT -->
+            <h2 style="font-size:1.75rem; font-weight:800; margin-bottom:1.5rem;">The bottom line</h2>
+            <div class="verdict-grid">
+                <div class="verdict-card" style="border-color:rgba(255,255,255,0.15);">
+                    <h3>Use CapCut if…</h3>
+                    <p>You need a free, general-purpose video editor for TikTok, Reels, or Shorts. CapCut excels at templates, transitions, effects, and quick social media edits. It's best when speed and visual flair matter more than subtitle export quality or data privacy.</p>
+                </div>
+                <div class="verdict-card vosuba-card">
+                    <h3>Use Vosuba if…</h3>
+                    <p>You need professional subtitle files (SRT/VTT/ASS), WCAG compliance, AI voiceover, or you work with sensitive footage that shouldn't leave your machine. Vosuba is the right choice for YouTubers, editors, and institutions who need export-ready captions — not just visual overlays.</p>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <section class="faq-section">
+                <h2>Common questions</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Is CapCut safe for private or unreleased footage?</summary>
+                        <div class="faq-answer">
+                            <p>CapCut is owned by ByteDance (the parent company of TikTok). When you use CapCut's auto-caption feature, your video is uploaded to ByteDance servers for processing. Their terms of service grant broad rights to uploaded content. If you work with unreleased footage, client projects, or confidential material, an offline tool like Vosuba keeps your files on your machine — nothing is ever uploaded.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Is CapCut really free?</summary>
+                        <div class="faq-answer">
+                            <p>CapCut's basic features are free, but premium effects, advanced AI features, and commercial-use licences require CapCut Pro ($7.99/month or $74.99/year). Free exports may include watermarks on certain features. Vosuba's free tier offers unlimited SRT export with no watermark on text-based subtitle files.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can Vosuba do everything CapCut does?</summary>
+                        <div class="faq-answer">
+                            <p>No — they serve different purposes. CapCut is a general-purpose video editor with transitions, effects, templates, and social media integration. Vosuba is a specialist subtitle and voiceover studio. If you need professional subtitle export (SRT, VTT, ASS), WCAG compliance checking, AI voiceover, or batch processing — Vosuba is the better tool. If you need video cuts, transitions, and TikTok templates, CapCut is more appropriate.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Does CapCut export SRT files?</summary>
+                        <div class="faq-answer">
+                            <p>CapCut's auto-caption feature generates styled text overlays but does not export standard SRT, VTT, or ASS subtitle files. This means captions created in CapCut cannot be imported into YouTube's subtitle system, DaVinci Resolve, or other professional tools. Vosuba exports all three formats natively.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <div class="cta-strip">
+                <h2>Keep your footage private — caption offline</h2>
+                <p>Download Vosuba free. Generate subtitles on your Mac without uploading a single frame. No account. No cloud.</p>
+                <div class="cta-buttons">
+                    <a href="download.html" class="btn btn-primary btn-lg">Download for Mac — Free</a>
+                    <a href="/#pricing" class="btn btn-ghost btn-lg">See Pricing →</a>
+                </div>
+            </div>
+
+            <nav aria-label="Comparisons" style="margin: 2rem 0; font-size:0.875rem; color:rgba(255,255,255,0.4);">
+                <a href="/" style="color:rgba(255,255,255,0.4);">Vosuba AI</a> /
+                <a href="/vs-capcut.html" style="color:rgba(255,255,255,0.65);" aria-current="page">Vosuba vs CapCut</a>
+                &nbsp;·&nbsp;
+                Also compare: <a href="/vs-descript.html" style="color:#c4a0ff;">vs Descript</a>,
+                <a href="/vs-submagic.html" style="color:#c4a0ff;">vs Submagic</a>,
+                <a href="/vs-macwhisper.html" style="color:#c4a0ff;">vs MacWhisper</a>,
+                <a href="/vs-captions-ai.html" style="color:#c4a0ff;">vs Captions.ai</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo">
+                        <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="28" height="28">
+                        <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+                    </a>
+                    <p>AI subtitles &amp; voiceovers that never leave your Mac.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="/#product">Features</a>
+                        <a href="/#pricing">Pricing</a>
+                        <a href="/#faq">FAQ</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Compare</h4>
+                        <a href="/vs-macwhisper.html">vs MacWhisper</a>
+                        <a href="/vs-submagic.html">vs Submagic</a>
+                        <a href="/vs-captions-ai.html">vs Captions.ai</a>
+                        <a href="/vs-descript.html">vs Descript</a>
+                        <a href="/vs-capcut.html">vs CapCut</a>
+                        <a href="/vs-rev.html">vs Rev</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Use Cases</h4>
+                        <a href="/for-universities.html">Universities</a>
+                        <a href="/for-regulated-industries.html">Regulated Industries</a>
+                        <a href="/for-creators.html">Content Creators</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Support</h4>
+                        <a href="mailto:support@vosuba.com">Contact</a>
+                        <a href="mailto:sales@vosuba.com">Enterprise Sales</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="/cookies.html">Privacy &amp; Cookies</a>
+                        <a href="/terms.html">Terms of Service</a>
+                        <a href="/refund.html">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Shaking Sheep Studio Limited · Hong Kong SAR · All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

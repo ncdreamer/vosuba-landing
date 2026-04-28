@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRT vs VTT vs ASS — Subtitle Formats Explained (2026) — Vosuba AI</title>
+    <meta name="description" content="SRT, VTT, and ASS are the three main subtitle formats. Learn the differences, which platforms support each, and when to use which format for YouTube, web, or professional video editing.">
+    <meta property="og:title" content="SRT vs VTT vs ASS — Subtitle Formats Explained">
+    <meta property="og:description" content="The complete guide to subtitle file formats. Which one works with YouTube? Which one supports styled captions? Which one does DaVinci Resolve use?">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://vosuba.com/subtitle-formats-explained.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SRT vs VTT vs ASS — Subtitle Formats Explained">
+    <meta name="twitter:description" content="Choose the right subtitle format for YouTube, web, or professional editing.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="canonical" href="https://vosuba.com/subtitle-formats-explained.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CNDRRHHX3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2CNDRRHHX3');
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "SRT vs VTT vs ASS: Subtitle Formats Explained",
+      "description": "A comprehensive guide to the three main subtitle formats — SRT, VTT, and ASS — covering syntax, platform compatibility, styling support, and use cases.",
+      "url": "https://vosuba.com/subtitle-formats-explained.html",
+      "publisher": { "@type": "Organization", "name": "Vosuba AI", "url": "https://vosuba.com" },
+      "datePublished": "2026-04-28"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which subtitle format is best for YouTube?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SRT is the best format for YouTube. It's universally supported, simple to edit, and YouTube accepts it natively via YouTube Studio. VTT also works but offers no advantage since YouTube ignores VTT styling. ASS is not supported by YouTube."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between SRT and VTT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SRT (SubRip Text) and VTT (Web Video Text Tracks) are both timed-text formats. The key differences: VTT uses a 'WEBVTT' header, uses periods instead of commas in timestamps, and supports positioning, styling, and cue identifiers. SRT is simpler — just sequence numbers, timestamps, and text. SRT has broader platform support; VTT is the standard for HTML5 web video."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I use ASS format?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use ASS (Advanced SubStation Alpha) when you need full visual control over your subtitles — custom fonts, colours, positioning, animations, and effects. ASS is the standard for anime fansubbing, professional video editing in DaVinci Resolve, and any workflow where styled, pixel-precise captions are required. It is not supported by YouTube, Vimeo, or most social media platforms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Vosuba export all three formats?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Vosuba exports SRT, VTT, and ASS from any project. The free tier includes unlimited SRT and VTT export. ASS export with styled captions is available on the Creator tier ($49 one-time)."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        .guide-hero { padding: 6rem 0 3rem; text-align: center; }
+        .guide-hero h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
+        .guide-hero p { font-size: 1.15rem; color: rgba(255,255,255,0.82); max-width: 640px; margin: 0 auto 2rem; }
+        .guide-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.3); border-radius: 2rem; padding: 0.45rem 1.1rem; font-size: 0.85rem; font-weight: 600; color: #c084fc; margin-bottom: 1.5rem; }
+        .section-block { margin: 3rem 0; }
+        .section-block h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; }
+        .section-block p, .section-block li { font-size: 0.92rem; color: rgba(255,255,255,0.85); line-height: 1.7; }
+        .master-table-wrap { overflow-x: auto; margin: 2.5rem 0; }
+        .master-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+        .master-table th, .master-table td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.07); }
+        .master-table thead th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.65); font-weight: 600; }
+        .master-table .yes { color: #34d399; }
+        .master-table .no { color: rgba(255,255,255,0.35); }
+        .master-table .partial { color: #fbbf24; }
+        .master-table tr:hover td { background: rgba(255,255,255,0.02); }
+        .format-detail { margin: 3rem 0; padding: 2rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 1rem; }
+        .format-detail h2 { font-size: 1.4rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .format-detail .format-sub { font-size: 0.95rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; }
+        .format-detail h3 { font-size: 1rem; font-weight: 700; margin: 1.25rem 0 0.35rem; }
+        .format-detail p { font-size: 0.9rem; color: rgba(255,255,255,0.82); line-height: 1.6; }
+        .format-detail pre { background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.08); border-radius: 0.5rem; padding: 1rem; overflow-x: auto; font-size: 0.82rem; color: rgba(255,255,255,0.75); line-height: 1.6; margin: 0.75rem 0; }
+        .compat-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.75rem 0; }
+        .compat-tag { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 2rem; padding: 0.25rem 0.7rem; font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+        .compat-tag.no-support { opacity: 0.4; text-decoration: line-through; }
+        .decision-box { background: rgba(149,71,247,0.08); border: 1px solid rgba(149,71,247,0.2); border-radius: 1rem; padding: 1.5rem; margin: 2.5rem 0; }
+        .decision-box h3 { color: #c4a0ff; font-size: 1.1rem; margin-bottom: 0.75rem; }
+        .decision-box ul { list-style: none; padding: 0; }
+        .decision-box li { font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; }
+        .decision-box li::before { content: "→"; position: absolute; left: 0; color: #c4a0ff; }
+        .cta-strip { background: rgba(149,71,247,0.1); border: 1px solid rgba(149,71,247,0.2); border-radius: 1.5rem; padding: 2.5rem; text-align: center; margin: 4rem 0; }
+        .cta-strip h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem; }
+        .cta-strip p { color: rgba(255,255,255,0.82); margin-bottom: 1.75rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .faq-section { margin: 4rem 0; }
+        .faq-section h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 2rem; }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav id="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="32" height="32">
+                <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="/#product">Product</a>
+                <a href="/#features">Features</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#faq">FAQ</a>
+            </div>
+            <a href="download.html" class="nav-cta">Download for Mac</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/#product">Product</a>
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="download.html" class="nav-cta">Download for Mac</a>
+    </div>
+
+    <main id="main-content">
+        <div class="container" style="max-width:780px;">
+
+            <section class="guide-hero">
+                <div class="guide-badge">📄 Reference · Updated April 2026</div>
+                <h1>SRT vs VTT vs ASS<br><span class="gradient-text">Subtitle Formats Explained</span></h1>
+                <p>Which subtitle format should you use? SRT for YouTube, VTT for web, ASS for professional editing. Here's everything you need to know — with syntax examples and compatibility charts.</p>
+            </section>
+
+            <!-- COMPARISON TABLE -->
+            <div class="master-table-wrap">
+                <table class="master-table" aria-label="Subtitle format comparison">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>SRT</th>
+                            <th>VTT</th>
+                            <th>ASS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Full name</td><td>SubRip Text</td><td>Web Video Text Tracks</td><td>Advanced SubStation Alpha</td></tr>
+                        <tr><td>Extension</td><td>.srt</td><td>.vtt</td><td>.ass</td></tr>
+                        <tr><td>Complexity</td><td>Simple</td><td>Moderate</td><td>Advanced</td></tr>
+                        <tr><td>Timestamps</td><td class="yes">✓ (comma separator)</td><td class="yes">✓ (period separator)</td><td class="yes">✓ (centisecond)</td></tr>
+                        <tr><td>Text styling</td><td class="no">✗ None</td><td class="partial">Basic (bold, italic)</td><td class="yes">✓ Full (fonts, colours, effects)</td></tr>
+                        <tr><td>Positioning</td><td class="no">✗ None</td><td class="yes">✓ Cue positioning</td><td class="yes">✓ Pixel-precise</td></tr>
+                        <tr><td>Animations</td><td class="no">✗ None</td><td class="no">✗ None</td><td class="yes">✓ Fade, move, rotate</td></tr>
+                        <tr><td>YouTube</td><td class="yes">✓ Supported</td><td class="yes">✓ Supported</td><td class="no">✗ Not supported</td></tr>
+                        <tr><td>HTML5 &lt;track&gt;</td><td class="partial">Partial</td><td class="yes">✓ Native</td><td class="no">✗ Not supported</td></tr>
+                        <tr><td>DaVinci Resolve</td><td class="yes">✓ Import</td><td class="partial">Via conversion</td><td class="yes">✓ Native</td></tr>
+                        <tr><td>Premiere Pro</td><td class="yes">✓ Import</td><td class="partial">Via conversion</td><td class="partial">Via conversion</td></tr>
+                        <tr><td>VLC Player</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Vosuba export</td><td class="yes">✓ Free</td><td class="yes">✓ Free</td><td class="yes">✓ Creator+</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- SRT DETAIL -->
+            <div class="format-detail">
+                <h2>SRT — SubRip Text</h2>
+                <p class="format-sub">The universal standard. Simple, portable, everywhere.</p>
+                <p>SRT is the most widely supported subtitle format in the world. It's a plain-text file with numbered segments, timestamps, and caption text. No styling, no positioning — just words and timing.</p>
+
+                <h3>Syntax example</h3>
+<pre>1
+00:00:01,000 --> 00:00:04,500
+Welcome to our tutorial on
+adding subtitles to video.
+
+2
+00:00:05,000 --> 00:00:08,200
+We'll cover three different
+methods you can use today.</pre>
+
+                <h3>Compatible platforms</h3>
+                <div class="compat-tags">
+                    <span class="compat-tag">YouTube</span>
+                    <span class="compat-tag">Vimeo</span>
+                    <span class="compat-tag">Facebook</span>
+                    <span class="compat-tag">LinkedIn</span>
+                    <span class="compat-tag">Premiere Pro</span>
+                    <span class="compat-tag">DaVinci Resolve</span>
+                    <span class="compat-tag">Final Cut Pro</span>
+                    <span class="compat-tag">VLC</span>
+                    <span class="compat-tag">HandBrake</span>
+                </div>
+
+                <h3>When to use SRT</h3>
+                <p>Use SRT when you need maximum compatibility — uploading to YouTube, sharing with clients, or importing into any video editor. If you're unsure which format to use, SRT is always the safe choice.</p>
+            </div>
+
+            <!-- VTT DETAIL -->
+            <div class="format-detail">
+                <h2>VTT — Web Video Text Tracks</h2>
+                <p class="format-sub">The web standard. Built for HTML5 video players.</p>
+                <p>VTT is the W3C standard for timed text on the web. It's similar to SRT but adds a header line, uses periods in timestamps, and supports basic styling (bold, italic) and positioning via CSS-like cue settings.</p>
+
+                <h3>Syntax example</h3>
+<pre>WEBVTT
+
+1
+00:00:01.000 --> 00:00:04.500 position:50% align:center
+Welcome to our tutorial on
+adding subtitles to video.
+
+2
+00:00:05.000 --> 00:00:08.200
+We'll cover three different
+methods you can use today.</pre>
+
+                <h3>Compatible platforms</h3>
+                <div class="compat-tags">
+                    <span class="compat-tag">HTML5 &lt;track&gt;</span>
+                    <span class="compat-tag">YouTube</span>
+                    <span class="compat-tag">Vimeo</span>
+                    <span class="compat-tag">Moodle / LMS</span>
+                    <span class="compat-tag">WordPress</span>
+                    <span class="compat-tag">Wistia</span>
+                    <span class="compat-tag">VLC</span>
+                </div>
+
+                <h3>When to use VTT</h3>
+                <p>Use VTT when embedding video on a website using the HTML5 <code>&lt;video&gt;</code> element. VTT is the only format natively supported by the <code>&lt;track&gt;</code> tag. It also works for LMS platforms like Moodle and Canvas.</p>
+            </div>
+
+            <!-- ASS DETAIL -->
+            <div class="format-detail">
+                <h2>ASS — Advanced SubStation Alpha</h2>
+                <p class="format-sub">The professional format. Full creative control.</p>
+                <p>ASS is the most powerful subtitle format, offering pixel-precise positioning, custom fonts, colours, borders, shadows, and animations (fade, move, rotate). It's the standard for anime fansubbing and professional video post-production.</p>
+
+                <h3>Syntax example</h3>
+<pre>[Script Info]
+Title: My Subtitles
+ScriptType: v4.00+
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, ...
+Style: Default,Inter,48,&H00FFFFFF,&H00000000,...
+
+[Events]
+Format: Layer, Start, End, Style, Name, ...
+Dialogue: 0,0:00:01.00,0:00:04.50,Default,,Welcome to our tutorial.</pre>
+
+                <h3>Compatible platforms</h3>
+                <div class="compat-tags">
+                    <span class="compat-tag">DaVinci Resolve</span>
+                    <span class="compat-tag">Aegisub</span>
+                    <span class="compat-tag">VLC</span>
+                    <span class="compat-tag">MPV</span>
+                    <span class="compat-tag">FFmpeg</span>
+                    <span class="compat-tag no-support">YouTube ✗</span>
+                    <span class="compat-tag no-support">Vimeo ✗</span>
+                    <span class="compat-tag no-support">HTML5 ✗</span>
+                </div>
+
+                <h3>When to use ASS</h3>
+                <p>Use ASS when you need styled, animated captions for professional video editing. If you're burning captions into a video using FFmpeg or DaVinci Resolve, ASS gives you full control over the visual presentation. Not suitable for platform uploads (YouTube, Vimeo) — use SRT instead.</p>
+            </div>
+
+            <!-- DECISION GUIDE -->
+            <div class="decision-box">
+                <h3>Quick decision guide</h3>
+                <ul>
+                    <li><strong>Uploading to YouTube or social media?</strong> Use <strong>SRT</strong>.</li>
+                    <li><strong>Embedding video on a website?</strong> Use <strong>VTT</strong>.</li>
+                    <li><strong>Editing in DaVinci Resolve or Aegisub?</strong> Use <strong>ASS</strong>.</li>
+                    <li><strong>Burning styled captions into a video?</strong> Use <strong>ASS</strong> (via Vosuba or FFmpeg).</li>
+                    <li><strong>Sharing with a client who hasn't specified?</strong> Use <strong>SRT</strong> — it works everywhere.</li>
+                    <li><strong>Need all three from one project?</strong> Use <strong><a href="/srt-generator.html" style="color:#c4a0ff;">Vosuba</a></strong> — export SRT, VTT, and ASS from the same timeline.</li>
+                </ul>
+            </div>
+
+            <!-- FAQ -->
+            <section class="faq-section">
+                <h2>Frequently asked questions</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Which subtitle format is best for YouTube?</summary>
+                        <div class="faq-answer">
+                            <p>SRT is the best format for YouTube. It's universally supported, simple to edit, and YouTube accepts it natively via YouTube Studio. VTT also works but offers no advantage since YouTube ignores VTT styling. ASS is not supported by YouTube.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What is the difference between SRT and VTT?</summary>
+                        <div class="faq-answer">
+                            <p>SRT (SubRip Text) and VTT (Web Video Text Tracks) are both timed-text formats. The key differences: VTT uses a 'WEBVTT' header, uses periods instead of commas in timestamps, and supports positioning, styling, and cue identifiers. SRT is simpler — just sequence numbers, timestamps, and text. SRT has broader platform support; VTT is the standard for HTML5 web video.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>When should I use ASS format?</summary>
+                        <div class="faq-answer">
+                            <p>Use ASS when you need full visual control over your subtitles — custom fonts, colours, positioning, animations, and effects. ASS is the standard for anime fansubbing, professional video editing in DaVinci Resolve, and any workflow where styled, pixel-precise captions are required. It is not supported by YouTube, Vimeo, or most social media platforms.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can Vosuba export all three formats?</summary>
+                        <div class="faq-answer">
+                            <p>Yes. Vosuba exports SRT, VTT, and ASS from any project. The free tier includes unlimited SRT and VTT export. ASS export with styled captions is available on the Creator tier ($49 one-time).</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <div class="cta-strip">
+                <h2>Export SRT, VTT, and ASS from one project</h2>
+                <p>Vosuba auto-transcribes your video and exports all three formats. Free SRT and VTT — unlimited, offline, no account.</p>
+                <div class="cta-buttons">
+                    <a href="download.html" class="btn btn-primary btn-lg">Download Vosuba — Free</a>
+                    <a href="/srt-generator.html" class="btn btn-ghost btn-lg">SRT Generator →</a>
+                </div>
+            </div>
+
+            <nav aria-label="Breadcrumb" style="margin:2rem 0;font-size:0.875rem;">
+                <a href="/" style="color:rgba(255,255,255,0.4);">Vosuba AI</a> /
+                <a href="/subtitle-formats-explained.html" style="color:rgba(255,255,255,0.65);" aria-current="page">SRT vs VTT vs ASS</a>
+                &nbsp;·&nbsp;
+                Also see: <a href="/how-to-add-subtitles-mac.html" style="color:#c4a0ff;">Add Subtitles on Mac</a>,
+                <a href="/youtube-srt-guide.html" style="color:#c4a0ff;">YouTube SRT Guide</a>,
+                <a href="/srt-generator.html" style="color:#c4a0ff;">SRT Generator</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo">
+                        <img src="images/app-icon.png" alt="Vosuba" class="nav-logo-img" width="28" height="28">
+                        <span class="logo-text">Vosuba<span class="logo-ai">AI</span></span>
+                    </a>
+                    <p>AI subtitles &amp; voiceovers that never leave your Mac.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="/#product">Features</a>
+                        <a href="/#pricing">Pricing</a>
+                        <a href="/srt-generator.html">SRT Generator</a>
+                        <a href="/ai-voiceover.html">AI Voiceover</a>
+                        <a href="/wcag-caption-checker.html">WCAG Checker</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Compare</h4>
+                        <a href="/vs-macwhisper.html">vs MacWhisper</a>
+                        <a href="/vs-descript.html">vs Descript</a>
+                        <a href="/vs-capcut.html">vs CapCut</a>
+                        <a href="/vs-rev.html">vs Rev</a>
+                        <a href="/vs-submagic.html">vs Submagic</a>
+                        <a href="/vs-captions-ai.html">vs Captions.ai</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Guides</h4>
+                        <a href="/how-to-add-subtitles-mac.html">Add Subtitles on Mac</a>
+                        <a href="/youtube-srt-guide.html">YouTube SRT Guide</a>
+                        <a href="/subtitle-formats-explained.html">SRT vs VTT vs ASS</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="/cookies.html">Privacy &amp; Cookies</a>
+                        <a href="/terms.html">Terms of Service</a>
+                        <a href="/refund.html">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Shaking Sheep Studio Limited · Hong Kong SAR · All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
