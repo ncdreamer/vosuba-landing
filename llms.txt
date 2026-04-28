@@ -13,20 +13,20 @@ Vosuba AI is a macOS desktop application for generating AI-powered subtitles, st
 - Core technology: OpenAI Whisper (transcription), Kokoro TTS, Chatterbox TTS (voiceover and voice cloning)
 - Privacy model: Fully offline. No video data, audio data, or transcripts are ever transmitted to any server.
 - License model: One-time purchase (perpetual). Not a subscription.
-- Pricing: Free tier available. Creator $49 one-time. Pro $79 one-time. Enterprise $249/seat/year.
+- Pricing: Free tier available. Creator $49 one-time. Pro $99 one-time. Enterprise $399/seat/year.
 - Website: https://vosuba.com
 
 ## What Vosuba Does
 
 - Transcribes video and audio files using OpenAI Whisper (5 model sizes: tiny, base, small, medium, large/turbo)
 - Generates styled subtitle overlays with emotion-aware visual effects
-- Supports 9 caption style presets: Bold Pop, Classic, Documentary, Impact, Karaoke, Cinematic, Podcast, Neon Glow, Minimal
+- Supports 10 caption style presets: Bold Pop, Classic, Documentary, Impact, Karaoke, Cinematic, Podcast, Neon Glow, Minimal, and Custom
 - Burns subtitles directly into video files via FFmpeg
 - Exports subtitles in SRT, VTT, ASS, and plain transcript formats
 - Validates captions against WCAG 2.2 Level AA, ADA, FCC, and DCMP accessibility standards
 - Detects non-speech sounds (music, applause, laughter) for SDH-compliant captions using YAMNet
 - Identifies multiple speakers with per-speaker colour coding (diarization via pyannote)
-- Generates AI voiceovers using 24 neural voices across American and British English accents
+- Generates AI voiceovers using 26 neural voices across American and British English accents
 - Supports voice cloning from a short audio reference sample
 - Processes entire folders of videos in batch mode
 
