@@ -1,0 +1,17 @@
+{
+  "redirects": [
+    {
+      "source": "/download/Vosuba-1.0.0-macOS.dmg",
+      "destination": "https://github.com/ncdreamer/vosuba-landing/releases/download/v1.0.0/Vosuba-1.0.0-macOS.dmg",
+      "statusCode": 302
+    }
+  ],
+  "headers": [
+    {
+      "source": "/download.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    }
+  ]
+}
