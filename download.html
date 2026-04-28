@@ -224,7 +224,8 @@
     </div>
 
     <script>
-        const GITHUB_DOWNLOAD_URL = 'https://github.com/ncdreamer/vosuba-landing/releases/download/v1.0.0/Vosuba-1.0.0-macOS.dmg';
+        // Use edge function proxy to avoid CORS issues with GitHub's CDN
+        const GITHUB_DOWNLOAD_URL = '/api/download';
         const FILE_NAME = 'Vosuba-1.0.0-macOS.dmg';
         const EXPECTED_SIZE_MB = 529;
 
