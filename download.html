@@ -142,7 +142,7 @@
             <p class="status-hint" id="status-hint">Vosuba-1.0.0-macOS.dmg · 529 MB</p>
         </div>
 
-        <a href="/download/Vosuba-1.0.0-macOS.dmg"
+        <a href="/api/download"
            class="manual-link"
            id="manual-download"
            download="Vosuba-1.0.0-macOS.dmg"
@@ -170,7 +170,7 @@
         // Auto-trigger the download using an invisible iframe approach
         // This avoids the UUID filename issue by not navigating away from this page
         (function() {
-            const DOWNLOAD_URL = '/download/Vosuba-1.0.0-macOS.dmg';
+            const DOWNLOAD_URL = '/api/download';
 
             gtag('event', 'download_initiated', { method: 'auto' });
 
