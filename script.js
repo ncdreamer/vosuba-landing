@@ -144,56 +144,113 @@ document.addEventListener('DOMContentLoaded', () => {
         if (el) sectionObserver.observe(el);
     });
 
-    // ─── Hero CTA buttons ───
-    document.querySelectorAll('.hero-ctas .btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const label = btn.textContent.trim().replace(/\s+/g, ' ');
-            _ga('hero_cta_click', { button_text: label });
+    // Current page path for attribution (e.g. "/for-creators.html")
+    const _page = window.location.pathname;
+
+    // ─── UNIVERSAL: Download CTA clicks (all pages) ───
+    // Catches every link to download.html regardless of page structure
+    document.querySelectorAll('a[href="download.html"], a[href="/download.html"]').forEach(link => {
+        link.addEventListener('click', () => {
+            const label = link.textContent.trim().replace(/\s+/g, ' ');
+            const location = _ctaLocation(link);
+            _ga('click_cta', { cta_text: label, cta_location: location, page: _page });
         });
     });
 
-    // ─── Nav link clicks ───
+    // ─── UNIVERSAL: Sales enquiry mailto clicks (all pages) ───
+    document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+        link.addEventListener('click', () => {
+            const label = link.textContent.trim().replace(/\s+/g, ' ');
+            const email = link.href.replace('mailto:', '').split('?')[0];
+            const location = _ctaLocation(link);
+            _ga('sales_enquiry', { cta_text: label, email: email, cta_location: location, page: _page });
+        });
+    });
+
+    // ─── UNIVERSAL: Outbound link clicks (all pages) ───
+    document.querySelectorAll('a[href^="http"]').forEach(link => {
+        if (link.hostname !== window.location.hostname) {
+            link.addEventListener('click', () => {
+                _ga('outbound_click', { link_text: link.textContent.trim(), url: link.href, page: _page });
+            });
+        }
+    });
+
+    // ─── UNIVERSAL: Nav link clicks (all pages) ───
     document.querySelectorAll('.nav-links a, .nav-cta').forEach(link => {
         link.addEventListener('click', () => {
-            _ga('nav_click', { link_text: link.textContent.trim() });
+            _ga('nav_click', { link_text: link.textContent.trim(), page: _page });
         });
     });
 
-    // ─── Product showcase tab switches ───
+    // ─── UNIVERSAL: FAQ opens (all pages) ───
+    document.querySelectorAll('.faq-item summary').forEach(summary => {
+        summary.addEventListener('click', () => {
+            _ga('faq_open', { question: summary.textContent.trim(), page: _page });
+        });
+    });
+
+    // ─── UNIVERSAL: Footer link clicks (all pages) ───
+    document.querySelectorAll('footer a').forEach(link => {
+        link.addEventListener('click', () => {
+            _ga('footer_click', { link_text: link.textContent.trim(), href: link.href, page: _page });
+        });
+    });
+
+    // ─── UNIVERSAL: Compare page internal links (vs-*, for-*) ───
+    document.querySelectorAll('a[href*="vs-"], a[href*="for-"]').forEach(link => {
+        if (!link.closest('footer') && !link.closest('.nav-links')) {
+            link.addEventListener('click', () => {
+                _ga('compare_link_click', { link_text: link.textContent.trim(), destination: link.getAttribute('href'), page: _page });
+            });
+        }
+    });
+
+    // ─── INDEX ONLY: Hero CTA buttons ───
+    document.querySelectorAll('.hero-ctas .btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            _ga('hero_cta_click', { button_text: btn.textContent.trim().replace(/\s+/g, ' ') });
+        });
+    });
+
+    // ─── INDEX ONLY: Product showcase tab switches ───
     document.querySelectorAll('.showcase-tab').forEach(tab => {
         tab.addEventListener('click', () => {
             _ga('showcase_tab', { tab: tab.dataset.tab });
         });
     });
 
-    // ─── Pricing button clicks (backup — inline onclick also fires) ───
+    // ─── INDEX ONLY: Pricing button clicks ───
     document.querySelectorAll('.pricing-card .btn, .enterprise-card .btn').forEach(btn => {
         btn.addEventListener('click', () => {
-            const label = btn.textContent.trim().replace(/\s+/g, ' ');
-            _ga('pricing_click', { button_text: label });
+            _ga('pricing_click', { button_text: btn.textContent.trim().replace(/\s+/g, ' ') });
         });
     });
 
-    // ─── FAQ opens ───
-    document.querySelectorAll('.faq-item summary').forEach(summary => {
-        summary.addEventListener('click', () => {
-            const question = summary.textContent.trim();
-            _ga('faq_open', { question: question });
+    // ─── UNIVERSAL: CTA strip / bottom CTA (works on all pages) ───
+    document.querySelectorAll('.cta-strip .btn, .cta-card .btn, .final-cta .btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            _ga('bottom_cta_click', { button_text: btn.textContent.trim().replace(/\s+/g, ' '), page: _page });
         });
     });
 
-    // ─── Footer link clicks ───
-    document.querySelectorAll('footer a').forEach(link => {
-        link.addEventListener('click', () => {
-            _ga('footer_click', { link_text: link.textContent.trim(), href: link.href });
-        });
+    // ─── UNIVERSAL: Time on page (fires at 30s, 60s, 120s) ───
+    [30, 60, 120].forEach(seconds => {
+        setTimeout(() => {
+            _ga('time_on_page', { seconds: seconds, page: _page });
+        }, seconds * 1000);
     });
 
-    // ─── Final CTA (bottom of page) ───
-    const finalCta = document.querySelector('.final-cta .btn');
-    if (finalCta) {
-        finalCta.addEventListener('click', () => {
-            _ga('final_cta_click', { button_text: finalCta.textContent.trim() });
-        });
+    /**
+     * Determine CTA location from DOM context.
+     * Returns a human-readable string like "navbar", "hero", "bottom_cta", "body".
+     */
+    function _ctaLocation(el) {
+        if (el.closest('nav, .mobile-menu')) return 'navbar';
+        if (el.closest('#hero, .hero-creator, .hero-regulated, .hero-uni')) return 'hero';
+        if (el.closest('.cta-strip, .cta-card, #bottom-cta, .final-cta')) return 'bottom_cta';
+        if (el.closest('.pricing-card, .enterprise-card, #pricing')) return 'pricing';
+        if (el.closest('footer')) return 'footer';
+        return 'body';
     }
 });
