@@ -176,7 +176,7 @@
         <div class="download-status" id="status-area">
             <!-- Initial state: Download button -->
             <div id="state-ready">
-                <button class="download-btn" id="start-download" onclick="startBlobDownload()">
+                <button class="download-btn" id="start-download" onclick="startDirectDownload()">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                     Download for Mac — Free
                 </button>
@@ -204,7 +204,7 @@
                 <div class="error-icon">✕</div>
                 <p class="status-text">Download failed</p>
                 <p class="status-hint" id="error-hint">Something went wrong. Please try again.</p>
-                <button class="secondary-btn" onclick="startBlobDownload()">Try Again</button>
+                <button class="secondary-btn" onclick="startDirectDownload()">Try Again</button>
             </div>
         </div>
 
@@ -224,10 +224,8 @@
     </div>
 
     <script>
-        // Use edge function proxy to avoid CORS issues with GitHub's CDN
-        const GITHUB_DOWNLOAD_URL = '/api/download';
+        const DOWNLOAD_URL = '/download/Vosuba-1.0.0-macOS.dmg';
         const FILE_NAME = 'Vosuba-1.0.0-macOS.dmg';
-        const EXPECTED_SIZE_MB = 430;
 
         function showState(state) {
             document.querySelectorAll('#state-ready, #state-downloading, #state-success, #state-error').forEach(function(el) {
@@ -236,72 +234,25 @@
             document.getElementById('state-' + state).classList.remove('hidden');
         }
 
-        function formatBytes(bytes) {
-            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
-            if (bytes < 1024 * 1024 * 1024) return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
-            return (bytes / (1024 * 1024 * 1024)).toFixed(2) + ' GB';
-        }
+        function startDirectDownload() {
+            gtag('event', 'download_free_app', { method: 'direct' });
 
-        async function startBlobDownload() {
+            // Show downloading state briefly while redirect starts
             showState('downloading');
-            gtag('event', 'download_free_app', { method: 'blob' });
+            document.getElementById('progress-text').textContent = 'Starting download…';
 
-            try {
-                var response = await fetch(GITHUB_DOWNLOAD_URL);
+            // Trigger native browser download via the Vercel redirect
+            // This redirects to GitHub releases which serves with proper
+            // Content-Disposition headers, triggering the browser's native
+            // download manager with real progress bar.
+            window.location.href = DOWNLOAD_URL;
 
-                if (!response.ok) {
-                    throw new Error('Server returned ' + response.status);
-                }
-
-                var contentLength = response.headers.get('content-length');
-                var totalBytes = contentLength ? parseInt(contentLength, 10) : EXPECTED_SIZE_MB * 1024 * 1024;
-
-                var reader = response.body.getReader();
-                var chunks = [];
-                var receivedBytes = 0;
-
-                while (true) {
-                    var result = await reader.read();
-                    if (result.done) break;
-
-                    chunks.push(result.value);
-                    receivedBytes += result.value.length;
-
-                    var percent = Math.min(99, Math.round((receivedBytes / totalBytes) * 100));
-                    document.getElementById('progress-bar').style.width = percent + '%';
-                    document.getElementById('progress-text').textContent =
-                        percent + '% — ' + formatBytes(receivedBytes) + ' / ' + formatBytes(totalBytes);
-                }
-
-                // Combine all chunks into a single Blob
-                var blob = new Blob(chunks, { type: 'application/x-apple-diskimage' });
-                chunks = null; // Free memory
-
-                // Create a blob URL and trigger download with correct filename
-                var blobUrl = URL.createObjectURL(blob);
-                var a = document.createElement('a');
-                a.href = blobUrl;
-                a.download = FILE_NAME; // THIS is what forces the correct filename
-                document.body.appendChild(a);
-                a.click();
-
-                // Cleanup
-                setTimeout(function() {
-                    document.body.removeChild(a);
-                    URL.revokeObjectURL(blobUrl);
-                }, 1000);
-
-                document.getElementById('progress-bar').style.width = '100%';
+            // After a short delay, show success state
+            setTimeout(function() {
                 showState('success');
-                document.getElementById('page-subtitle').textContent = 'Your download is ready!';
+                document.getElementById('page-subtitle').textContent = 'Your download has started!';
                 gtag('event', 'download_completed', { file: FILE_NAME });
-
-            } catch (err) {
-                console.error('Download failed:', err);
-                document.getElementById('error-hint').textContent = err.message || 'Network error. Please check your connection and try again.';
-                showState('error');
-                gtag('event', 'download_failed', { error: err.message });
-            }
+            }, 2000);
         }
     </script>
 </body>
