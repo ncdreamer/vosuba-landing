@@ -36,6 +36,47 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I use both Vosuba and MacWhisper?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Some users use MacWhisper for quick transcript extraction and Vosuba when they need styled captions for a final video. However, Vosuba's free tier already covers unlimited SRT exports — so for most subtitle workflows, Vosuba alone is sufficient."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Vosuba more expensive than MacWhisper?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MacWhisper's one-time price is around $20. Vosuba Creator is $49 one-time. The difference reflects a much broader feature set: styled overlays, burn-in, WCAG compliance tools, sound detection, voiceover studio, and batch processing. If you only need raw transcription, MacWhisper is the cheaper option. If you need complete caption production, Vosuba replaces multiple tools."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which tool is better for university or government captioning compliance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vosuba is purpose-built for institutional compliance use cases. It validates captions against WCAG 2.2 Level AA, ADA, FCC, and DCMP standards, exports accessibility packages, and supports enterprise volume licensing. MacWhisper does not include any compliance tooling."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Vosuba use the same Whisper models as MacWhisper?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Both tools use OpenAI's open-source Whisper models and run them locally on Apple Silicon. Transcription accuracy is equivalent between the two apps when using the same model size. The difference is everything built on top of the transcript."
+          }
+        }
+      ]
+    }
+    </script>
+
     <style>
         /* ── Comparison page styles ── */
         .comp-hero { padding: 6rem 0 4rem; text-align: center; }
@@ -123,6 +164,11 @@
                 <h1>Vosuba vs MacWhisper<br><span class="gradient-text">Which offline Mac subtitle tool wins?</span></h1>
                 <p>MacWhisper transcribes audio to text. Vosuba takes it the rest of the way — styled captions, burn-in, voiceover, and WCAG compliance. Here's the honest breakdown.</p>
             </section>
+
+            <!-- AEO Quick Answer Block -->
+            <div class="aeo-answer" role="region" aria-label="Quick answer">
+                <p><strong>Quick answer:</strong> Both Vosuba and MacWhisper run 100% offline on Mac using OpenAI's Whisper models. MacWhisper (~$20) focuses on audio-to-text transcription. Vosuba ($49 Creator) goes further with styled caption overlays, video burn-in, WCAG 2.2 compliance tools, AI voiceover with 26 voices, and batch processing — making it a complete subtitle production studio rather than a transcription utility.</p>
+            </div>
 
             <!-- FEATURE TABLE -->
             <div class="comp-table-wrap">
