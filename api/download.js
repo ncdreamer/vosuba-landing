@@ -6,7 +6,7 @@ export const config = {
 
 export default async function handler(request) {
   const GITHUB_URL =
-    'https://github.com/ncdreamer/vosuba-landing/releases/download/v1.0.0/Vosuba-1.0.0-macOS.dmg';
+    'https://github.com/ncdreamer/vosuba-landing/releases/download/v1.0.1/Vosuba-1.0.1-macOS.dmg';
 
   try {
     // Fetch from GitHub (follows redirects automatically)
@@ -27,7 +27,7 @@ export default async function handler(request) {
     // Build response headers
     const headers = new Headers({
       'Content-Type': 'application/x-apple-diskimage',
-      'Content-Disposition': 'attachment; filename="Vosuba-1.0.0-macOS.dmg"',
+      'Content-Disposition': 'attachment; filename="Vosuba-1.0.1-macOS.dmg"',
       'Cache-Control': 'public, max-age=86400, s-maxage=86400',
       'X-Robots-Tag': 'noindex',
     });
